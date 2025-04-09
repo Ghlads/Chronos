@@ -1,22 +1,30 @@
-# Portfolio Interactif - "Chronos"
+# Interactive Portfolio – "Chronos"
 
-Bienvenue sur mon portfolio interactif, présenté sous la forme d’un petit jeu en pixel art minimaliste.  
-Vous incarnez un personnage explorant des fragments de mémoire représentant les projets marquants de mon parcours.
+Welcome to my interactive portfolio, presented as a minimalist pixel art game.  
+You play as a small figure exploring fragments of memory, each representing a key project from my journey.
 
-## 🎮 Fonctionnement
+## 🎮 How It Works
 
-- **Contrôle simple** : clic ou toucher pour se déplacer
-- **Deux modes** :
-  - *Libre* : accédez directement aux projets
-  - *Découverte* : explorez et collectez des fragments pour débloquer les projets
-- Chaque fragment révèle une **vidéo** et une **description** de mon rôle sur le projet concerné
+- **Simple controls**: click or tap to move
+- **Two modes**:
+  - *Free mode*: access all projects directly
+  - *Discovery mode*: explore and collect fragments to unlock each project
+- Each fragment reveals a **trailer video** and a **description** of my role on the project
 
-## 💡 Intention
+## 💡 Intent
 
-Ce jeu est à la fois un support original pour présenter mes compétences,  
-et une façon plus personnelle de raconter mon parcours de développeur.
+This project is both a creative way to showcase my skills and a personal reflection on my path as a developer.
 
-## ⚠️ À propos de ce dépôt
+## ⚠️ About This Repository
 
-Ce projet est public pour permettre aux recruteurs et curieux de consulter le **code source**  
-et d’explorer mon approche technique.
+This repository is public so recruiters and curious minds can review the **source code**  
+and explore my technical and design choices.
+
+> Please respect the license: this project is personal and **not intended for commercial reuse**.
+
+## 🛡️ License
+
+- The **code** is available for educational and personal reference, but commercial reuse is not allowed.
+- All **assets** (art, audio, writing) are protected under the [CC BY-NC-ND 4.0 license](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+See [LICENSE.md](./LICENSE.md) for more details.
