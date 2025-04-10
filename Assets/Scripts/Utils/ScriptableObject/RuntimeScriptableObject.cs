@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Scriptable.Variable
+namespace Scriptable
 {
     public abstract class RuntimeScriptableObject : ScriptableObject
     {
