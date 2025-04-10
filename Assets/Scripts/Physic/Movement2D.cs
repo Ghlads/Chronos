@@ -40,9 +40,14 @@ public class Movement2D : MonoBehaviour
             return;
         }
 
+        if ( !m_movement.IsNearlyZero() )
+        {
+            return;
+        }
+
         float velocityMagnitude = m_rigidbody.linearVelocity.magnitude;
-        float frictionToApply = Mathf.Min( velocityMagnitude, Operation.RaiseExponant( m_friction, m_frictionStrength ) );
-        m_rigidbody.AddForce( ( m_rigidbody.linearVelocity / velocityMagnitude ) * -frictionToApply, ForceMode2D.Force );
+        float slowedVelocityMagnitude = Mathf.Max( 0, velocityMagnitude - ( Operation.RaiseExponant( m_friction, m_frictionStrength ) * Time.fixedDeltaTime ) );
+        m_rigidbody.linearVelocity = slowedVelocityMagnitude * m_rigidbody.linearVelocity / velocityMagnitude;
     }
 
 
@@ -56,7 +61,7 @@ public class Movement2D : MonoBehaviour
         Vector2 normalizedMovement = m_movement.normalized;
         if ( m_rigidbody.linearVelocity.IsNearlyZero() )
         {
-            m_rigidbody.AddForce( normalizedMovement * Operation.RaiseExponant( m_acceleration, m_accelerationStrength ), ForceMode2D.Force );
+            m_rigidbody.linearVelocity = Operation.RaiseExponant( m_acceleration, m_accelerationStrength ) * Time.fixedDeltaTime * normalizedMovement;
         }
         else
         {
@@ -69,7 +74,7 @@ public class Movement2D : MonoBehaviour
             else
             {
                 float dotScalarImpact = Mathf.Lerp( 1.0f, m_steeringForce, Operation.InverseLerpUnclamp( 1.0f, -1.0f, dot ) );
-                m_rigidbody.AddForce( dotScalarImpact * Operation.RaiseExponant( m_acceleration, m_accelerationStrength ) * normalizedMovement, ForceMode2D.Force );
+                m_rigidbody.linearVelocity += dotScalarImpact * Time.fixedDeltaTime * Operation.RaiseExponant( m_acceleration, m_accelerationStrength ) * normalizedMovement;
             }
         }
 
@@ -83,7 +88,7 @@ public class Movement2D : MonoBehaviour
         float velocityMagnitude = m_rigidbody.linearVelocity.magnitude;
         if ( velocityMagnitude > m_maxSpeed )
         {
-            m_rigidbody.linearVelocity = ( m_rigidbody.linearVelocity / velocityMagnitude ) * m_maxSpeed;
+            m_rigidbody.linearVelocity = m_maxSpeed * ( m_rigidbody.linearVelocity / velocityMagnitude );
         }
     }
 
