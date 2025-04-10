@@ -35,6 +35,12 @@ namespace Scriptable.Variable
         }
 
 
+        public static implicit operator VariableType( ScriptableVariable<VariableType> variable )
+        {
+            return variable.Value;
+        }
+
+
 #if UNITY_EDITOR
         private void OnValidate()
         {
