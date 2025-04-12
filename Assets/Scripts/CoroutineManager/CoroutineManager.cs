@@ -24,6 +24,11 @@ public static class CoroutineManager
             return;
         }
 
+        if ( s_instance == null )
+        {
+            return;
+        }
+
         s_instance.StopCoroutine( routine );
     }
 
