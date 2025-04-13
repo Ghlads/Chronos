@@ -18,15 +18,29 @@ public class ProjectDisplayController : MonoBehaviour
     [SerializeField] private Transform m_bulletPointsContainer;
 
     [Space]
-    [SerializeField] private ProjectData m_projectData;
+    [SerializeField] private ProjectDataScriptableEvent m_projectDataEvent;
+
+    private ProjectData m_projectData;
 
     private List<BulletPointController> m_bulletPoints = new();
 
     private void Start()
     {
-        SetProject( m_projectData );
         m_trailerButton.onClick.AddListener( OpenTrailerURL );
     }
+
+
+    private void OnEnable()
+    {
+        m_projectDataEvent.AddListener( SetProject );
+    }
+
+
+    private void OnDisable()
+    {
+        m_projectDataEvent.RemoveListener( SetProject );
+    }
+
 
     public void SetProject( ProjectData projectData )
     {
