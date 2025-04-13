@@ -46,7 +46,7 @@ public class Movement2D : MonoBehaviour
         }
 
         float velocityMagnitude = m_rigidbody.linearVelocity.magnitude;
-        float slowedVelocityMagnitude = Mathf.Max( 0, velocityMagnitude - ( Operation.RaiseExponant( m_friction, m_frictionStrength ) * Time.fixedDeltaTime ) );
+        float slowedVelocityMagnitude = Mathf.Max( 0, velocityMagnitude - ( MathUtils.RaiseExponant( m_friction, m_frictionStrength ) * Time.fixedDeltaTime ) );
         m_rigidbody.linearVelocity = slowedVelocityMagnitude * m_rigidbody.linearVelocity / velocityMagnitude;
     }
 
@@ -61,7 +61,7 @@ public class Movement2D : MonoBehaviour
         Vector2 normalizedMovement = m_movement.normalized;
         if ( m_rigidbody.linearVelocity.IsNearlyZero() )
         {
-            m_rigidbody.linearVelocity = Operation.RaiseExponant( m_acceleration, m_accelerationStrength ) * Time.fixedDeltaTime * normalizedMovement;
+            m_rigidbody.linearVelocity = MathUtils.RaiseExponant( m_acceleration, m_accelerationStrength ) * Time.fixedDeltaTime * normalizedMovement;
         }
         else
         {
@@ -69,12 +69,12 @@ public class Movement2D : MonoBehaviour
             float dot = Vector2.Dot( normalizedVelocity, normalizedMovement );
             if ( dot < m_flipThreshold )
             {
-                m_rigidbody.linearVelocity = Operation.RaiseExponant( m_acceleration, m_accelerationStrength ) * Time.fixedDeltaTime * normalizedMovement;
+                m_rigidbody.linearVelocity = MathUtils.RaiseExponant( m_acceleration, m_accelerationStrength ) * Time.fixedDeltaTime * normalizedMovement;
             }
             else
             {
-                float dotScalarImpact = Mathf.Lerp( 1.0f, m_steeringForce, Operation.InverseLerpUnclamp( 1.0f, -1.0f, dot ) );
-                m_rigidbody.linearVelocity += dotScalarImpact * Time.fixedDeltaTime * Operation.RaiseExponant( m_acceleration, m_accelerationStrength ) * normalizedMovement;
+                float dotScalarImpact = Mathf.Lerp( 1.0f, m_steeringForce, MathUtils.InverseLerpUnclamp( 1.0f, -1.0f, dot ) );
+                m_rigidbody.linearVelocity += dotScalarImpact * Time.fixedDeltaTime * MathUtils.RaiseExponant( m_acceleration, m_accelerationStrength ) * normalizedMovement;
             }
         }
 
