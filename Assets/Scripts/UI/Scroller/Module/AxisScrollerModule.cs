@@ -76,6 +76,7 @@ public abstract class AxisScrollerModule : IScrollerModule
             {
                 yield return m_delayBetweenLoops;
                 ApplyPosition( m_startPos );
+                yield return m_delayBetweenLoops;
             }
             else
             {
