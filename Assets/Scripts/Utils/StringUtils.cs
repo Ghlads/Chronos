@@ -14,6 +14,4 @@ public  static class StringUtils
 
         return builder.Append( strings[strings.Count-1] ).ToString();
     }
-
-
 }
