@@ -1,6 +1,4 @@
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
-
 public enum Exponant
 {
     Constant = 0,
@@ -11,7 +9,7 @@ public enum Exponant
     Quintic = 5,
 }
 
-public static class Operation
+public static class MathUtils
 {
     public static float RaiseExponant( float value, Exponant exponant )
     {
