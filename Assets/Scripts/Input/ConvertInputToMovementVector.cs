@@ -1,4 +1,4 @@
-using Scriptable.Variable;
+using Framework.Scriptable;
 using UnityEngine;
 
 [RequireComponent( typeof( Movement2D ) )]

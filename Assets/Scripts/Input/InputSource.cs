@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 using static Chronos.Input.InputControls;
 
 [CreateAssetMenu( fileName = "InputSource", menuName = "Scriptable/Input/Source" )]
-public class InputSource : Scriptable.RuntimeScriptableObject, IMovementActions
+public class InputSource : Framework.Scriptable.RuntimeScriptableObject, IMovementActions
 {
     public bool IsPointerDown => m_inputActions.Movement.PointerDown.IsPressed();
 

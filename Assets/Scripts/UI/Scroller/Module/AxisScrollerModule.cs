@@ -64,6 +64,7 @@ public abstract class AxisScrollerModule : IScrollerModule
 
     private IEnumerator InternalScrolling()
     {
+        yield return m_delayBetweenLoops;
         while ( true )
         {
             float currentPos = GetPosition();
