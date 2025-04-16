@@ -1,3 +1,4 @@
+using Game.Generated.Scriptable;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -18,7 +19,7 @@ public class ProjectDisplayController : MonoBehaviour
     [SerializeField] private Transform m_bulletPointsContainer;
 
     [Space]
-    [SerializeField] private ProjectDataScriptableEvent m_projectDataEvent;
+    [SerializeField] private ProjectDataEvent m_projectDataEvent;
 
     private ProjectData m_projectData;
 

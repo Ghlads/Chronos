@@ -1,0 +1,15 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Framework/Script/Scriptable/Editor/ScriptableGenerator/ScriptableClassGenerator.uss?fileID=7433441132597879392&amp;guid=519a5fb96b8861e48b4fe42407ff2615&amp;type=3#ScriptableClassGenerator" />
+    <editor:EnumFlagsField label="Classes to generate" value="-1" type="Framework.Scriptable.Editor.ScriptableClass, ScriptableEditorAssembly" tooltip="Scriptabel classes you wnat to generate. Some have dependencies and it will auto add them" />
+    <engine:VisualElement name="type-selector" style="flex-grow: 0; flex-direction: row; margin-left: 3px; margin-top: 1px; margin-bottom: 1px; margin-right: 3px; flex-shrink: 0;">
+        <engine:Label text="Type wrapped" display-tooltip-when-elided="false" triple-click-selects-line="false" double-click-selects-word="false" emoji-fallback-support="false" enable-rich-text="false" style="min-width: 120px; padding-top: 2px; margin-right: 2px; overflow: hidden;" />
+        <engine:Button text="select type" enable-rich-text="false" emoji-fallback-support="false" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" tooltip="Open a type selector to select type to generate" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 3px; padding-bottom: 1px; padding-left: 3px; flex-grow: 1;" />
+    </engine:VisualElement>
+    <engine:TextField label="Namespace" name="namespace" tooltip="Namespace you want your generated class to be wrapped in" />
+    <engine:TextField label="Category" name="category" tooltip="Category of this scriptable, will help inside create context menu" />
+    <engine:TextField label="OutputPath" name="ouput-path" tooltip="Target path for your classes, this is relative to Assets folder. Exemple Script/MyClass -&gt; &lt;absolute path to your project folder&gt;/Assets/Script/MyClass" />
+    <engine:VisualElement name="footer" style="flex-grow: 1; flex-direction: row; margin-top: 11px;">
+        <engine:ProgressBar value="0" name="progressbar" style="flex-grow: 1; align-self: center; visibility: hidden;" />
+        <engine:Button text="GENERATE" name="generate-button" class="generate-button" style="align-self: flex-end;" />
+    </engine:VisualElement>
+</engine:UXML>
