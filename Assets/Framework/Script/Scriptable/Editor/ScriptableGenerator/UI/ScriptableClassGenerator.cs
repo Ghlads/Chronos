@@ -1,18 +1,16 @@
-using Codice.Client.BaseCommands.WkStatus.Printers;
 using System;
-using System.Collections;
-using System.IO;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UIElements;
 
 namespace Framework.Scriptable.Editor
 {
     public class ScriptableClassGenerator : EditorWindow, IProgress<float>
     {
-        [SerializeField]
-        private VisualTreeAsset m_visualTreeAsset = default;
+        [SerializeField] private VisualTreeAsset m_visualTreeAsset = default;
+        [SerializeField] private GeneratorCache m_generatorCache;
 
         [MenuItem( "Tools/Generator/ScriptableClass" )]
         public static void ShowGenerator()
@@ -50,9 +48,32 @@ namespace Framework.Scriptable.Editor
 
             m_classesSelectionField.RegisterCallback<ChangeEvent<Enum>>( ClassesSelectionChangeHandler );
             m_typeSelector.RegisterCallback<ClickEvent>( TypeSelectorClickHandler );
+            m_namespaceField.RegisterCallback<ChangeEvent<string>>( NamespaceChangeHandler );
+            m_categoryField.RegisterCallback<ChangeEvent<string>>( CategoryChangeHandler );
+            m_outputPathField.RegisterCallback<ChangeEvent<string>>( OutputChangeHandler );
             m_generateButton.RegisterCallback<ClickEvent>( GenerateButtonClickHandler );
+
+
+            m_namespaceField.value = m_generatorCache.LastNamespace;
+            m_categoryField.value = m_generatorCache.LastCategory;
+            m_outputPathField.value = m_generatorCache.LastOutputPath;
+            NewTypeSelected( m_generatorCache.LastSelectedType );
         }
 
+        private void OutputChangeHandler( ChangeEvent<string> evt )
+        {
+            m_generatorCache.LastOutputPath = evt.newValue;
+        }
+
+        private void CategoryChangeHandler( ChangeEvent<string> evt )
+        {
+            m_generatorCache.LastCategory = evt.newValue;
+        }
+
+        private void NamespaceChangeHandler( ChangeEvent<string> evt )
+        {
+            m_generatorCache.LastNamespace = evt.newValue;
+        }
 
         private void ClassesSelectionChangeHandler( ChangeEvent<Enum> evt )
         {
@@ -76,6 +97,7 @@ namespace Framework.Scriptable.Editor
         {
             m_selectedType = newType;
             m_typeSelector.text = m_selectedType != null ? m_selectedType.Name : "select type";
+            m_generatorCache.LastSelectedType = newType;
         }
 
 

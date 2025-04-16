@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Framework.Scriptable
 {
-    public class VariableSetter<T, U> : MonoBehaviour where T : ScriptableVariable<U>
+    public class VariableSetter<T, U> : MonoBehaviour where T : ScriptableVariable<U>, IGenericScriptable
     {
         [SerializeField] private T m_variable;
 

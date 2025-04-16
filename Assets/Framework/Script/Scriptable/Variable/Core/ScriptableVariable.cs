@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Framework.Scriptable
 {
-    public abstract class ScriptableVariable<VariableType> : RuntimeScriptableObject
+    public abstract class ScriptableVariable<VariableType> : RuntimeScriptableObject, IGenericScriptable
     {
         public delegate void ValueChangeDelegate( VariableType newValue );
 

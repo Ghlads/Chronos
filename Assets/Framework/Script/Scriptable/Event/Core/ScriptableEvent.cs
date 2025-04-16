@@ -20,7 +20,7 @@ namespace Framework.Scriptable
     }
 
 
-    public abstract class ScriptableEvent<T> : RuntimeScriptableObject
+    public abstract class ScriptableEvent<T> : RuntimeScriptableObject, IGenericScriptable
     {
         public delegate void Signature( T value );
 
