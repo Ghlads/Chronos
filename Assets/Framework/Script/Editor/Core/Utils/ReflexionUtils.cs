@@ -104,4 +104,21 @@ public static class ReflexionUtils
             .Where( t => t.Name == name )
             .ToList();
     }
+
+
+    public static bool ImplementsInterface<T>( this Type type )
+    {
+        return ImplementsInterface( type, typeof(T ) );
+    }
+
+
+    public static bool ImplementsInterface( this Type targetType, Type interfaceType )
+    {
+        if ( !interfaceType.IsInterface )
+        {
+            return false;
+        }
+
+        return interfaceType.IsAssignableFrom( targetType );
+    }
 }

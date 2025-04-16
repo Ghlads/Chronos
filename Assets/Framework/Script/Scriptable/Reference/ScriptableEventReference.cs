@@ -10,7 +10,7 @@ namespace Framework.Scriptable
     }
 
     [Serializable]
-    public class ScriptableEventReference<T, U, V> where U : ScriptableEvent<T> where V : RuntimeEventInjector<T, U>
+    public class ScriptableEventReference<T, U, V> : IGenericScriptable where U : ScriptableEvent<T> where V : RuntimeEventInjector<T, U>
     {
         [SerializeField] private U m_event;
         [SerializeField] private V m_injector;
