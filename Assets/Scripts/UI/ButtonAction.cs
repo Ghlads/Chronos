@@ -1,6 +1,6 @@
+using Framework.Scriptable;
 using UnityEngine;
 using UnityEngine.UI;
-using Scriptable.Event;
 
 [RequireComponent( typeof( Button ) )]
 public class ButtonAction : MonoBehaviour
