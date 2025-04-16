@@ -102,7 +102,7 @@ namespace Framework.Scriptable.Editor
         {
             m_matchingTypes = AppDomain.CurrentDomain.GetAssemblies()
                             .SelectMany( x => x.GetTypes() )
-                            .Where( type => IsTypeEligible( type, evt.newValue ) )
+                            .Where( type => ScriptableGeneratorUtils.IsTypeEligible( type, evt.newValue ) )
                             .Distinct()
                             .Take( 30 )
                             .ToList();
@@ -110,39 +110,6 @@ namespace Framework.Scriptable.Editor
             m_selectButton.SetEnabled( false );
             m_listView.itemsSource = m_matchingTypes;
             m_listView.Rebuild();
-        }
-
-
-        private bool IsTypeEligible( Type type, string filter )
-        {
-            if ( !type.IsPublic )
-            {
-                return false;   
-            }
-
-            if ( type.IsAbstract )
-            {
-                return false;
-            }
-
-            if ( type.IsInterface )
-            {
-                return false;
-            }
-
-            if ( type.IsGenericType )
-            {
-                return false;
-            }
-
-            if ( !( type.IsPrimitive || 
-                type.Attributes.HasFlag( System.Reflection.TypeAttributes.Serializable ) || 
-                type.InheritsFrom<UnityEngine.Object>() ) )
-            {
-                return false;
-            }
-
-            return type.Name.ToLowerInvariant().Contains( filter );
         }
     }
 }

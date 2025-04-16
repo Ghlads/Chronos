@@ -355,5 +355,43 @@ namespace Framework.Scriptable.Editor
                 genericSubType: typeof( ScriptableEventReference<,,> ).MakeGenericType( type, eventConcreteType, injectorConcreteType ),
                 concreteType: out Type _ );
         }
+
+
+        public static bool IsTypeEligible( Type type, string filter )
+        {
+            if ( !type.IsPublic )
+            {
+                return false;
+            }
+
+            if ( type.IsAbstract )
+            {
+                return false;
+            }
+
+            if ( type.IsInterface )
+            {
+                return false;
+            }
+
+            if ( type.IsGenericType )
+            {
+                return false;
+            }
+
+            if ( !( type.IsPrimitive ||
+                type.Attributes.HasFlag( System.Reflection.TypeAttributes.Serializable ) ||
+                type.InheritsFrom<UnityEngine.Object>() ) )
+            {
+                return false;
+            }
+
+            if ( type.ImplementsInterface<IGenericScriptable>() )
+            {
+                return false;
+            }
+
+            return type.Name.ToLowerInvariant().Contains( filter );
+        }
     }
 }

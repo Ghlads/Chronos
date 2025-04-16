@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Framework.Scriptable
 {
-    public abstract class RuntimeVariableInjector<T, U> : MonoBehaviour where U : ScriptableVariable<T>
+    public abstract class RuntimeVariableInjector<T, U> : MonoBehaviour where U : ScriptableVariable<T>, IGenericScriptable
     {
         [SerializeField] private U m_templateVariable;
 

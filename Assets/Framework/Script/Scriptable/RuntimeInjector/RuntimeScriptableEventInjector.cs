@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Framework.Scriptable
 {
-    public abstract class RuntimeEventInjector<T, U> : MonoBehaviour where U : ScriptableEvent<T>
+    public abstract class RuntimeEventInjector<T, U> : MonoBehaviour, IGenericScriptable where U : ScriptableEvent<T>
     {
         [SerializeField] private U m_templateEvent;
 

@@ -12,7 +12,7 @@ namespace Framework.Scriptable
     }
 
     [Serializable]
-    public class ScriptableVariableReference<T, U, V> where U : ScriptableVariable<T> where V : RuntimeVariableInjector<T, U>
+    public class ScriptableVariableReference<T, U, V> where U : ScriptableVariable<T> where V : RuntimeVariableInjector<T, U>, IGenericScriptable
     {
         [SerializeField] private T m_value;
         [SerializeField] private U m_variable;
