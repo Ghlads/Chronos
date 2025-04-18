@@ -1,32 +1,22 @@
+using Framework.Core.Editor;
+using Framework.Editor;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using UnityEditor;
 using UnityEngine;
 
 namespace Framework.Scriptable.Editor
 {
-    [Flags]
-    public enum ScriptableClass
-    {
-        None,
-        Variable = 1,
-        Event = 1 << 1,
-        VariableInjector = 1 << 2,
-        EventInjector = 1 << 3,
-        VariableReference = 1 << 4,
-        EventReference = 1 << 5,
-    }
-
-
     public static class ScriptableGeneratorUtils
     {
         public static int ScriptableClassCount = 6;
         private static IEnumerator s_generationOperation = null;
 
-        public static void Generate( ScriptableClass classes, string @namespace, string outputPath, string category, Type targetType, IProgress<float> reporter = null, Action<bool> generationEndCallback = null )
+        public static void Generate( List<CodeTemplateSource> templates, string @namespace, string outputPath, string category, Type targetType, IProgress<float> reporter = null, Action<bool> generationEndCallback = null )
         {
             if ( s_generationOperation != null )
             {
@@ -35,7 +25,7 @@ namespace Framework.Scriptable.Editor
                 return;
             }
 
-            s_generationOperation = GenerateAsync( classes, @namespace, outputPath, category, targetType, reporter, generationEndCallback );
+            s_generationOperation = GenerateAsync( templates, @namespace, outputPath, category, targetType, reporter, generationEndCallback );
             EditorApplication.update += GeneratorUpdate;
         }
 
@@ -52,7 +42,7 @@ namespace Framework.Scriptable.Editor
         }
 
 
-        public static IEnumerator GenerateAsync( ScriptableClass classes, string @namespace, string outputPath, string category, Type targetType, IProgress<float> reporter = null, Action<bool> generationEndCallback = null )
+        public static IEnumerator GenerateAsync( List<CodeTemplateSource> templates, string @namespace, string outputPath, string category, Type targetType, IProgress<float> reporter = null, Action<bool> generationEndCallback = null )
         {
             if ( string.IsNullOrWhiteSpace( outputPath ) )
             {
@@ -61,7 +51,7 @@ namespace Framework.Scriptable.Editor
                 yield break;
             }
 
-            if ( classes == ScriptableClass.None )
+            if ( templates == null || templates.Count <= 0 )
             {
                 Debug.LogError( "[Generation fail] : no classes requseted" );
                 generationEndCallback?.Invoke( false );
@@ -75,18 +65,20 @@ namespace Framework.Scriptable.Editor
                 yield break;
             }
 
+            targetType = targetType.Beautified();
+
             reporter.Report( 15.0f );
             yield return null;
 
             try
             {
                 // path can not exist yet we'll create it but we want to catch user input error
-                if ( outputPath[outputPath.Length - 1] != '/' )
+                if ( !outputPath.EndsWith( '/' ) )
                 {
                     outputPath += '/';
                 }
 
-                Directory.Exists( Application.dataPath + "/" + outputPath );
+                Directory.Exists( Application.dataPath + "/" + outputPath );// Don't create yet since other thinks can fail
             }
             catch ( Exception ex )
             {
@@ -95,11 +87,18 @@ namespace Framework.Scriptable.Editor
                 yield break;
             }
 
-            classes.EnsureClassesDependencies();
-            classes.RemoveExistantClasses( targetType );
-            if ( classes == ScriptableClass.None )
+            List<GenericCodeTemplate> resolvedTemplates = new List<GenericCodeTemplate>( templates.Count );
+
+
+            foreach ( CodeTemplateSource template in templates )
             {
-                Debug.LogWarning( "[Generation cancel] : All classes requested already exist. Nothing to generate" );
+                AddTemplateAndDependencies( resolvedTemplates, template );
+            }
+
+            RemoveExistantTemplates( resolvedTemplates, targetType, @namespace );
+            if ( resolvedTemplates.Count <= 0 )
+            {
+                Debug.LogWarning( "[Generation cancel] : All templates requested already exist. Nothing to generate" );
                 generationEndCallback?.Invoke( true );
                 yield break;
             }
@@ -108,252 +107,94 @@ namespace Framework.Scriptable.Editor
             yield return null;
 
             float progress = 30f;
-            float step = ( 100f - progress ) / ScriptableGeneratorUtils.ScriptableClassCount;
-            TypeData data = ( TypeData )targetType;
-            for ( int index = 0; index < ScriptableGeneratorUtils.ScriptableClassCount; index++ )
-            {
-                ScriptableClass currentClassTested = ( ScriptableClass )( 1 << index );
-                if ( classes.HasClassFlag( currentClassTested ) )
-                {
-                    GenerateClass(
-                        currentClassTested,
-                        outputPath,
-                        GetClassName( currentClassTested, data ),
-                        GenerateClassContent( currentClassTested, data, @namespace, category ) );
-                }
+            float step = ( 100f - progress ) / resolvedTemplates.Count;
 
+            bool success = true;
+            foreach ( GenericCodeTemplate template in resolvedTemplates )
+            {
+                success &= GenerateClass( template, targetType, @namespace, outputPath, category );
                 progress += step;
                 reporter.Report( progress );
+                yield return null;
             }
 
             reporter.Report( 100f );
-
-            generationEndCallback?.Invoke( true );
+            generationEndCallback?.Invoke( success );
             yield break;
         }
 
 
-        public static void GenerateClass( ScriptableClass toGenerate, string outputPath, string className, string content )
+        public static void RemoveExistantTemplates( List<GenericCodeTemplate> list, Type target, string @namespace )
         {
-            try
+            for ( int index = 0; index < list.Count; index++ )
             {
-                Directory.CreateDirectory( $"{Application.dataPath}/{outputPath}" );
-            }
-            catch ( Exception e )
-            { 
-                Debug.LogError( $"[Generatrion fail] : Couldn't create directory at path {Application.dataPath}/{outputPath} | Exception {e}" );
-            }
-
-            try
-            {
-                File.WriteAllText( $"{Application.dataPath}/{outputPath}{className}.generated.cs", content );
-            }
-            catch ( Exception e )
-            {
-                Debug.LogError( $"[Generatrion fail] : Couldn't generate {toGenerate} | Exception {e}" );
-            }
-        }
-
-
-        public static string GenerateClassContent( ScriptableClass target, TypeData data, string @namespace, string category )
-        {
-            switch ( target )
-            {
-                case ScriptableClass.Variable:
-                    return Templates.Variable.GenerateClassContent(
-                        data,
-                        @namespace,
-                        category );
-
-                case ScriptableClass.Event:
-                    return Templates.Event.GenerateClassContent(
-                        data,
-                        @namespace,
-                        category );
-
-                case ScriptableClass.VariableInjector:
-                    return Templates.VariableInjector.GenerateClassContent(
-                        data,
-                        new TypeData( GetClassName( ScriptableClass.Variable, data ), @namespace ),
-                        @namespace );
-
-                case ScriptableClass.EventInjector:
-                    return Templates.EventInjector.GenerateClassContent(
-                        data,
-                        new TypeData( GetClassName( ScriptableClass.Event, data ), @namespace ),
-                        @namespace );
-
-                case ScriptableClass.VariableReference:
-                    return Templates.VariableReference.GenerateClassContent(
-                        data,
-                        new TypeData( GetClassName( ScriptableClass.Variable, data ), @namespace ),
-                        new TypeData( GetClassName( ScriptableClass.VariableInjector, data ), @namespace ),
-                        @namespace );
-
-                case ScriptableClass.EventReference:
-                    return Templates.EventReference.GenerateClassContent(
-                        data,
-                        new TypeData( GetClassName( ScriptableClass.Event, data ), @namespace ),
-                        new TypeData( GetClassName( ScriptableClass.EventInjector, data ), @namespace ),
-                        @namespace );
-
-                case ScriptableClass.None:
-                default:
-                    Debug.LogError( $"Couldn't get content for class {target}" );
-                    return string.Empty;
-            }
-        }
-
-
-        public static string GetClassName( ScriptableClass target, TypeData data )
-        {
-            switch ( target )
-            {
-                case ScriptableClass.Variable:
-                    return Templates.Variable.GetClassName( data );
-                case ScriptableClass.Event:
-                    return Templates.Event.GetClassName( data );
-                case ScriptableClass.VariableInjector:
-                    return Templates.VariableInjector.GetClassName( data );
-                case ScriptableClass.EventInjector:
-                    return Templates.EventInjector.GetClassName( data );
-                case ScriptableClass.VariableReference:
-                    return Templates.VariableReference.GetClassName( data );
-                case ScriptableClass.EventReference:
-                    return Templates.EventReference.GetClassName( data );
-                case ScriptableClass.None:
-                default:
-                    Debug.LogError( $"Couldn't get name for class {target}" );
-                    return string.Empty;
-            }
-        }
-
-
-        public static void EnsureClassesDependencies( this ref ScriptableClass classes )
-        {
-            if ( classes.HasClassFlag( ScriptableClass.EventReference ) )
-            {
-                classes |= ScriptableClass.EventInjector;
-            }
-
-            if ( classes.HasClassFlag( ScriptableClass.VariableReference ) )
-            {
-                classes |= ScriptableClass.VariableInjector;
-            }
-
-            if ( classes.HasClassFlag( ScriptableClass.EventInjector ) )
-            {
-                classes |= ScriptableClass.Event;
-            }
-
-            if ( classes.HasClassFlag( ScriptableClass.VariableInjector ) )
-            {
-                classes |= ScriptableClass.Variable;
-            }
-        }
-
-
-        public static bool HasClassFlag( this ScriptableClass classes, ScriptableClass flag )
-        {
-            return ( classes & flag ) == flag;
-        }
-
-
-        public static void RemoveExistantClasses( this ref ScriptableClass classes, Type type )
-        {
-            RemoveExistantVariableClasses( ref classes, type );
-            RemoveExistantEventClasses( ref classes, type );
-        }
-
-
-        public static bool TryGetTypeAndRemoveFromFlagIfExistant( ref ScriptableClass classes, ScriptableClass toCheck, string typeName, Type genericSubType, out Type concreteType )
-        {
-            concreteType = null;
-            if ( !classes.HasClassFlag( toCheck ) )
-            {
-                return false;
-            }
-
-            List<Type> types = ReflexionUtils.FindTypesByName( typeName );
-            if ( types == null || types.Count <= 0 )
-            {
-                return false;
-            }
-
-            foreach ( Type t in types )
-            {
-                if ( t.InheritsFrom( genericSubType ) )
+                GenericCodeTemplate template = list[index];
+                List<Type> types = ReflexionUtils.FindTypesByFullName( $"{@namespace}.{template.GetTypeName( target )}" );
+                if ( types == null || types.Count <= 0 )
                 {
-                    classes &= ~toCheck;
-                    return true;
+                    continue;
                 }
-            }
 
-            return false;
+                // trick to prevent shifting the whole list since order doesn't matter
+                list[index] = list[list.Count - 1];
+                list.RemoveAt( list.Count - 1 );
+                index--;
+            }
         }
 
 
-        public static void RemoveExistantVariableClasses( ref ScriptableClass classes, Type type )
+        public static void AddTemplateAndDependencies( List<GenericCodeTemplate> list, GenericCodeTemplate template )
         {
-            TypeData typeData = ( TypeData )type;
-            if ( !TryGetTypeAndRemoveFromFlagIfExistant(
-                classes: ref classes,
-                toCheck: ScriptableClass.Variable,
-                typeName: Templates.Variable.GetClassName( typeData ),
-                genericSubType: typeof( ScriptableVariable<> ).MakeGenericType( type ),
-                concreteType: out Type variableConcreteType ) )
+            if ( !list.AddUnique( template ) )
             {
                 return;
             }
 
-            if ( !TryGetTypeAndRemoveFromFlagIfExistant(
-                classes: ref classes,
-                toCheck: ScriptableClass.VariableInjector,
-                typeName: Templates.VariableInjector.GetClassName( typeData ),
-                genericSubType: typeof( RuntimeVariableInjector<,> ).MakeGenericType( type, variableConcreteType ),
-                concreteType: out Type injectorConcreteType ) )
+            foreach ( GenericCodeTemplate dependency in template.Dependencies )
             {
-                return;
+                AddTemplateAndDependencies( list, dependency );
             }
-
-            TryGetTypeAndRemoveFromFlagIfExistant(
-                classes: ref classes, 
-                toCheck: ScriptableClass.VariableReference,
-                typeName: Templates.VariableReference.GetClassName( typeData ),
-                genericSubType: typeof( ScriptableVariableReference<,,> ).MakeGenericType( type, variableConcreteType, injectorConcreteType ),
-                concreteType: out Type _ );
         }
 
 
-        public static void RemoveExistantEventClasses( ref ScriptableClass classes, Type type )
+        public static void AddTemplateAndDependencies( List<GenericCodeTemplate> list, CodeTemplateSource template )
         {
-            TypeData typeData = ( TypeData )type;
-            if ( !TryGetTypeAndRemoveFromFlagIfExistant(
-                classes: ref classes,
-                toCheck: ScriptableClass.Event,
-                typeName: Templates.Event.GetClassName( typeData ),
-                genericSubType: typeof( ScriptableEvent<> ).MakeGenericType( type ),
-                concreteType: out Type eventConcreteType ) )
+            switch ( template )
             {
-                return;
+                case GenericCodeTemplate genericCodeTemplate:
+                    AddTemplateAndDependencies( list, genericCodeTemplate );
+                    break;
+                case CodeTemplatesPreset codeTemplatesPreset:
+                    foreach ( CodeTemplateSource source in codeTemplatesPreset.CodeTemplateSources )
+                    {
+                        AddTemplateAndDependencies ( list, source );
+                    }
+                    break;
+                default:
+                    Debug.LogError( $"[Generation fail] : unsupported template type | {template.GetType()}" );
+                    break;
+            }
+        }
+
+
+        public static bool GenerateClass( GenericCodeTemplate template, Type target, string @namspace, string outputPath, string category )
+        {
+            string fileName = template.GetTypeName( target );
+            const string EXTENSION = ".generated.cs";
+            StringBuilder contentBuilder = new StringBuilder();
+            IDisposable wrapper = new NoopDisposable();
+            if ( !string.IsNullOrWhiteSpace( @namspace ) )
+            {
+                contentBuilder.Append( "namespace " ).Append( @namspace );
+                wrapper = new CurlyBracketWrapper( contentBuilder );
+            }
+          
+            using ( wrapper )
+            {
+                contentBuilder.Append( template.GetTypeContent( target, category ) );
             }
 
-            if ( !TryGetTypeAndRemoveFromFlagIfExistant(
-                classes: ref classes,
-                toCheck: ScriptableClass.EventInjector,
-                typeName: Templates.EventInjector.GetClassName( typeData ),
-                genericSubType: typeof( RuntimeEventInjector<,> ).MakeGenericType( type, eventConcreteType ),
-                concreteType: out Type injectorConcreteType ) )
-            {
-                return;
-            }
-
-            TryGetTypeAndRemoveFromFlagIfExistant(
-                classes: ref classes,
-                toCheck: ScriptableClass.EventReference,
-                typeName: Templates.EventReference.GetClassName( typeData ),
-                genericSubType: typeof( ScriptableEventReference<,,> ).MakeGenericType( type, eventConcreteType, injectorConcreteType ),
-                concreteType: out Type _ );
+            return FileUtils.CreateTextFileAtPath( $"{Application.dataPath}/{outputPath}", fileName, contentBuilder.ToString(), EXTENSION );
         }
 
 
@@ -375,13 +216,6 @@ namespace Framework.Scriptable.Editor
             }
 
             if ( type.IsGenericType )
-            {
-                return false;
-            }
-
-            if ( !( type.IsPrimitive ||
-                type.Attributes.HasFlag( System.Reflection.TypeAttributes.Serializable ) ||
-                type.InheritsFrom<UnityEngine.Object>() ) )
             {
                 return false;
             }

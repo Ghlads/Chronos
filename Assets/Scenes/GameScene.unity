@@ -233,12 +233,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b7ad2a29c52c64fb162aa419ad0b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_triggerEnterEvent: {fileID: 11400000, guid: 8e46f0858ad02864e9205b5e72b74f8a, type: 2}
-  m_triggerStayEvent: {fileID: 0}
-  m_triggerExitEvent: {fileID: 0}
-  m_collisionEnterEvent: {fileID: 0}
-  m_collisionStayEvent: {fileID: 0}
-  m_collisionExitEvent: {fileID: 0}
+  m_triggerEnterEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 1713480154}
+    m_referenceMode: 2
+  m_triggerStayEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_triggerExitEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionEnterEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionStayEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionExitEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
 --- !u!1 &490696945
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,12 +491,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b7ad2a29c52c64fb162aa419ad0b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_triggerEnterEvent: {fileID: 11400000, guid: 8e46f0858ad02864e9205b5e72b74f8a, type: 2}
-  m_triggerStayEvent: {fileID: 0}
-  m_triggerExitEvent: {fileID: 0}
-  m_collisionEnterEvent: {fileID: 0}
-  m_collisionStayEvent: {fileID: 0}
-  m_collisionExitEvent: {fileID: 0}
+  m_triggerEnterEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 1713480154}
+    m_referenceMode: 2
+  m_triggerStayEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_triggerExitEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionEnterEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionStayEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionExitEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
 --- !u!1 &1223659763
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,6 +795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1713480153}
+  - component: {fileID: 1713480154}
   m_Layer: 0
   m_Name: MooringPoints
   m_TagString: Untagged
@@ -784,6 +821,19 @@ Transform:
   - {fileID: 891193941}
   m_Father: {fileID: 106460043}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1713480154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713480152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f1d5601f34aef409575836b4dfd8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_templateEvent: {fileID: 11400000, guid: 8e46f0858ad02864e9205b5e72b74f8a, type: 2}
 --- !u!1 &1780243956
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,12 +915,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b7ad2a29c52c64fb162aa419ad0b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_triggerEnterEvent: {fileID: 11400000, guid: 8e46f0858ad02864e9205b5e72b74f8a, type: 2}
-  m_triggerStayEvent: {fileID: 0}
-  m_triggerExitEvent: {fileID: 0}
-  m_collisionEnterEvent: {fileID: 0}
-  m_collisionStayEvent: {fileID: 0}
-  m_collisionExitEvent: {fileID: 0}
+  m_triggerEnterEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 1713480154}
+    m_referenceMode: 2
+  m_triggerStayEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_triggerExitEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionEnterEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionStayEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
+  m_collisionExitEvent:
+    m_event: {fileID: 0}
+    m_injector: {fileID: 0}
+    m_referenceMode: 1
 --- !u!1 &2131637635
 GameObject:
   m_ObjectHideFlags: 0

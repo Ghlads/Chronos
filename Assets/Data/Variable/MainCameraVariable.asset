@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d141ce7127410f14fb4bd4571a28ed17, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a6b4dee2a5c27a42a63e25b544aedee, type: 3}
   m_Name: MainCameraVariable
   m_EditorClassIdentifier: 
   m_defaultValue: {fileID: 0}
