@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3244299b0081a54d9d4bb3fcd8135e2, type: 3}
+  m_Script: {fileID: 11500000, guid: b4155ce677d974443b1b5ba4d66d13d6, type: 3}
   m_Name: SE_enter_mooring_point
   m_EditorClassIdentifier: 
   m_dummyValue: {fileID: 0}

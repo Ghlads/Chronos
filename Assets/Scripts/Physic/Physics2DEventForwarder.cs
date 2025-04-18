@@ -1,5 +1,6 @@
 using UnityEngine;
 using Framework.Scriptable;
+using Framework.Scriptable.Generated;
 
 
 [RequireComponent( typeof( Collider2D ) )]
@@ -17,13 +18,13 @@ public class Physics2DEventForwarder : MonoBehaviour
     }
 
     [Header( "Trigger" )]
-    [SerializeField] private Collider2DEvent m_triggerEnterEvent;
-    [SerializeField] private Collider2DEvent m_triggerStayEvent;
-    [SerializeField] private Collider2DEvent m_triggerExitEvent;
+    [SerializeField] private Collider2DEventReference m_triggerEnterEvent;
+    [SerializeField] private Collider2DEventReference m_triggerStayEvent;
+    [SerializeField] private Collider2DEventReference m_triggerExitEvent;
     [Header( "Collision" )]
-    [SerializeField] private Collision2DEvent m_collisionEnterEvent;
-    [SerializeField] private Collision2DEvent m_collisionStayEvent;
-    [SerializeField] private Collision2DEvent m_collisionExitEvent;
+    [SerializeField] private Collision2DEventReference m_collisionEnterEvent;
+    [SerializeField] private Collision2DEventReference m_collisionStayEvent;
+    [SerializeField] private Collision2DEventReference m_collisionExitEvent;
 
     private EnabledEvent m_enabledEvent = EnabledEvent.None;
 
@@ -60,7 +61,7 @@ public class Physics2DEventForwarder : MonoBehaviour
         }
     }
 
-    private void TryRaise<T>( T value, ScriptableEvent<T> @event, EnabledEvent eventType )
+    private void TryRaise<T, U, V>( T value, ScriptableEventReference<T, U, V> @event, EnabledEvent eventType ) where U : ScriptableEvent<T> where V : RuntimeEventInjector<T, U>
     {
         if ( ( m_enabledEvent & eventType ) == eventType )
         {
@@ -80,7 +81,7 @@ public class Physics2DEventForwarder : MonoBehaviour
     }
 
 
-    private void OnTriggerStay2D( Collider2D collision ) 
+    private void OnTriggerStay2D( Collider2D collision )
     {
         TryRaise( collision, m_triggerStayEvent, EnabledEvent.TriggerStay );
     }

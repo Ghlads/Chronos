@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Framework.Core.Editor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
@@ -87,22 +88,28 @@ namespace Framework.Scriptable.Editor
 
         private void BindTypeEntry( VisualElement element, int index )
         {
-            Label label = element as Label;
-            label.text = m_matchingTypes[index].GetSafeName();
+            Label label = element.Q<Label>();
+            label.text = m_matchingTypes[index].FullName;
         }
 
 
         private VisualElement MakeTypeEntry()
         {
-            return new Label();
+            VisualElement container = new();
+            Label label = new Label();
+            container.Add( label );
+            container.style.justifyContent = Justify.Center;
+            return label;
         }
 
 
         private void FilterChangeHandler( ChangeEvent<string> evt )
         {
+            string filter = evt.newValue.ToLowerInvariant();
             m_matchingTypes = AppDomain.CurrentDomain.GetAssemblies()
                             .SelectMany( x => x.GetTypes() )
-                            .Where( type => ScriptableGeneratorUtils.IsTypeEligible( type, evt.newValue ) )
+                            .Where( type => ScriptableGeneratorUtils.IsTypeEligible( type.Beautified(), filter ) )
+                            .Select( t => t.Beautified() )
                             .Distinct()
                             .Take( 30 )
                             .ToList();
