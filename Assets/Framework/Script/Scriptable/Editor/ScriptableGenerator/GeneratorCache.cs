@@ -1,4 +1,6 @@
+using Framework.Editor;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
@@ -16,6 +18,7 @@ namespace Framework.Scriptable.Editor
         [SerializeField][HideInInspector] private string m_lastNamespace = string.Empty;
         [SerializeField][HideInInspector] private string m_lastOutputPath = string.Empty;
         [SerializeField][HideInInspector] private string m_lastCategory = string.Empty;
+        [SerializeField][HideInInspector] private List<CodeTemplateSource> m_lastSelectedTemplates = new List<CodeTemplateSource>();
 
         public string DefaultNamespace => m_defaultNamespace;
         public string DefaultOutputPath => m_defaultOutputPath;
@@ -74,5 +77,8 @@ namespace Framework.Scriptable.Editor
             }
             set => m_lastSelectedTypeFullName = value != null ? value.FullName : string.Empty;
         }
+
+
+        public List<CodeTemplateSource> LastSelectedTemplates => m_lastSelectedTemplates;
     }
 }

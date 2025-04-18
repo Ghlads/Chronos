@@ -15,7 +15,9 @@ MonoBehaviour:
   m_defaultNamespace: Game.Generated
   m_defaultOutputPath: Scripts/Game/Generated
   m_defaultCategory: Chronos
-  m_lastSelectedTypeAssemblyQualifyName: 
-  m_lastNamespace: 
-  m_lastOutputPath: 
-  m_lastCategory: 
+  m_lastSelectedTypeFullName: UnityEngine.Collision2D
+  m_lastNamespace: Framework.Scriptable.Generated
+  m_lastOutputPath: Framework/Script/Scriptable/Generated/Collision2D
+  m_lastCategory: Unity/Physics/2D
+  m_lastSelectedTemplates:
+  - {fileID: 11400000, guid: 2f01f6097c85fd24c8cb3a6e54103a17, type: 2}

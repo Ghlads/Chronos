@@ -1,7 +1,9 @@
 {
     "name": "CoreEditorAssembly",
     "rootNamespace": "Framework.Core.Editor",
-    "references": [],
+    "references": [
+        "GUID:67b7cc668d4c8fb48a3f2177efe832c0"
+    ],
     "includePlatforms": [
         "Editor"
     ],
