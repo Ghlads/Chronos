@@ -81,7 +81,7 @@ namespace Framework.Core
 
         public static bool IsAlmostEqual( float a, float b, float epsilon = 1E-6F )
         {
-            return a - b <= epsilon;
+            return Mathf.Abs( a - b ) <= epsilon;
         }
 
 
