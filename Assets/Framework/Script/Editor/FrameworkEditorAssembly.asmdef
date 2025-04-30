@@ -2,7 +2,9 @@
     "name": "FrameworkEditorAssembly",
     "rootNamespace": "Framework.Editor",
     "references": [
-        "GUID:67b7cc668d4c8fb48a3f2177efe832c0"
+        "GUID:b8e9311378e929d418facae4f119c6bc",
+        "GUID:67b7cc668d4c8fb48a3f2177efe832c0",
+        "GUID:eb287ea3bb26c5746815dce15bb8952f"
     ],
     "includePlatforms": [
         "Editor"

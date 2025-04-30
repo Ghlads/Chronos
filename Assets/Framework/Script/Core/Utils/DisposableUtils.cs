@@ -1,6 +1,6 @@
 using System;
 
-namespace Framework
+namespace Framework.Core
 {
     public class NoopDisposable : IDisposable
     {

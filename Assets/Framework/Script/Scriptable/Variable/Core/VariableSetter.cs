@@ -1,16 +1,34 @@
+using Framework.Core;
 using UnityEngine;
 
 namespace Framework.Scriptable
 {
-    public class VariableSetter<T, U> : MonoBehaviour where T : ScriptableVariable<U>, IGenericScriptable
+    public class VariableSetter<T> : MonoBehaviour, IGenericScriptable
     {
-        [SerializeField] private T m_variable;
-
-        [SerializeField] private U m_value;
+        [SerializeField] private InterfaceReference<IVariable<T>> m_variable;
+        [SerializeField] private T m_value;
+        [Space]
+        [SerializeField] private bool m_setOnEnable = false;
+        
 
         private void OnEnable()
         { 
-            m_variable.Value = m_value;
+            if ( m_setOnEnable )
+            {
+                SetValueFromField();
+            }
+        }
+
+
+        public void SetValue( T value )
+        {
+            m_variable.Get().Value = value;
+        }
+
+
+        public void SetValueFromField()
+        {
+            SetValue( m_value );
         }
     }
 }

@@ -1,4 +1,4 @@
-using Framework.Core.Editor;
+using Framework.Core;
 using System;
 using System.Reflection;
 using UnityEditor;
@@ -41,7 +41,7 @@ namespace Framework.Scriptable.Editor
 
         private void RaiseEvent()
         {
-            m_raiseMethod.Invoke( target, new object[] { m_dummyProperty.boxedValue } );
+            m_raiseMethod.Invoke( target, new object[] { m_dummyProperty?.boxedValue } );
         }
     }
 }

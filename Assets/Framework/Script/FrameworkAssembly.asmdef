@@ -1,7 +1,10 @@
 {
     "name": "FrameworkAssembly",
     "rootNamespace": "Framework",
-    "references": [],
+    "references": [
+        "GUID:77fe6ae43ea76cd4da99544622256638",
+        "GUID:ed9c3eb77243f614fa8bd487ed5f840b"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -1,29 +1,36 @@
+using Framework.Core;
 using UnityEngine;
 
 
 namespace Framework.Scriptable
 {
-    public abstract class RuntimeVariableInjector<T, U> : MonoBehaviour, IGenericScriptable where U : ScriptableVariable<T>
+    public abstract class RuntimeVariableInjector<T> : MonoBehaviour, IVariable<T> 
     {
-        [SerializeField] private U m_templateVariable;
+        [SerializeField] private InterfaceReference<IVariable<T>, RuntimeScriptableObject> m_templateVariable;
 
-        private U m_instanceVariable = null;
+        private IVariable<T> m_instanceVariable = null;
 
-        public event ScriptableVariable<T>.ValueChangeDelegate OnValueChanged
+        public event IEventBase.Raw OnChangeHappen
         {
             add
             {
-                if ( m_instanceVariable != null )
-                {
-                    m_instanceVariable.OnValueChanged += value;
-                }
+                GetOrInstanciateVariable().OnChangeHappen += value;
             }
             remove
             {
-                if ( m_instanceVariable != null )
-                {
-                    m_instanceVariable.OnValueChanged -= value;
-                }
+                GetOrInstanciateVariable().OnChangeHappen -= value;
+            }
+        }
+
+        public event IEvent<T>.Signature OnValueChanged
+        {
+            add
+            {
+                GetOrInstanciateVariable().OnValueChanged += value;
+            }
+            remove
+            {
+                GetOrInstanciateVariable().OnValueChanged -= value;
             }
         }
 
@@ -41,7 +48,7 @@ namespace Framework.Scriptable
         }
 
 
-        private U GetOrInstanciateVariable()
+        private IVariable<T> GetOrInstanciateVariable()
         {
             if ( m_templateVariable == null )
             {
@@ -50,11 +57,34 @@ namespace Framework.Scriptable
 
             if ( m_instanceVariable == null )
             {
-                m_instanceVariable = Instantiate( m_templateVariable );
+                m_instanceVariable = Instantiate( m_templateVariable.GetRaw() ) as IVariable<T>;
             }
 
             return m_instanceVariable;
         }
 
+
+        void IEvent<T>.AddListener( IEvent<T>.Signature listener )
+        {
+            OnValueChanged += listener;
+        }
+
+
+        void IEvent<T>.RemoveListener( IEvent<T>.Signature listener )
+        {
+            OnValueChanged -= listener;
+        }
+
+
+        void IEventBase.AddListener( IEventBase.Raw listener )
+        {
+            OnChangeHappen += listener;
+        }
+
+
+        void IEventBase.RemoveListener( IEventBase.Raw listener )
+        {
+            OnChangeHappen -= listener;
+        }
     }
 }
