@@ -2,7 +2,7 @@
     "name": "ScriptableAssembly",
     "rootNamespace": "Framework.Scriptable",
     "references": [
-        "GUID:67b7cc668d4c8fb48a3f2177efe832c0"
+        "GUID:77fe6ae43ea76cd4da99544622256638"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

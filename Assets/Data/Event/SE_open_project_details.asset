@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf67e061507ac648b39385b81f07abd, type: 3}
   m_Name: SE_open_project_details
   m_EditorClassIdentifier: 
-  m_dummyValue: {fileID: 0}
+  m_dummyValue: {fileID: 11400000, guid: 67c82f2c6d1348a41b66c65357a2739e, type: 2}

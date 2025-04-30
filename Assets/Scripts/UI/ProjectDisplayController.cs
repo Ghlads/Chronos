@@ -1,4 +1,6 @@
+using Framework.Core;
 using Game.Generated.Scriptable;
+using NUnit.Framework;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -28,16 +30,11 @@ public class ProjectDisplayController : MonoBehaviour
     private void Start()
     {
         m_trailerButton.onClick.AddListener( OpenTrailerURL );
-    }
-
-
-    private void OnEnable()
-    {
         m_projectDataEvent.AddListener( SetProject );
     }
 
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         m_projectDataEvent.RemoveListener( SetProject );
     }
@@ -51,14 +48,17 @@ public class ProjectDisplayController : MonoBehaviour
         m_platformesTMP.text = $"Platformes : {StringUtils.Concat( m_projectData.Platformes, "/ " )}";
         m_technologiesTMP.text = $"Technologies : {StringUtils.Concat( m_projectData.Techonologies, " / " )}";
 
-        foreach ( BulletPointController bulletPoint in m_bulletPoints )
+        for ( int index = m_bulletPoints.Count - 1; index >= 0; index-- )
         {
-            Destroy( bulletPoint.gameObject );
+            Destroy( m_bulletPoints[ index ].gameObject );
+            m_bulletPoints.RemoveAt( index );
         }
 
+        Assert.IsEmpty( m_bulletPoints );
         foreach ( BulletPointData point in m_projectData.BulletPoints )
         {
             BulletPointController bulletPoint = Instantiate( m_bulletPointPrefab, m_bulletPointsContainer );
+            m_bulletPoints.Add( bulletPoint );
             bulletPoint.SetData( point );
         }
     }

@@ -302,8 +302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba24c7a27f0a5249962e8fb2c2a4026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_variable: {fileID: 11400000, guid: 1ee434435b9a2b341b52b6f4a0f360ea, type: 2}
+  m_variable:
+    m_rawObject: {fileID: 11400000, guid: 1ee434435b9a2b341b52b6f4a0f360ea, type: 2}
   m_value: {fileID: 519420031}
+  m_setOnEnable: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,8 +16,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a981ee1dbf39ca04691a1988ecc298e0, type: 2}
   m_customParamsCount: 0
   m_typeNameFormat: '{0}EventInjector'
-  m_typeContentFormat: 'public class {0}EventInjector : Framework.Scriptable.RuntimeEventInjector<{1},
-    {2}> {{}}'
+  m_typeContentFormat: 'public class {0}EventInjector : Framework.Scriptable.RuntimeEventInjector<{1}>
+    {{}}'
   m_formatParams:
   - MyConcreteClassTest
   - MyConcreteClassTest

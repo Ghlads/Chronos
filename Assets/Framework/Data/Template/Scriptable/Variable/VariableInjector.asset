@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d84eecc14c3ce743b8cf20f6a591e4d, type: 3}
   m_Name: VariableInjector
   m_EditorClassIdentifier: 
-  m_dependencies:
-  - {fileID: 11400000, guid: 8150c51947d98814291bd2ff6dd5785f, type: 2}
+  m_dependencies: []
   m_customParamsCount: 0
   m_typeNameFormat: '{0}VariableInjector'
-  m_typeContentFormat: 'public class {0}VariableInjector : Framework.Scriptable.RuntimeVariableInjector<{1},
-    {2}> {{}}'
+  m_typeContentFormat: 'public class {0}VariableInjector : Framework.Scriptable.RuntimeVariableInjector<{1}>
+    {{}}'
   m_formatParams: []

@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Framework/Script/Core/Editor/ScriptingAction/SourceSelector/SourceSelectorWindow.uss?fileID=7433441132597879392&amp;guid=dd11f47c27e48c24b9c9b9c96984d1cb&amp;type=3#SourceSelectorWindow" />
+    <engine:ListView show-bound-collection-size="false" allow-remove="false" allow-add="false" show-border="true" style="flex-grow: 1;" />
+    <engine:VisualElement name="footer" style="flex-grow: 0; flex-direction: row; justify-content: space-between;">
+        <engine:Button text="cancel&#10;" name="cancel-button" />
+        <engine:Button text="select" name="select-button" />
+    </engine:VisualElement>
+</engine:UXML>

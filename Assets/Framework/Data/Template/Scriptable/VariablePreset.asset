@@ -15,5 +15,4 @@ MonoBehaviour:
   m_codeTemplateSources:
   - {fileID: 11400000, guid: 8150c51947d98814291bd2ff6dd5785f, type: 2}
   - {fileID: 11400000, guid: 1133df4dff0fb60438e56cf38d815839, type: 2}
-  - {fileID: 11400000, guid: 89e7c29563c22ff49853d55408950f12, type: 2}
   - {fileID: 11400000, guid: 3dee1d15ffb627c4199c6cf5c6bc95f9, type: 2}
