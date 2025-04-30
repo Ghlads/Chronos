@@ -1,3 +1,4 @@
+using Framework.Core;
 using UnityEngine;
 
 [RequireComponent( typeof( Rigidbody2D ) )]

@@ -1,4 +1,4 @@
 namespace Framework.Scriptable.Generated
 {
-public class StringEventInjector : Framework.Scriptable.RuntimeEventInjector<string, StringEvent> {}
+public class StringEventInjector : Framework.Scriptable.RuntimeEventInjector<string> {}
 }

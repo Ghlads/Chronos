@@ -1,0 +1,197 @@
+VisualElement {}
+
+.source-type-field__selected{
+	width: 12px;
+	height: 12px;
+}
+
+
+.source-type-field__indicator{
+	width: 12px;
+	height: 16px;
+	background-image: resource("d_scrolldown_uielements@2x");
+}
+
+
+.source-type-field__button{
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.source-type-field{
+	height: 100%;
+}
+
+
+.generic-dropdown{
+	background-color: #555555;
+	border-radius: 5px;
+	border-width: 1px;
+	border-color: #121212;
+	overflow: hidden;
+}
+
+
+.generic-dropdown__list-view__element VisualElement{
+	width: 16px;
+	height: 16px;
+	align-self: center;
+}
+
+.generic-dropdown__list-view__element:hover{
+	background-color: #2C5D87;
+}
+
+.odd{
+	background-color: #555555;
+}
+
+
+.even{
+	background-color: #484848;
+}
+
+
+.value{
+	-unity-background-image-tint-color: #b26af7;
+	background-image: resource("d_PreMatCylinder@2x");
+}
+
+
+.return{
+	-unity-background-image-tint-color: #f55033;
+	background-image: resource("d_Import@2x");
+}
+
+
+.input{
+	-unity-background-image-tint-color: #41f241;
+	background-image: resource("Download-Available@2x");
+}
+
+.any-value-field__value-field{
+	flex-grow: 1;
+}
+
+.any-value-field{
+	flex-grow: 1;
+}
+
+.parameter-reference-field__source-type-field{
+	height: 100%;
+
+}
+
+.parameter-reference-field__any-value-field{
+	flex-grow: 1;
+	margin-right: 8px;
+}
+
+.parameter-reference-field__select-source__button{
+	flex-grow: 1;
+	margin-right: 8px;
+}
+
+.source-type-field__button{
+	height: 100%;
+}
+
+.any-value-field__value-field__bool{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 3px;
+	margin-right: 0px;
+}
+
+.source-type-field__button{
+	padding-bottom: 0px;
+	padding-top: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.scripting-action-field>*{
+	border-color: #202020;
+
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+
+.scripting-action-field__header{
+	background-color: #353535;
+
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+
+	justify-content: space-between;
+}
+
+.scripting-action-field__add-remove-container{
+	flex-direction: row;
+}
+
+.add{
+	background-image: resource("d_Toolbar Plus@2x");
+}
+
+.remove{
+	background-image: resource("d_Toolbar Minus@2x");
+}
+
+.scripting-action-field__body{
+	background-color: #464646;
+
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	border-top-width: 0px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.scripting-action-field__action-declaration>Button{
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.scripting-action-field__indicator{
+	width: 12px;
+	height: 16px;
+	flex-shrink: 0;
+	background-image: resource("d_scrolldown_uielements@2x");
+}
+
+.scripting-action-field__selected{
+	-unity-text-align: middle-left;
+	overflow: hidden;
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.action-container{
+	flex-grow: 1;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.indicator{
+	width: 12px;
+	height: 16px;
+	flex-shrink: 0;
+	background-image: resource("d_scrolldown_uielements@2x");
+}
+
+.modifier-reference-field__button{
+	flex-grow: 1;
+}

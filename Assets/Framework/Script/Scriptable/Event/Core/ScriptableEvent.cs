@@ -1,18 +1,12 @@
+using Framework.Core;
 using UnityEngine;
 
 namespace Framework.Scriptable
 {
-    public struct NullStruct
-    {
-        public static NullStruct Default = default;
-    }
-
 
     [CreateAssetMenu( fileName = "ScriptableEvent", menuName = "Scriptable/Event/Primitive/Void" )]
     public class ScriptableEvent : ScriptableEvent<NullStruct>
     {
-        public new delegate void Signature();
-
         public void Raise()
         {
             Raise( NullStruct.Default );
@@ -20,27 +14,27 @@ namespace Framework.Scriptable
     }
 
 
-    public abstract class ScriptableEvent<T> : RuntimeScriptableObject, IGenericScriptable
+    public abstract class ScriptableEvent<T> : ScriptableEventBase, IRaiseableEvent<T>
     {
-        public delegate void Signature( T value );
-
-        private Signature m_onInvoke;
-
         [SerializeField] private T m_dummyValue;
 
         public void Raise( T value )
         {
             m_onInvoke?.Invoke( value );
+            RaiseBase();
         }
 
 
-        public void AddListener( Signature listener )
+        protected IRaiseableEvent<T>.Signature m_onInvoke;
+
+
+        public void AddListener( IRaiseableEvent<T>.Signature listener )
         {
             m_onInvoke += listener;
         }
 
 
-        public void RemoveListener( Signature listener )
+        public void RemoveListener( IRaiseableEvent<T>.Signature listener )
         {
             m_onInvoke -= listener;
         }
@@ -56,5 +50,48 @@ namespace Framework.Scriptable
         {
             RemoveAllListener();
         }
+    }
+
+
+    public abstract class ScriptableEventBase : RuntimeScriptableObject, IEventBase
+    {
+        private IEventBase.Raw m_rawDelegate;
+        public void AddListener( IEventBase.Raw listener )
+        {
+            m_rawDelegate += listener;
+        }
+
+        public void RemoveListener( IEventBase.Raw listener )
+        {
+            m_rawDelegate -= listener;
+        }
+
+
+        protected void RaiseBase()
+        {
+            m_rawDelegate?.Invoke();
+        }
+    }
+
+
+    public interface IEventBase : IGenericScriptable
+    {
+        public delegate void Raw();
+        public void AddListener( Raw listener );
+        public void RemoveListener( Raw listener );
+    }
+
+
+    public interface IEvent<T> : IEventBase
+    {
+        public delegate void Signature( T value );
+        public void AddListener( Signature listener );
+        public void RemoveListener( Signature listener );
+    }
+
+
+    public interface IRaiseableEvent<T> : IEvent<T>
+    {
+        public void Raise( T value );
     }
 }

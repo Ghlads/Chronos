@@ -1,4 +1,4 @@
-using Framework.Scriptable;
+using Framework.Core;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonAction : MonoBehaviour
 {
     [HideInInspector][SerializeField] private Button m_button;
-    [SerializeField] private ScriptableEvent m_event;
+    [SerializeField] private ScriptingAction m_event;
 
     private void OnEnable()
     {
@@ -24,7 +24,7 @@ public class ButtonAction : MonoBehaviour
     {
         if ( m_event != null )
         {
-            m_event.Raise();
+            m_event.Invoke();
         }
     }
 
