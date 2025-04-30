@@ -22,8 +22,7 @@ namespace Game
                 rigidbody.linearVelocity = Vector2.zero;
             }
 
-            Vector3 moorPointPosition = data.Source.transform.position;
-            moorable.Moor( moorPointPosition );
+            moorable.Moor( data.Source.transform );
         }
     }
 }
