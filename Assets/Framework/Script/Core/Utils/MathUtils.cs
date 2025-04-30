@@ -1,3 +1,5 @@
+using Codice.Client.BaseCommands.WkStatus.Printers;
+using log4net.Util;
 using UnityEngine;
 
 namespace Framework.Core
@@ -10,6 +12,13 @@ namespace Framework.Core
         Cubic = 3,
         Quartic = 4,
         Quintic = 5,
+    }
+
+    public enum Axis
+    {
+        X = 0,
+        Y = 1,
+        Z = 2,
     }
 
     public static class MathUtils
@@ -98,5 +107,12 @@ namespace Framework.Core
             return IsAlmostEqual( a.x, b.x, epsilon ) &&
                    IsAlmostEqual( a.y, b.y, epsilon );
         }
+
+
+        public static Vector3 ToVector3( this Vector2 v )
+        {
+            return new Vector3( v.x, v.y, 0 );
+        }
+
     }
 }
