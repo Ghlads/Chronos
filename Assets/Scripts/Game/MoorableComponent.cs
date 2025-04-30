@@ -84,7 +84,7 @@ namespace Game
                 yield break;
             }
 
-            Vector2 closestDirection = Vector2.Dot( harborPerpendicularDirection, Vector2.up ) >= 0 ? harborPerpendicularDirection : -harborPerpendicularDirection;
+            Vector2 closestDirection = Vector2.Dot( harborPerpendicularDirection, transform.up ) >= 0 ? harborPerpendicularDirection : -harborPerpendicularDirection;
             float targetAngle = Mathf.Atan2( closestDirection.y, closestDirection.x ) * Mathf.Rad2Deg;
             float forwardOffset = Mathf.Atan2( Vector2.up.y, Vector2.up.x ) * Mathf.Rad2Deg;
             targetAngle -= forwardOffset;
