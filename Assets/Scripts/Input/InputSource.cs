@@ -16,6 +16,7 @@ public class InputSource : Framework.Scriptable.RuntimeScriptableObject, IMoveme
 
     public void Enable()
     {
+        m_inputActions ??= new InputControls();
         m_inputActions.Movement.SetCallbacks( this );
         m_inputActions.Enable();
     }

@@ -310,8 +310,8 @@ MonoBehaviour:
     m_variableReference:
       m_rawObject: {fileID: 11400000, guid: e3d0167d87d7fe948b7d61983575f24d, type: 2}
     m_variableReferenceType: 1
-  m_mooringSpeed: 5
-  m_mooringTolerance: 0.1
+  m_mooringSpeed: 2
+  m_mooringTolerance: 0.01
 --- !u!114 &8018968029301138613
 MonoBehaviour:
   m_ObjectHideFlags: 0
