@@ -24,7 +24,6 @@ namespace Game
 
             Assert.IsNull( m_mooringRoutine );
             m_isMoored.Value = true;
-            //transform.position = moorPosition;
             m_mooringRoutine = StartCoroutine( MoorRoutine( moorPosition ) );
         }
 
@@ -59,7 +58,7 @@ namespace Game
 
                 transform.position += movement;
                 yield return null;
-            } while ( MathUtils.Vector3Equal( transform.position, moorPosition, m_mooringTolerance ) );
+            } while ( !MathUtils.Vector3Equal( transform.position, moorPosition, m_mooringTolerance ) );
 
             transform.position = moorPosition;
             m_mooringRoutine = null;
