@@ -114,5 +114,30 @@ namespace Framework.Core
             return new Vector3( v.x, v.y, 0 );
         }
 
+
+        public static float GetAngleRadBetween( Vector3 a, Vector3 b, Axis axis )
+        {
+            float angleA = 0;
+            float angleB = 0;
+            switch ( axis )
+            {
+                case Axis.X:
+                    angleA = Mathf.Atan2( a.z, a.y );
+                    angleB = Mathf.Atan2( b.z, b.y );   
+                    break;
+                case Axis.Y:
+                    angleA = Mathf.Atan2( a.x, a.z );
+                    angleB = Mathf.Atan2( b.x, b.z );
+                    break;
+                case Axis.Z:
+                    angleA = Mathf.Atan2( a.y, a.x );
+                    angleB = Mathf.Atan2( b.y, b.x );
+                    break;
+            }
+
+
+            return angleA - angleB;
+        }
+
     }
 }

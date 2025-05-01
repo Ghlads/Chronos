@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 namespace Framework.Core
 {
-    public static class List
+    public static class ListUtils
     {
         public static T FirstOrDefaultNoException<T>( this List<T> list )
         {
