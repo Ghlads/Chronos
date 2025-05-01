@@ -18,9 +18,7 @@ namespace Game
             Vector2 velocity = m_rigidbody.linearVelocity;
             if ( velocity.sqrMagnitude > 0.0001f )
             {
-                float targetAngle = Mathf.Atan2( velocity.y, velocity.x ) * Mathf.Rad2Deg;
-                float forwardOffset = Mathf.Atan2( m_forward.y, m_forward.x ) * Mathf.Rad2Deg;
-                targetAngle -= forwardOffset;
+                float targetAngle = MathUtils.GetAngleRadBetween( velocity, m_forward, Axis.Z ) * Mathf.Rad2Deg;
                 float currentAngle = transform.eulerAngles.z;
                 float newAngle = Mathf.LerpAngle( currentAngle, targetAngle, Time.deltaTime * m_rotationSpeed );
                 transform.rotation = Quaternion.Euler( 0f, 0f, newAngle );

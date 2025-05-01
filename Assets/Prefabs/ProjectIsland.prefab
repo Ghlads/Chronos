@@ -114,6 +114,8 @@ GameObject:
   - component: {fileID: 1327080982465051996}
   - component: {fileID: 6828905127075301341}
   - component: {fileID: 2774272757745687013}
+  - component: {fileID: 301516640433611245}
+  - component: {fileID: 4083037059012717334}
   m_Layer: 0
   m_Name: ProjectIsland
   m_TagString: Untagged
@@ -317,6 +319,38 @@ MonoBehaviour:
       m_source: 0
       m_expectedTypeFullName: ProjectData
     m_modifierReferences: []
+--- !u!114 &301516640433611245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110989718824604362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71171a6a4627bc458dced1285986302, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_runtimeSet:
+    m_rawObject: {fileID: 11400000, guid: 9204ab0b1a13dc04aafa0c89874208cd, type: 2}
+  m_value: {fileID: 3110989718824604362}
+  m_setOnEnable: 1
+--- !u!114 &4083037059012717334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110989718824604362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2049578498fda54685bbaf8a264c207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_variable:
+    m_rawObject: {fileID: 11400000, guid: 6d810b617ef80d44aaa579b1e89bd589, type: 2}
+  m_value: {fileID: 3110989718824604362}
+  m_setOnEnable: 1
 --- !u!1 &4187499387464125539
 GameObject:
   m_ObjectHideFlags: 0

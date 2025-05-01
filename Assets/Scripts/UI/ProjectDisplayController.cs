@@ -15,6 +15,7 @@ public class ProjectDisplayController : MonoBehaviour
     [Header( "Details Container" )]
     [SerializeField] private Image m_splash;
     [SerializeField] private Button m_trailerButton;
+    [SerializeField] private GameObject m_titleContainer;
     [SerializeField] private TextMeshProUGUI m_titleTMP;
     [SerializeField] private TextMeshProUGUI m_platformesTMP;
     [SerializeField] private TextMeshProUGUI m_technologiesTMP;
@@ -44,9 +45,11 @@ public class ProjectDisplayController : MonoBehaviour
     {
         m_projectData = projectData;
         m_splash.sprite = m_projectData.Splash;
-        m_titleTMP.text = $"Title : {m_projectData.Title}";
-        m_platformesTMP.text = $"Platformes : {StringUtils.Concat( m_projectData.Platformes, "/ " )}";
-        m_technologiesTMP.text = $"Technologies : {StringUtils.Concat( m_projectData.Techonologies, " / " )}";
+
+        m_titleContainer.SetActive( m_projectData.NeedTitleDisplay );
+        m_titleTMP.text = m_projectData.Title;
+        m_platformesTMP.text = StringUtils.Concat( m_projectData.Platformes, "/ " );
+        m_technologiesTMP.text = StringUtils.Concat( m_projectData.Techonologies, " / " );
 
         for ( int index = m_bulletPoints.Count - 1; index >= 0; index-- )
         {
