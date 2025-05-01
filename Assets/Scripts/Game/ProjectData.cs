@@ -7,6 +7,7 @@ public class ProjectData : ScriptableObject
     [SerializeField] private Sprite m_splash;
     [SerializeField] private string m_trailerLink;
     [SerializeField] private string m_title;
+    [SerializeField] private bool m_needTitleDisplay;
     [SerializeField] private List<string> m_platformes;
     [Space]
     [SerializeField] private List<string> m_technologies;
@@ -16,6 +17,7 @@ public class ProjectData : ScriptableObject
     public Sprite Splash => m_splash;
     public string TrailerLink => m_trailerLink;
     public string Title => m_title;
+    public bool NeedTitleDisplay => m_needTitleDisplay;
     public IReadOnlyList<string> Platformes => m_platformes;
     public IReadOnlyList<string> Techonologies => m_technologies;
     public IReadOnlyList<BulletPointData> BulletPoints => m_bulletPoints;

@@ -85,9 +85,7 @@ namespace Game
             }
 
             Vector2 closestDirection = Vector2.Dot( harborPerpendicularDirection, transform.up ) >= 0 ? harborPerpendicularDirection : -harborPerpendicularDirection;
-            float targetAngle = Mathf.Atan2( closestDirection.y, closestDirection.x ) * Mathf.Rad2Deg;
-            float forwardOffset = Mathf.Atan2( Vector2.up.y, Vector2.up.x ) * Mathf.Rad2Deg;
-            targetAngle -= forwardOffset;
+            float targetAngle = MathUtils.GetAngleRadBetween( closestDirection, Vector3.up, Axis.Z ) * Mathf.Rad2Deg;
             float startAngle = transform.eulerAngles.z;
             float t = 0;
             do

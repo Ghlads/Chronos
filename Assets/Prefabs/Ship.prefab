@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 8018968029301138613}
   - component: {fileID: 9048802215283502629}
   - component: {fileID: 6410768043334416433}
+  - component: {fileID: 5640080470187624268}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -312,6 +313,7 @@ MonoBehaviour:
     m_variableReferenceType: 1
   m_mooringSpeed: 2
   m_mooringTolerance: 0.01
+  m_rotationSpeed: 3
 --- !u!114 &8018968029301138613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,3 +395,19 @@ MonoBehaviour:
   m_forward: {x: 0, y: 1}
   m_rotationSpeed: 5
   m_lineLength: 1
+--- !u!114 &5640080470187624268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289984768859780772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2049578498fda54685bbaf8a264c207, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_variable:
+    m_rawObject: {fileID: 11400000, guid: d8eb94e1385c4194d81e6f6f5d740c7f, type: 2}
+  m_value: {fileID: 6289984768859780772}
+  m_setOnEnable: 1

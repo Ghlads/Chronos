@@ -31,7 +31,7 @@ namespace Framework.Core.Editor
             Add( m_fieldButton = new Button() );
             m_fieldButton.Add( m_selectedElement = new VisualElement() );
             m_fieldButton.Add( m_dropdownIndicatorElement = new VisualElement() );
-            List<SourceType> list = List.MakeListFromEnum<SourceType>();
+            List<SourceType> list = ListUtils.MakeListFromEnum<SourceType>();
             m_onlyRef = false;
             if ( expectedType != null && !AnyValueUtils.IsTypeSupported( expectedType ) )
             {

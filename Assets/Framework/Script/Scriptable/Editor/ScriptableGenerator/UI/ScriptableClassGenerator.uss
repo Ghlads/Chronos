@@ -26,3 +26,11 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
 }
+
+.readonly>ListView #unity-list-view__size-field{
+    display: None;
+}
+
+.readonly>ListView #unity-list-view__footer{
+    display: None;
+}
