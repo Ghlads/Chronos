@@ -10,6 +10,7 @@ namespace Game
         [SerializeField] private InterfaceReference<IVariable<GameObject>> m_originVariable;
 
         [SerializeField] private GameObject m_arrow;
+        [SerializeField][Range( 0, 359 )] private float m_damping;
         private IVariable<GameObject> m_target;
         private IVariable<GameObject> m_origin;
 
@@ -27,9 +28,22 @@ namespace Game
                 return;
             }
 
-            Vector3 directionToTarget = ( m_target.Value.transform.position - m_origin.Value.transform.position ).normalized;
-            float targetAngle = MathUtils.GetAngleRadBetween( directionToTarget, m_arrow.transform.up, Axis.Z ) * Mathf.Rad2Deg;
-            m_arrow.transform.rotation = Quaternion.Euler( 0, 0, targetAngle ) * m_arrow.transform.rotation;
+            Vector3 directionToTarget = ( m_target.Value.transform.position - m_origin.Value.transform.position );
+            if ( directionToTarget.sqrMagnitude < .0001f ) 
+            {
+                return;
+            }
+
+            directionToTarget.Normalize();
+            float targetAngle = MathUtils.GetAngleRadBetween( directionToTarget, Vector3.up, Axis.Z ) * Mathf.Rad2Deg;
+            if ( targetAngle < 0f )
+            {
+                targetAngle += 360f;
+            }
+
+            float currentAngle = m_arrow.transform.eulerAngles.z;
+            float newAngle = Mathf.LerpAngle( currentAngle, targetAngle, m_damping * Time.deltaTime );
+            m_arrow.transform.rotation = Quaternion.Euler( 0, 0, newAngle );
         }
     }
 }

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: RuntimeSetPreset
   m_EditorClassIdentifier: 
   m_codeTemplateSources:
-  - {fileID: 11400000, guid: 999d7c4f926b7d44392bfcca559eb620, type: 2}
-  - {fileID: 11400000, guid: 6fdfe5d8b0b0c844195861b5fab200a0, type: 2}
-  - {fileID: 11400000, guid: 0f2277eecbb30ab4c8ea8c2373daf13d, type: 2}
+  - {fileID: 11400000, guid: 69cb56ed8ccbca94fb26341639445899, type: 2}
+  - {fileID: 11400000, guid: 6d534d13ec6e3004b978a0178f8fa67a, type: 2}
+  - {fileID: 11400000, guid: c03c18948db30044096bfa56f15243c1, type: 2}
+  - {fileID: 11400000, guid: 53cf627e113d9824782b27ee3e436ccb, type: 2}

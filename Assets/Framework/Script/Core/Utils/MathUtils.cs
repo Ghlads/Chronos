@@ -139,5 +139,66 @@ namespace Framework.Core
             return angleA - angleB;
         }
 
+
+        /// <summary>
+        /// Will constraint position x and y torect bound and apply their current offset on the other side of the bounds
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="rect"></param>
+        public static void ConstraintPositionInRectWarpped( ref Vector3 position, Rect rect )
+        {
+            if ( position.x < rect.xMin )
+            {
+                float delta = rect.xMin - position.x;
+                position.x = rect.xMax - delta;
+            }
+            else if ( position.x > rect.xMax )
+            {
+                float delta = position.x - rect.xMax;
+                position.x = rect.xMin + delta;
+            }
+
+            if ( position.y < rect.yMin )
+            {
+                float delta = rect.yMin - position.y;
+                position.y = rect.yMax - delta;
+            }
+            else if ( position.y > rect.yMax )
+            {
+                float delta = position.y - rect.yMax;
+                position.y = rect.yMin + delta;
+            }
+        }
+
+
+        /// <summary>
+        /// Will constraint position x and y torect bound and apply their current offset on the other side of the bounds
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="rect"></param>
+        public static void ConstraintPositionInRectWarpped( ref Vector2 position, Rect rect )
+        {
+            if ( position.x < rect.xMin )
+            {
+                float delta = rect.xMin - position.x;
+                position.x = rect.xMax - delta;
+            }
+            else if ( position.x > rect.xMax )
+            {
+                float delta = position.x - rect.xMax;
+                position.x = rect.xMin + delta;
+            }
+
+            if ( position.y < rect.yMin )
+            {
+                float delta = rect.yMin - position.y;
+                position.y = rect.yMax - delta;
+            }
+            else if ( position.y > rect.yMax )
+            {
+                float delta = position.y - rect.yMax;
+                position.y = rect.yMin + delta;
+            }
+        }
     }
 }
