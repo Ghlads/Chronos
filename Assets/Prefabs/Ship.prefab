@@ -137,6 +137,8 @@ GameObject:
   - component: {fileID: 9048802215283502629}
   - component: {fileID: 6410768043334416433}
   - component: {fileID: 5640080470187624268}
+  - component: {fileID: 582794517181614600}
+  - component: {fileID: 3379173800793058792}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -411,3 +413,110 @@ MonoBehaviour:
     m_rawObject: {fileID: 11400000, guid: d8eb94e1385c4194d81e6f6f5d740c7f, type: 2}
   m_value: {fileID: 6289984768859780772}
   m_setOnEnable: 1
+--- !u!114 &582794517181614600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289984768859780772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b26a77e9f7d144498937a3b438ed271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_runtimeSet:
+    m_rawObject: {fileID: 11400000, guid: 94b6809aeb410254197113250e2b8137, type: 2}
+  m_value: {fileID: 678528946301156836}
+  m_setOnEnable: 1
+--- !u!114 &3379173800793058792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289984768859780772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9727b3313fa0e44ae3d6c9e7614994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_type: 4
+  m_action:
+    m_target: {fileID: 11400000, guid: 6d810b617ef80d44aaa579b1e89bd589, type: 2}
+    m_method:
+      m_methodName: set_Value
+      m_declaringType:
+        m_serializedNode:
+        - AssemblyQualifiedName: Framework.Scriptable.ScriptableVariable`1, ScriptableAssembly,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+          GenericParametersCount: 1
+          FirstGenericParameterIndex: 1
+        - AssemblyQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+          GenericParametersCount: 0
+          FirstGenericParameterIndex: -1
+      m_isStatic: 0
+      m_parametersType:
+      - m_serializedNode:
+        - AssemblyQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+          GenericParametersCount: 0
+          FirstGenericParameterIndex: -1
+    m_parameterReferences:
+    - m_value:
+        m_type: 9
+        m_stringValue: 
+        m_x: 0
+        m_y: 0
+        m_z: 0
+        m_w: 0
+        m_objectValue: {fileID: 0}
+      m_returnValueIndex: 0
+      m_source: 1
+      m_expectedTypeFullName: UnityEngine.GameObject
+    m_modifierReferences:
+    - m_method:
+        m_methodName: FindClosest
+        m_declaringType:
+          m_serializedNode:
+          - AssemblyQualifiedName: Game.CompassUtils, GameAssembly, Version=0.0.0.0,
+              Culture=neutral, PublicKeyToken=null
+            GenericParametersCount: 0
+            FirstGenericParameterIndex: -1
+        m_isStatic: 1
+        m_parametersType:
+        - m_serializedNode:
+          - AssemblyQualifiedName: Framework.Scriptable.Generated.GameObjectRuntimeSet,
+              ScriptableAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+            GenericParametersCount: 0
+            FirstGenericParameterIndex: -1
+        - m_serializedNode:
+          - AssemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule,
+              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+            GenericParametersCount: 0
+            FirstGenericParameterIndex: -1
+      m_parameterReferences:
+      - m_value:
+          m_type: 9
+          m_stringValue: 
+          m_x: 0
+          m_y: 0
+          m_z: 0
+          m_w: 0
+          m_objectValue: {fileID: 11400000, guid: 9204ab0b1a13dc04aafa0c89874208cd, type: 2}
+        m_returnValueIndex: -1
+        m_source: 0
+        m_expectedTypeFullName: Framework.Scriptable.Generated.GameObjectRuntimeSet
+      - m_value:
+          m_type: 9
+          m_stringValue: 
+          m_x: 0
+          m_y: 0
+          m_z: 0
+          m_w: 0
+          m_objectValue: {fileID: 5380526497209370861}
+        m_returnValueIndex: -1
+        m_source: 0
+        m_expectedTypeFullName: UnityEngine.Transform
+      m_isLight: 0

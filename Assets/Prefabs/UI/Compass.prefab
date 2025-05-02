@@ -129,3 +129,4 @@ MonoBehaviour:
   m_originVariable:
     m_rawObject: {fileID: 11400000, guid: d8eb94e1385c4194d81e6f6f5d740c7f, type: 2}
   m_arrow: {fileID: 2786504453597171291}
+  m_damping: 10

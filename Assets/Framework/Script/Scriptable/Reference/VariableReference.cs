@@ -20,6 +20,20 @@ namespace Framework.Scriptable
         private IEventBase.Raw m_onChangeHappen;
         private IEvent<T>.Signature m_onValueChanged;
 
+        public T Default
+        {
+            get
+            {
+                return m_variableReferenceType switch
+                {
+                    SVReferenceMode.Value => m_value,
+                    SVReferenceMode.Reference => m_variableReference.Get().Default,
+                    _ => m_value,
+                };
+            }
+        }
+
+
         public T Value
         {
             get

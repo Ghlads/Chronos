@@ -13,6 +13,13 @@ namespace Framework.Scriptable
 
         [SerializeField] private T m_value;
 
+
+        public T Default
+        {
+            get => m_defaultValue;
+        }
+
+
         public T Value
         {
             get => m_value;
@@ -80,6 +87,7 @@ namespace Framework.Scriptable
 
     public interface IVariable<T> : IEvent<T>
     {
+        public T Default { get; }
         public T Value { get; set; }
         public event Raw OnChangeHappen;
         public event Signature OnValueChanged;
