@@ -22,6 +22,7 @@ namespace Framework.Scriptable
             }
         }
 
+
         public event IEvent<T>.Signature OnValueChanged
         {
             add
@@ -32,6 +33,12 @@ namespace Framework.Scriptable
             {
                 GetOrInstanciateVariable().OnValueChanged -= value;
             }
+        }
+
+
+        public T Default
+        {
+            get => GetOrInstanciateVariable().Default;
         }
 
 
