@@ -132,13 +132,14 @@ GameObject:
   - component: {fileID: 6908835948260187137}
   - component: {fileID: 7402673498424796157}
   - component: {fileID: 6202306032598139112}
+  - component: {fileID: 5912544287426922245}
   - component: {fileID: 2225493288631971084}
-  - component: {fileID: 8018968029301138613}
   - component: {fileID: 9048802215283502629}
   - component: {fileID: 6410768043334416433}
   - component: {fileID: 5640080470187624268}
   - component: {fileID: 582794517181614600}
-  - component: {fileID: 3379173800793058792}
+  - component: {fileID: 9210590296449630312}
+  - component: {fileID: 6659935409344393761}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -239,63 +240,47 @@ MonoBehaviour:
   m_event:
     m_rawObject: {fileID: 11400000, guid: e3d0167d87d7fe948b7d61983575f24d, type: 2}
   m_onRaised:
-    m_target: {fileID: 7402673498424796157}
-    m_method:
-      m_methodName: set_enabled
-      m_declaringType:
-        m_serializedNode:
-        - AssemblyQualifiedName: UnityEngine.Behaviour, UnityEngine.CoreModule, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-      m_isStatic: 0
-      m_parametersType:
-      - m_serializedNode:
-        - AssemblyQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-    m_parameterReferences:
-    - m_value:
-        m_type: 0
-        m_stringValue: 
-        m_x: 0
-        m_y: 0
-        m_z: 0
-        m_w: 0
-        m_objectValue: {fileID: 0}
-      m_returnValueIndex: 0
-      m_source: 1
-      m_expectedTypeFullName: System.Boolean
-    m_modifierReferences:
-    - m_method:
-        m_methodName: Not
-        m_declaringType:
-          m_serializedNode:
-          - AssemblyQualifiedName: Framework.Core.CoreUtils, FrameworkCoreAssmebly,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            GenericParametersCount: 0
-            FirstGenericParameterIndex: -1
-        m_isStatic: 1
-        m_parametersType:
-        - m_serializedNode:
-          - AssemblyQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-              PublicKeyToken=b77a5c561934e089
-            GenericParametersCount: 0
-            FirstGenericParameterIndex: -1
-      m_parameterReferences:
-      - m_value:
-          m_type: 0
-          m_stringValue: 
-          m_x: 0
-          m_y: 0
-          m_z: 0
-          m_w: 0
-          m_objectValue: {fileID: 0}
-        m_returnValueIndex: 0
-        m_source: 2
-        m_expectedTypeFullName: System.Boolean
-      m_isLight: 0
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5912544287426922245}
+        m_TargetAssemblyTypeName: Framework.Core.NotConverter, FrameworkCoreAssmebly
+        m_MethodName: Raise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5912544287426922245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289984768859780772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 902e787f141d1fc4abbdaac7c8953ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onConvert:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7402673498424796157}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2225493288631971084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,34 +301,6 @@ MonoBehaviour:
   m_mooringSpeed: 2
   m_mooringTolerance: 0.01
   m_rotationSpeed: 3
---- !u!114 &8018968029301138613
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289984768859780772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb3710f4f2b5404280a07854bdf1b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_event:
-    m_rawObject: {fileID: 11400000, guid: 31fb50e62d5f70d41b512b62381f5635, type: 2}
-  m_onRaised:
-    m_target: {fileID: 2225493288631971084}
-    m_method:
-      m_methodName: Unmoor
-      m_declaringType:
-        m_serializedNode:
-        - AssemblyQualifiedName: Game.MoorableComponent, GameAssembly, Version=0.0.0.0,
-            Culture=neutral, PublicKeyToken=null
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-      m_isStatic: 0
-      m_parametersType: []
-    m_parameterReferences: []
-    m_modifierReferences: []
 --- !u!70 &9048802215283502629
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -429,7 +386,7 @@ MonoBehaviour:
     m_rawObject: {fileID: 11400000, guid: 94b6809aeb410254197113250e2b8137, type: 2}
   m_value: {fileID: 678528946301156836}
   m_setOnEnable: 1
---- !u!114 &3379173800793058792
+--- !u!114 &9210590296449630312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438,85 +395,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 6289984768859780772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba9727b3313fa0e44ae3d6c9e7614994, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b58e4ca49ef2c641b797730cc8190a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_type: 4
-  m_action:
-    m_target: {fileID: 11400000, guid: 6d810b617ef80d44aaa579b1e89bd589, type: 2}
-    m_method:
-      m_methodName: set_Value
-      m_declaringType:
-        m_serializedNode:
-        - AssemblyQualifiedName: Framework.Scriptable.ScriptableVariable`1, ScriptableAssembly,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          GenericParametersCount: 1
-          FirstGenericParameterIndex: 1
-        - AssemblyQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-      m_isStatic: 0
-      m_parametersType:
-      - m_serializedNode:
-        - AssemblyQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-    m_parameterReferences:
-    - m_value:
-        m_type: 9
-        m_stringValue: 
-        m_x: 0
-        m_y: 0
-        m_z: 0
-        m_w: 0
-        m_objectValue: {fileID: 0}
-      m_returnValueIndex: 0
-      m_source: 1
-      m_expectedTypeFullName: UnityEngine.GameObject
-    m_modifierReferences:
-    - m_method:
-        m_methodName: FindClosest
-        m_declaringType:
-          m_serializedNode:
-          - AssemblyQualifiedName: Game.CompassUtils, GameAssembly, Version=0.0.0.0,
-              Culture=neutral, PublicKeyToken=null
-            GenericParametersCount: 0
-            FirstGenericParameterIndex: -1
-        m_isStatic: 1
-        m_parametersType:
-        - m_serializedNode:
-          - AssemblyQualifiedName: Framework.Scriptable.Generated.GameObjectRuntimeSet,
-              ScriptableAssembly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            GenericParametersCount: 0
-            FirstGenericParameterIndex: -1
-        - m_serializedNode:
-          - AssemblyQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule,
-              Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-            GenericParametersCount: 0
-            FirstGenericParameterIndex: -1
-      m_parameterReferences:
-      - m_value:
-          m_type: 9
-          m_stringValue: 
-          m_x: 0
-          m_y: 0
-          m_z: 0
-          m_w: 0
-          m_objectValue: {fileID: 11400000, guid: 9204ab0b1a13dc04aafa0c89874208cd, type: 2}
-        m_returnValueIndex: -1
-        m_source: 0
-        m_expectedTypeFullName: Framework.Scriptable.Generated.GameObjectRuntimeSet
-      - m_value:
-          m_type: 9
-          m_stringValue: 
-          m_x: 0
-          m_y: 0
-          m_z: 0
-          m_w: 0
-          m_objectValue: {fileID: 5380526497209370861}
-        m_returnValueIndex: -1
-        m_source: 0
-        m_expectedTypeFullName: UnityEngine.Transform
-      m_isLight: 0
+  m_origin: {fileID: 5380526497209370861}
+  m_gameObjectSet:
+    m_rawObject: {fileID: 11400000, guid: 9204ab0b1a13dc04aafa0c89874208cd, type: 2}
+  m_targetVariable:
+    m_rawObject: {fileID: 11400000, guid: 6d810b617ef80d44aaa579b1e89bd589, type: 2}
+--- !u!114 &6659935409344393761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6289984768859780772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb3710f4f2b5404280a07854bdf1b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_event:
+    m_rawObject: {fileID: 11400000, guid: 31fb50e62d5f70d41b512b62381f5635, type: 2}
+  m_onRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2225493288631971084}
+        m_TargetAssemblyTypeName: Game.MoorableComponent, GameAssembly
+        m_MethodName: Unmoor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

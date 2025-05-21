@@ -1,5 +1,6 @@
 using Framework.Core;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Framework.Scriptable
 {
@@ -7,7 +8,7 @@ namespace Framework.Scriptable
     {
         [SerializeField] private InterfaceReference<IBaseRuntimeSet> m_runtimeSet;
         [Space]
-        [SerializeField] private ScriptingAction m_onSetClear;
+        [SerializeField] private UnityEvent m_onSetClear;
 
         private void OnEnable()
         {

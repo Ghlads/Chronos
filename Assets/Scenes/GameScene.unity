@@ -864,6 +864,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 705123698}
     m_Modifications:
+    - target: {fileID: 3379173800793058792, guid: 82d000d3019742c41ba07c5f4c07e84b, type: 3}
+      propertyPath: m_action.m_modifierReferences.Array.data[0].m_parameterReferences.Array.data[0].m_expectedTypeFullName
+      value: 'Framework.Scriptable.IRuntimeSet`1[[UnityEngine.GameObject, UnityEngine.CoreModule,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]'
+      objectReference: {fileID: 0}
     - target: {fileID: 5380526497209370861, guid: 82d000d3019742c41ba07c5f4c07e84b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.28

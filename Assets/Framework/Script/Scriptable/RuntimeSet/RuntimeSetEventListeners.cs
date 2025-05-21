@@ -1,5 +1,6 @@
 using Framework.Core;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Framework.Scriptable
 {
@@ -7,7 +8,7 @@ namespace Framework.Scriptable
     {
         [SerializeField] private InterfaceReference<IRuntimeSet<T>> m_runtimeSet;
         [Space]
-        [SerializeField] private ScriptingAction<T, int> m_onElementAdded;
+        [SerializeField] private UnityEvent<T, int> m_onElementAdded;
 
         private void OnEnable()
         {
@@ -38,7 +39,7 @@ namespace Framework.Scriptable
     {
         [SerializeField] private InterfaceReference<IRuntimeSet<T>> m_runtimeSet;
         [Space]
-        [SerializeField] private ScriptingAction<T, int> m_onElementRemoved;
+        [SerializeField] private UnityEvent<T, int> m_onElementRemoved;
 
         private void OnEnable()
         {
@@ -69,7 +70,7 @@ namespace Framework.Scriptable
     {
         [SerializeField] private InterfaceReference<IRuntimeSet<T>> m_runtimeSet;
         [Space]
-        [SerializeField] private ScriptingAction<T, T, int> m_onElementChange;
+        [SerializeField] private UnityEvent<T, T, int> m_onElementChange;
 
         private void OnEnable()
         {
