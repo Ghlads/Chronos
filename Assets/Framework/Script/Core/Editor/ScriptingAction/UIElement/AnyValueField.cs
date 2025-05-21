@@ -101,6 +101,8 @@ namespace Framework.Core.Editor
 
         public static AnyValueField RestrictedField( SerializedProperty property, Type restrictedType )
         {
+            property.FindPropertyRelative( "m_type" ).enumValueIndex = ( int )AnyValueUtils.TypeToEnum( restrictedType );
+            property.ApplyModificationAndUpdate();
             return new( property, Mode.Restricted, restrictedType );
         }
 

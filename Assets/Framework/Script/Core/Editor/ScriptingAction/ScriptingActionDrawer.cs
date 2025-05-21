@@ -18,6 +18,12 @@ namespace Framework.Core.Editor
         {
             return new ScriptingActionField( property, fieldInfo );
         }
+
+
+
+
+
+
     }
 
     public interface ISourceReference 
@@ -88,6 +94,7 @@ namespace Framework.Core.Editor
         private readonly Label m_label;
         private readonly Button m_addModifierButton;
         private readonly Button m_removeModifierButton;
+        private readonly Button m_generateAction;
 
         private readonly ObjectField m_targetField;
         private readonly Button m_selectActionButton;
@@ -160,6 +167,7 @@ namespace Framework.Core.Editor
             };
             m_modifierView.reorderable = true;
             m_modifierView.virtualizationMethod = CollectionVirtualizationMethod.DynamicHeight;
+            m_generateAction = new Button();
 
             // Property
             if ( property != null )
@@ -173,7 +181,7 @@ namespace Framework.Core.Editor
             m_targetField.RegisterCallback<ChangeEvent<UnityEngine.Object>>( TargetChangeHandler );
             m_addModifierButton.RegisterCallback<ClickEvent>( AddModifierHandler );
             m_removeModifierButton.RegisterCallback<ClickEvent>( RemoveModifierHandler );
-
+            m_generateAction.RegisterCallback<ClickEvent>( GenerateActionHandler );
 
             // Style
             m_label.style.overflow = Overflow.Hidden;
@@ -203,12 +211,19 @@ namespace Framework.Core.Editor
             header.Add( addRemoveContainer );
             body.Add( modifierContainer );
             body.Add( lastActionContainer );
+            body.Add( m_generateAction );
             modifierContainer.Add( m_modifierView );
             lastActionContainer.Add( m_actionParameterView );
             actionDeclarationContainer.Add( m_targetField );
             actionDeclarationContainer.Add( m_selectActionButton );
             m_selectActionButton.Add( m_actionLabel );
             m_selectActionButton.Add( indicatorElement );
+        }
+
+
+        private void GenerateActionHandler( ClickEvent evt )
+        {
+
         }
 
 
@@ -408,7 +423,7 @@ namespace Framework.Core.Editor
         }
 
 
-        private static string DisplayNameAndTypeToString( SerializedProperty property, Type fieldType )
+        public static string DisplayNameAndTypeToString( SerializedProperty property, Type fieldType )
         {
             StringBuilder builder = new StringBuilder();
             builder.Append( property.displayName ).Append( " " );
@@ -420,7 +435,7 @@ namespace Framework.Core.Editor
                     Type type = genericArgs[ index ].Beautified();
                     if ( type != typeof( NullStruct ) )
                     {
-                        builder.Append( type.Name ).Append( ", " );
+                        builder.Append( index ).Append( ": " ).Append( type.Name ).Append( ", " );
                     }
                 }
 
@@ -429,7 +444,7 @@ namespace Framework.Core.Editor
                     Type lastType = genericArgs[genericArgs.Length - 1].Beautified();
                     if ( lastType != typeof( NullStruct ) )
                     {
-                        builder.Append( lastType.Name );
+                        builder.Append( genericArgs.Length - 1 ).Append( ": " ).Append( lastType.Name );
                     }
                 }
             }    

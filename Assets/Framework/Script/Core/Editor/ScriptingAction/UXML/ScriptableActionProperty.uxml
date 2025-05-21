@@ -1,34 +1,5 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <engine:Foldout text="Foldout">
+    <engine:Foldout text="Foldout" name="Foldout" data-source-type="Framework.Core.Editor.ActionSchema, CoreEditorAssembly">
         <engine:ListView name="modifier-list" />
-        <engine:VisualElement name="target-invoke-action" style="flex-grow: 1; background-color: rgb(30, 30, 30); border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; padding-bottom: 4px; padding-top: 4px;">
-            <engine:VisualElement name="target-action-field" style="flex-grow: 1; flex-direction: row; margin-bottom: 10px;">
-                <editor:ObjectField name="target-field" style="flex-grow: 1;" />
-                <engine:Button text="void SetActive( bool )" name="method-selector" style="flex-grow: 1;" />
-            </engine:VisualElement>
-            <engine:VisualElement name="template-parameter-drawer" style="flex-grow: 1; flex-direction: row; margin-left: 40px;">
-                <engine:DropdownField choices="input,return,value" name="DropdownField" index="1" style="align-self: center;" />
-                <engine:VisualElement name="edition-container" style="flex-grow: 1;">
-                    <engine:VisualElement name="non-value-mode" style="flex-grow: 1; display: flex;">
-                        <engine:Button text="[0] : bool input" />
-                    </engine:VisualElement>
-                    <engine:VisualElement name="value-mode" style="flex-grow: 1; display: none;">
-                        <engine:Toggle style="display: flex;" />
-                        <engine:EnumField value="Center" type="UnityEngine.TextAlignment, UnityEngine.TextRenderingModule" style="display: none;" />
-                        <engine:IntegerField value="42" style="display: none;" />
-                        <engine:FloatField value="42.2" style="display: none;" />
-                        <engine:Vector2Field style="display: none;" />
-                        <engine:Vector3Field style="display: none;" />
-                        <engine:Vector4Field style="display: none;" />
-                        <engine:RectField style="display: none;" />
-                        <editor:ColorField value="#00FFFFFF" style="display: none;" />
-                        <engine:TextField placeholder-text="filler text" style="display: none;" />
-                        <editor:ObjectField style="display: none;" />
-                    </engine:VisualElement>
-                </engine:VisualElement>
-                <engine:Label text="isActive" name="parameter-name" enable-rich-text="false" emoji-fallback-support="false" double-click-selects-word="false" triple-click-selects-line="false" style="align-self: center; margin-left: 25px; max-width: 100px;" />
-            </engine:VisualElement>
-            <engine:ListView name="parameters-list" />
-        </engine:VisualElement>
     </engine:Foldout>
 </engine:UXML>

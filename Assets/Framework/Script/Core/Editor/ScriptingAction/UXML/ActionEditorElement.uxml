@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Framework/Script/Core/Editor/ScriptingAction/USS/ScriptingActionSheet.uss?fileID=7433441132597879392&amp;guid=a840d972c3d6de545abf7a3e51e4cda1&amp;type=3#ScriptingActionSheet" />
+    <engine:Foldout text="Foldout" data-source-type="Framework.Core.Editor.ActionSchema, CoreEditorAssembly" class="action-foldout" style="flex-grow: 0;">
+        <engine:ListView item-template="project://database/Assets/Framework/Script/Core/Editor/ScriptingAction/UXML/ModifierEditorElement.uxml?fileID=9197481963319205126&amp;guid=dab233744caf39b45b9fa41048ef5985&amp;type=3#ModifierEditorElement" show-add-remove-footer="true" show-border="true" virtualization-method="DynamicHeight" />
+        <Bindings>
+            <engine:DataBinding property="text" binding-mode="ToTarget" />
+        </Bindings>
+    </engine:Foldout>
+</engine:UXML>

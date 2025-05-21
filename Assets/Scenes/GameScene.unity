@@ -908,7 +908,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6410768043334416433, guid: 82d000d3019742c41ba07c5f4c07e84b, type: 3}
+      propertyPath: m_rotationSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421509913691711178, guid: 82d000d3019742c41ba07c5f4c07e84b, type: 3}
+      propertyPath: m_action.m_constantArguments.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421509913691711178, guid: 82d000d3019742c41ba07c5f4c07e84b, type: 3}
+      propertyPath: m_action.m_constantArguments.Array.data[0].Args.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421509913691711178, guid: 82d000d3019742c41ba07c5f4c07e84b, type: 3}
+      propertyPath: m_action.m_constantArguments.Array.data[0].Args.Array.data[0].m_x
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7421509913691711178, guid: 82d000d3019742c41ba07c5f4c07e84b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

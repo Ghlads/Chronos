@@ -29,6 +29,41 @@ namespace Framework.Core
         }
 
 
+        public static T Last<T>( this List<T> list )
+        {
+            return list == null || list.Count <= 0 ? default : list[list.Count - 1];
+        }
+
+
+        public static void PopLast<T>( this List<T> list )
+        {
+            if ( list == null || list.Count <= 0 )
+            {
+                return;
+            }
+
+            list.RemoveAt( list.Count - 1 );
+        }
+
+
+        public static void SwapRemoveAtIndex<T>( this List<T> list, int index )
+        {
+            if ( list == null || list.Count <= 0 )
+            {
+                return;
+            }
+
+            if ( index < 0 || index >= list.Count )
+            {
+                return;
+            }
+
+
+            list[index] = list.Last();
+            list.PopLast();
+        }
+
+
         public static bool AddUnique<T>( this List<T> list, T element )
         {
             if ( list == null )

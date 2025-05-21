@@ -264,6 +264,12 @@ namespace Framework.Core
         }
 
 
+        public static implicit operator GameObject( AnyValue value )
+        {
+            return value.Get<UnityEngine.Object>() as GameObject; 
+        }
+
+
         public void Set<T>( T value )
         {
             switch ( m_type )

@@ -1,0 +1,32 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Framework/Script/Core/Editor/ScriptingAction/USS/ScriptingActionSheet.uss?fileID=7433441132597879392&amp;guid=a840d972c3d6de545abf7a3e51e4cda1&amp;type=3#ScriptingActionSheet" />
+    <engine:VisualElement name="root" data-source-type="Framework.Core.Editor.ModifierSchema, CoreEditorAssembly" class="modifier-element" style="flex-grow: 0;">
+        <engine:VisualElement name="header" style="flex-grow: 1; flex-direction: row;">
+            <engine:Label text="0" style="-unity-text-align: middle-center; width: 14px;">
+                <Bindings>
+                    <engine:DataBinding property="text" data-source-path="m_index" binding-mode="ToTarget" />
+                </Bindings>
+            </engine:Label>
+            <engine:Toggle name="foldout-toggle" class="unity-foldout__toggle" />
+            <engine:Button name="function-selector" style="flex-grow: 1; flex-direction: row; justify-content: space-between; margin-right: 0; flex-shrink: 1;">
+                <engine:Label text="Label" name="Label" style="-unity-text-align: middle-left; flex-shrink: 1; overflow: hidden;">
+                    <Bindings>
+                        <engine:DataBinding property="text" data-source-path="m_method" binding-mode="ToTarget" />
+                    </Bindings>
+                </engine:Label>
+                <engine:VisualElement name="indicator" class="source-type-field__indicator" style="flex-shrink: 0;" />
+            </engine:Button>
+            <engine:VisualElement name="is-light" style="flex-direction: row; display: flex; flex-shrink: 0;">
+                <engine:VisualElement name="light-icon" tooltip="is function call light, instead of caching result function will be called each time its return value is needed. /!\ if return value is never used function will never be call" class="light-icon" style="align-self: center; margin-left: 3px;" />
+                <engine:Toggle name="is-light-toggle" tooltip="is function call light, instead of caching result function will be called each time its return value is needed. /!\ if return value is never used function will never be call" style="align-self: center; translate: 0 1px; margin-right: 0;">
+                    <Bindings>
+                        <engine:DataBinding property="value" data-source-path="m_isLight" binding-mode="TwoWay" />
+                    </Bindings>
+                </engine:Toggle>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="container" style="flex-grow: 1; margin-left: 30px;">
+            <engine:ListView item-template="project://database/Assets/Framework/Script/Core/Editor/ScriptingAction/UXML/ParameterEditorElement.uxml?fileID=9197481963319205126&amp;guid=ca7613e076806ec458ac89aabc379be0&amp;type=3#ParameterEditorElement" show-bound-collection-size="false" allow-remove="false" allow-add="false" show-alternating-row-backgrounds="ContentOnly" virtualization-method="DynamicHeight" show-border="true" style="margin-left: 15px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

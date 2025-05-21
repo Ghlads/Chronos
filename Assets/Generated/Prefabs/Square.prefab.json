@@ -1,0 +1,112 @@
+{
+    "m_idSchemaPairs": [
+        {
+            "ID": {
+                "m_guid": "6bd23e2b-ef59-4ee5-846f-eb2829079642"
+            },
+            "Action": {
+                "m_modifierSchemas": [],
+                "m_name": "Action",
+                "m_inputsType": [],
+                "m_isOverridable": false,
+                "m_isOverridden": false
+            }
+        },
+        {
+            "ID": {
+                "m_guid": "cecfbf0f-8226-4c8e-8009-f4bf5ea8a884"
+            },
+            "Action": {
+                "m_modifierSchemas": [
+                    {
+                        "m_method": {
+                            "m_declaringTypeSchema": {
+                                "m_declaringAssemblyFullName": "FrameworkCoreAssmebly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "m_fullName": "Framework.Core.CoreUtils"
+                            },
+                            "m_methodName": "Not",
+                            "m_parametersTypeSchema": [
+                                {
+                                    "m_declaringAssemblyFullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                    "m_fullName": "System.Boolean"
+                                }
+                            ],
+                            "m_isStatic": true
+                        },
+                        "m_parameters": [
+                            {
+                                "m_sources": 2,
+                                "m_index": 0,
+                                "m_constIndex": 0,
+                                "m_expectedType": {
+                                    "m_declaringAssemblyFullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                    "m_fullName": "System.Boolean"
+                                }
+                            }
+                        ],
+                        "m_isLight": false,
+                        "m_index": 0
+                    },
+                    {
+                        "m_method": {
+                            "m_declaringTypeSchema": {
+                                "m_declaringAssemblyFullName": "FrameworkCoreAssmebly, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                "m_fullName": "Framework.Core.CoreUtils"
+                            },
+                            "m_methodName": "Behaviour_Enable",
+                            "m_parametersTypeSchema": [
+                                {
+                                    "m_declaringAssemblyFullName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                    "m_fullName": "UnityEngine.Behaviour"
+                                },
+                                {
+                                    "m_declaringAssemblyFullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                    "m_fullName": "System.Boolean"
+                                }
+                            ],
+                            "m_isStatic": true
+                        },
+                        "m_parameters": [
+                            {
+                                "m_sources": 0,
+                                "m_index": 0,
+                                "m_constIndex": 0,
+                                "m_expectedType": {
+                                    "m_declaringAssemblyFullName": "UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+                                    "m_fullName": "UnityEngine.Behaviour"
+                                }
+                            },
+                            {
+                                "m_sources": 1,
+                                "m_index": 0,
+                                "m_constIndex": 1,
+                                "m_expectedType": {
+                                    "m_declaringAssemblyFullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                                    "m_fullName": "System.Boolean"
+                                }
+                            }
+                        ],
+                        "m_isLight": false,
+                        "m_index": 1
+                    }
+                ],
+                "m_name": "Action Bool",
+                "m_inputsType": [],
+                "m_isOverridable": false,
+                "m_isOverridden": false
+            }
+        },
+        {
+            "ID": {
+                "m_guid": "e4cb8dd4-948a-4e63-b203-010ff77dec14"
+            },
+            "Action": {
+                "m_modifierSchemas": [],
+                "m_name": "Action 2",
+                "m_inputsType": [],
+                "m_isOverridable": false,
+                "m_isOverridden": false
+            }
+        }
+    ]
+}

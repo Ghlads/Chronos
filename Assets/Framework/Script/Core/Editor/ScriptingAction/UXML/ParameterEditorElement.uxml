@@ -1,0 +1,24 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Framework/Script/Core/Editor/ScriptingAction/USS/ScriptingActionSheet.uss?fileID=7433441132597879392&amp;guid=a840d972c3d6de545abf7a3e51e4cda1&amp;type=3#ScriptingActionSheet" />
+    <engine:VisualElement name="container" data-source-type="Framework.Core.Editor.ParameterSchema, CoreEditorAssembly" style="flex-direction: row; padding-left: 5px; padding-right: 5px; margin-top: 3px; margin-bottom: 3px;">
+        <engine:EnumField value="Input" type="Framework.Core.Editor.ParameterSchema+Sources, CoreEditorAssembly" name="source-field" style="margin-right: 5px; width: 65px;">
+            <Bindings>
+                <engine:DataBinding property="value" data-source-path="Source" binding-mode="TwoWay" />
+            </Bindings>
+        </engine:EnumField>
+        <engine:VisualElement name="any-value-field-container" style="flex-grow: 1; margin-right: 3px;" />
+        <engine:Button name="index-selector" style="flex-grow: 1; flex-direction: row; justify-content: space-between; flex-shrink: 1;">
+            <engine:Label text="Label" name="Label" style="overflow: hidden; flex-shrink: 1;">
+                <Bindings>
+                    <engine:DataBinding property="text" binding-mode="ToTarget" />
+                </Bindings>
+            </engine:Label>
+            <engine:VisualElement name="indicator" class="source-type-field__indicator" style="flex-grow: 0; flex-shrink: 0;" />
+        </engine:Button>
+        <engine:Label text="parameter-name" name="parameter-name" style="margin-left: 5px; -unity-text-align: middle-left;">
+            <Bindings>
+                <engine:DataBinding property="text" data-source-path="Name" binding-mode="ToTarget" />
+            </Bindings>
+        </engine:Label>
+    </engine:VisualElement>
+</engine:UXML>

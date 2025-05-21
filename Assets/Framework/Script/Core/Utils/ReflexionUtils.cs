@@ -151,6 +151,28 @@ namespace Framework.Core
         }
 
 
+        public static Type OptimizedGetType( string assemblyFullName, string fullName )
+        {
+            if ( string.IsNullOrEmpty( fullName ) || string.IsNullOrEmpty( assemblyFullName ) )
+            {
+                return null;
+            }
+
+
+            foreach ( Assembly assembly in AppDomain.CurrentDomain.GetAssemblies() )
+            {
+                if ( assembly.FullName != assemblyFullName )
+                {
+                    continue;
+                }
+
+                return assembly.GetType( fullName );
+            }
+
+            return null;
+        }
+
+
         public static bool ImplementsInterface<T>( this Type type )
         {
             return ImplementsInterface( type, typeof( T ) );
@@ -224,6 +246,23 @@ namespace Framework.Core
             }
 
             return buidler.ToString();
+        }
+
+
+        public static FieldInfo GetFieldInHierarchy( this Type type, string fieldName, BindingFlags bindingFlags )
+        {
+            while ( type != null )
+            {
+                FieldInfo field = type.GetField( fieldName, bindingFlags );
+                if ( field != null )
+                {
+                    return field;
+                }
+
+                type = type.BaseType;
+            }
+
+            return null;
         }
     }
 
