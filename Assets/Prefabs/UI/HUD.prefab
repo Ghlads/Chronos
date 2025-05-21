@@ -54,35 +54,20 @@ MonoBehaviour:
   m_event:
     m_rawObject: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
   m_onRaised:
-    m_target: {fileID: 4365887621358484669}
-    m_method:
-      m_methodName: SetActive
-      m_declaringType:
-        m_serializedNode:
-        - AssemblyQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-      m_isStatic: 0
-      m_parametersType:
-      - m_serializedNode:
-        - AssemblyQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-    m_parameterReferences:
-    - m_value:
-        m_type: 0
-        m_stringValue: 
-        m_x: 0
-        m_y: 0
-        m_z: 0
-        m_w: 0
-        m_objectValue: {fileID: 0}
-      m_returnValueIndex: -1
-      m_source: 0
-      m_expectedTypeFullName: System.Boolean
-    m_modifierReferences: []
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4365887621358484669}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2637464292273086857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,35 +83,20 @@ MonoBehaviour:
   m_event:
     m_rawObject: {fileID: 11400000, guid: 31fb50e62d5f70d41b512b62381f5635, type: 2}
   m_onRaised:
-    m_target: {fileID: 4365887621358484669}
-    m_method:
-      m_methodName: SetActive
-      m_declaringType:
-        m_serializedNode:
-        - AssemblyQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule,
-            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-      m_isStatic: 0
-      m_parametersType:
-      - m_serializedNode:
-        - AssemblyQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-            PublicKeyToken=b77a5c561934e089
-          GenericParametersCount: 0
-          FirstGenericParameterIndex: -1
-    m_parameterReferences:
-    - m_value:
-        m_type: 0
-        m_stringValue: 
-        m_x: 1
-        m_y: 0
-        m_z: 0
-        m_w: 0
-        m_objectValue: {fileID: 0}
-      m_returnValueIndex: -1
-      m_source: 0
-      m_expectedTypeFullName: System.Boolean
-    m_modifierReferences: []
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4365887621358484669}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &5823151077859961030
 PrefabInstance:
   m_ObjectHideFlags: 0

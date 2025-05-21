@@ -1,11 +1,11 @@
-using Framework.Scriptable.Generated;
+using Framework.Scriptable;
 using UnityEngine;
 
 namespace Game
 {
     public static class CompassUtils
     {
-        public static GameObject FindClosest( GameObjectRuntimeSet set, Transform from )
+        public static GameObject FindClosest( IRuntimeSet<GameObject> set, Transform from )
         {
             if ( set == null || set.Count <= 0 || from == null )
             {

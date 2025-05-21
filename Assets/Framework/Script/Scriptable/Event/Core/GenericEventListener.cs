@@ -8,7 +8,7 @@ namespace Framework.Scriptable
     {
         [SerializeField] private InterfaceReference<IEventBase> m_event;
 
-        [SerializeField] private ScriptingAction m_onRaised;
+        [SerializeField] private UnityEvent m_onRaised;
 
 
         private void Awake()
@@ -33,7 +33,7 @@ namespace Framework.Scriptable
     {
         [SerializeField] private InterfaceReference<IEvent<T>> m_event;
 
-        [SerializeField] private ScriptingAction<T> m_onRaised;
+        [SerializeField] private UnityEvent<T> m_onRaised;
 
         private void Awake()
         {
