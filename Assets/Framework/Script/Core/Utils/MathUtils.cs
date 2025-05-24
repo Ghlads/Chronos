@@ -25,10 +25,10 @@ namespace Framework.Core
     {
         public static float RaiseExponant( float value, Exponant exponant )
         {
-            float result = 0.0f;
+            float result = value;
             for ( int _ = 0; _ < ( int )exponant; _++ )
             {
-                result += value;
+                result *= value;
             }
 
             return result;
@@ -37,10 +37,10 @@ namespace Framework.Core
 
         public static int RaiseExponant( int value, Exponant exponant )
         {
-            int result = 0;
+            int result = value;
             for ( int _ = 0; _ < ( int )exponant; _++ )
             {
-                result += value;
+                result *= value;
             }
 
             return result;
@@ -199,6 +199,33 @@ namespace Framework.Core
                 float delta = position.y - rect.yMax;
                 position.y = rect.yMin + delta;
             }
+        }
+
+
+        public static void Clamp( this Rect rect, ref Vector2 vec )
+        {
+            vec = rect.Clamp( vec );
+        }
+
+
+        public static Vector2 Clamp( this Rect rect, Vector2 vec )
+        {
+            Vector2 clamped = new Vector2();
+            clamped.x = Mathf.Clamp( vec.x, rect.xMin, rect.xMax );
+            clamped.y = Mathf.Clamp( vec.y, rect.yMin, rect.yMax );
+            return clamped;
+        }
+
+        /// <summary/>
+        /// <param name="rect"></param>
+        /// <param name="offset">Support negative values</param>
+        /// <returns><paramref name="rect"/> offseted by <paramref name="offset"/></returns>
+        public static Rect Resize( this Rect rect, float offset )
+        {
+            Rect result = new Rect( rect );
+            result.min -= Vector2.one * offset;
+            result.max += Vector2.one * offset;
+            return result;
         }
     }
 }

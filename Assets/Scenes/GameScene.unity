@@ -486,8 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_bounds: {fileID: 11400000, guid: e67b1fa15288d504381d26e67fbebdfa, type: 2}
-  m_nonPhysicObjects: {fileID: 11400000, guid: 755d2bded2ec4fc45b27752577e50195, type: 2}
-  m_physicObjects: {fileID: 11400000, guid: 94b6809aeb410254197113250e2b8137, type: 2}
+  m_deadSeaSize: {fileID: 11400000, guid: 9081367da0b039c45ad402623dde98a1, type: 2}
 --- !u!1001 &1306394157
 PrefabInstance:
   m_ObjectHideFlags: 0
