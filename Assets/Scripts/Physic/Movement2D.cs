@@ -79,7 +79,6 @@ public class Movement2D : MonoBehaviour
             }
         }
 
-
         m_movement = Vector2.zero;
     }
 
