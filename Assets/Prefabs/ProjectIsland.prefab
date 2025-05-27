@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 6487336182097092283}
   - component: {fileID: 6828905127075301341}
   - component: {fileID: 301516640433611245}
+  - component: {fileID: 4861147871192014403}
   m_Layer: 0
   m_Name: ProjectIsland
   m_TagString: Untagged
@@ -182,6 +183,73 @@ MonoBehaviour:
     m_rawObject: {fileID: 11400000, guid: 9204ab0b1a13dc04aafa0c89874208cd, type: 2}
   m_value: {fileID: 3110989718824604362}
   m_setOnEnable: 1
+--- !u!114 &4861147871192014403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110989718824604362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c157f1d53abb8346a528fd34dfbec34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_invokeOnEnable: 0
+  m_action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5402733181545431740}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
+        m_TargetAssemblyTypeName: Framework.Scriptable.ScriptableEvent`1[[ProjectData,
+          GameAssembly
+        m_MethodName: Raise
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 67c82f2c6d1348a41b66c65357a2739e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ProjectData, GameAssembly
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 9204ab0b1a13dc04aafa0c89874208cd, type: 2}
+        m_TargetAssemblyTypeName: Framework.Scriptable.RuntimeSet`1[[UnityEngine.GameObject,
+          UnityEngine
+        m_MethodName: RemoveItem
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3110989718824604362}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 37859ccdddb43244d812e0afe218ae76, type: 2}
+        m_TargetAssemblyTypeName: Framework.Scriptable.RuntimeSet`1[[UnityEngine.GameObject,
+          UnityEngine
+        m_MethodName: AddUnique
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3110989718824604362}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &4187499387464125539
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,30 +334,17 @@ MonoBehaviour:
   m_onMoorableEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5402733181545431740}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4861147871192014403}
+        m_TargetAssemblyTypeName: Framework.Core.SimpleAction, FrameworkCoreAssmebly
+        m_MethodName: Invoke
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
-        m_TargetAssemblyTypeName: Framework.Scriptable.ScriptableEvent`1[[ProjectData,
-          GameAssembly
-        m_MethodName: Raise
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 67c82f2c6d1348a41b66c65357a2739e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ProjectData, GameAssembly
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &4974045161877851139
 GameObject:
@@ -515,30 +570,17 @@ MonoBehaviour:
   m_onMoorableEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5402733181545431740}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4861147871192014403}
+        m_TargetAssemblyTypeName: Framework.Core.SimpleAction, FrameworkCoreAssmebly
+        m_MethodName: Invoke
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
-        m_TargetAssemblyTypeName: Framework.Scriptable.ScriptableEvent`1[[ProjectData,
-          GameAssembly
-        m_MethodName: Raise
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 67c82f2c6d1348a41b66c65357a2739e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ProjectData, GameAssembly
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8374198585383842159
 GameObject:
@@ -711,30 +753,17 @@ MonoBehaviour:
   m_onMoorableEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5402733181545431740}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4861147871192014403}
+        m_TargetAssemblyTypeName: Framework.Core.SimpleAction, FrameworkCoreAssmebly
+        m_MethodName: Invoke
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
-        m_TargetAssemblyTypeName: Framework.Scriptable.ScriptableEvent`1[[ProjectData,
-          GameAssembly
-        m_MethodName: Raise
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 67c82f2c6d1348a41b66c65357a2739e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ProjectData, GameAssembly
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &9155397715617244449
 GameObject:

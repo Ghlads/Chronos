@@ -52,6 +52,17 @@ namespace Framework.Scriptable
         public bool IsReadOnly => false;
 
 
+        public void AddUnique( T item )
+        {
+            if ( m_values.Contains( item ) )
+            {
+                return;
+            }
+
+            Add( item );
+        }
+
+
         public void Add( T item )
         {
             m_values.Add( item );
@@ -108,6 +119,12 @@ namespace Framework.Scriptable
             }
 
             return result;
+        }
+
+
+        public void RemoveItem( T item )
+        {
+            Remove( item );
         }
 
 
