@@ -1,4 +1,5 @@
 using Framework.Core;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -93,6 +94,44 @@ namespace Framework.Scriptable
         private void ChangeHandler( T previousElement, T newElement, int index )
         {
             m_onElementChange.Invoke( previousElement, newElement, index );
+        }
+    }
+
+
+    public abstract class RuntimeSetEmptyListener<T> : MonoBehaviour
+    {
+        [SerializeField] private InterfaceReference<IRuntimeSet<T>> m_runtimeSet;
+        [Space]
+        [SerializeField][Tooltip( "Either from a clear or removing the last element" )] private UnityEvent m_onSetEmpty;
+
+
+        private void Start()
+        {
+            IRuntimeSet<T> set = m_runtimeSet.Get();
+            set.OnCleared += ClearHandler;
+            set.OnElementRemoved += RemoveHandler;
+        }
+
+
+        private void RemoveHandler( T newElement, int index )
+        {
+            if ( m_runtimeSet.Get().Count <= 0 )
+            {
+                EmptyHandler();
+            }
+        }
+
+
+        private void ClearHandler()
+        {
+            EmptyHandler();
+        }
+        
+
+        [ContextMenu("Debug_Invoke")]
+        public void EmptyHandler()
+        {
+            m_onSetEmpty.Invoke();
         }
     }
 }

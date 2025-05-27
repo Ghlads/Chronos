@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 493589ec0b38b2f4caa0c3b827c6c1e0, type: 3}
-  m_Name: IslandRuntimeSet
+  m_Name: VisitedIslandRuntimeSet
   m_EditorClassIdentifier: 
   m_values: []
   m_mode: 0

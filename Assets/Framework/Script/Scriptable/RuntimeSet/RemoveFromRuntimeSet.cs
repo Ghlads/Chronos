@@ -34,6 +34,18 @@ namespace Framework.Scriptable
         }
 
 
+        public void RemoveByElement()
+        {
+            RemoveByElement( m_element );
+        }
+
+
+        public void RemoveByIndex()
+        {
+            RemoveByIndex( m_index );
+        }
+
+
         public void RemoveByElement( T element )
         {
             m_runtimeSet.Get().Remove( element );

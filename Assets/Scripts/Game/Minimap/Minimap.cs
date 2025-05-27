@@ -1,4 +1,5 @@
 using Framework.Scriptable.Generated;
+using System;
 using System.Collections.Generic;
 using Unity.Hierarchy;
 using UnityEngine;
@@ -19,17 +20,24 @@ namespace Game
 
         private void Start()
         {
+            m_islandsSet.OnElementAdded += IslandAddedHandler;
             for ( int index = 0; index  < m_islandsSet.Count; index++ )
             {
-                GameObject marker = Instantiate( m_islandMarkerPrefab, Vector3.zero, Quaternion.identity, m_islandMarkerContainer );
-                m_islandsMarkers.Add( marker );
+                CreateNewMarker();
             }
         }
 
 
-        private Vector2 TransformWorldToMapSpace( Vector3 position )
+        private void CreateNewMarker()
         {
-            return TransformWorldToMapSpace( position, m_shipVariable.Value.transform.position );
+            GameObject marker = Instantiate( m_islandMarkerPrefab, Vector3.zero, Quaternion.identity, m_islandMarkerContainer );
+            m_islandsMarkers.Add( marker );
+        }
+
+
+        private void IslandAddedHandler( GameObject newElement, int index )
+        {
+            CreateNewMarker();
         }
 
 
