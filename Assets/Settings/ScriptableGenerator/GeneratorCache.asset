@@ -15,9 +15,9 @@ MonoBehaviour:
   m_defaultNamespace: Game.Generated
   m_defaultOutputPath: Scripts/Game/Generated
   m_defaultCategory: Chronos
-  m_lastSelectedTypeFullName: UnityEngine.Rect
+  m_lastSelectedTypeFullName: UnityEngine.GameObject
   m_lastNamespace: Framework.Scriptable.Generated
-  m_lastOutputPath: Framework/Script/Scriptable/Generated/Rect
+  m_lastOutputPath: Framework/Script/Scriptable/Generated/GameObject
   m_lastCategory: Unity
   m_lastSelectedTemplates:
-  - {fileID: 11400000, guid: 4f5e45e96feae0c47aefede5fb13e8b5, type: 2}
+  - {fileID: 11400000, guid: 5c1075b16b1480a41879acc7724d8e8b, type: 2}

@@ -102,7 +102,7 @@ MonoBehaviour:
   m_mapBoundsVariable: {fileID: 11400000, guid: e67b1fa15288d504381d26e67fbebdfa, type: 2}
   m_shipVariable: {fileID: 11400000, guid: d8eb94e1385c4194d81e6f6f5d740c7f, type: 2}
   m_mapScale: 5
-  m_islandsSet: {fileID: 11400000, guid: 9204ab0b1a13dc04aafa0c89874208cd, type: 2}
+  m_islandsSet: {fileID: 11400000, guid: 37859ccdddb43244d812e0afe218ae76, type: 2}
   m_islandMarkerContainer: {fileID: 2619508184883888192}
   m_islandMarkerPrefab: {fileID: 3040095008198545484, guid: 4ef461fe34ee10a46a8b17243b765db7, type: 3}
 --- !u!1 &5158956223103139989
