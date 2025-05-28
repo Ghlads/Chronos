@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
+    <Game.MinimapElement MapBounds="project://database/Assets/Data/Variable/Map/MapBound.asset?fileID=11400000&amp;guid=e67b1fa15288d504381d26e67fbebdfa&amp;type=2#MapBound" Ship="project://database/Assets/Data/Variable/Ship/ShipObjectVariable.asset?fileID=11400000&amp;guid=d8eb94e1385c4194d81e6f6f5d740c7f&amp;type=2#ShipObjectVariable" IslandSet="project://database/Assets/Data/RuntimeSet/VisitedIslandRuntimeSet.asset?fileID=11400000&amp;guid=37859ccdddb43244d812e0afe218ae76&amp;type=2#VisitedIslandRuntimeSet" class="minimap">
+        <engine:VisualElement name="minimap-root" style="flex-grow: 1; overflow: hidden; background-color: rgb(63, 149, 253);">
+            <engine:VisualElement name="minimap-marker-container" style="flex-grow: 1;" />
+            <engine:VisualElement name="ship-marker" class="minimap-marker" style="background-color: rgb(255, 255, 255);" />
+        </engine:VisualElement>
+    </Game.MinimapElement>
+</engine:UXML>

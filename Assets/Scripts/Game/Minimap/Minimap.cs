@@ -57,7 +57,6 @@ namespace Game
             {
                 m_islandsMarkers[index].transform.localPosition = TransformWorldToMapSpace( m_islandsSet[index].transform.localPosition, shipPosition );
             }
-        
         }
     }
 }

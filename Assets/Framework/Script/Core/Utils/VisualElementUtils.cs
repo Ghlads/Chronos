@@ -15,5 +15,14 @@ namespace Framework.Core
         {
             element.style.display = DisplayStyle.Flex;
         }
+
+
+        public static void RegisterUpdate( this VisualElement element, System.Action update )
+        {
+            if ( Application.isPlaying )
+            {
+                element.schedule.Execute( update ).Until( () => false );
+            }
+        }
     }
 }
