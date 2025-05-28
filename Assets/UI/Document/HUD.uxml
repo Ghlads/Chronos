@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="Compass" src="project://database/Assets/UI/Document/Compass/Compass.uxml?fileID=9197481963319205126&amp;guid=ccf82b02e6bb6844da998786289b8fbc&amp;type=3#Compass" />
+    <engine:Template name="Minimap" src="project://database/Assets/UI/Document/Minimap/Minimap.uxml?fileID=9197481963319205126&amp;guid=7d9bd3e202baa88459acd3475faa9d78&amp;type=3#Minimap" />
+    <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
+    <engine:Instance template="Compass" name="compass" style="position: absolute; bottom: 0;" />
+    <engine:Instance template="Minimap" name="minimap" style="position: absolute; right: 0;" />
+</engine:UXML>

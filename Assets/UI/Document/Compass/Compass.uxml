@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
+    <CompassElement TargetObject="project://database/Assets/Data/Variable/Compas/CompassTargetObject.asset?fileID=11400000&amp;guid=6d810b617ef80d44aaa579b1e89bd589&amp;type=2#CompassTargetObject" OriginObject="project://database/Assets/Data/Variable/Ship/ShipObjectVariable.asset?fileID=11400000&amp;guid=d8eb94e1385c4194d81e6f6f5d740c7f&amp;type=2#ShipObjectVariable" Damping="10" Target="project://database/Assets/Data/Variable/Compas/CompassTargetObject.asset?fileID=11400000&amp;guid=6d810b617ef80d44aaa579b1e89bd589&amp;type=2#CompassTargetObject" Origin="project://database/Assets/Data/Variable/Ship/ShipObjectVariable.asset?fileID=11400000&amp;guid=d8eb94e1385c4194d81e6f6f5d740c7f&amp;type=2#ShipObjectVariable" RotationOffset="0" class="compass">
+        <engine:VisualElement name="compass-root" style="flex-shrink: 0; flex-grow: 1;">
+            <engine:VisualElement name="compass-needle" class="compass-needle" style="flex-grow: 1;" />
+        </engine:VisualElement>
+    </CompassElement>
+</engine:UXML>
