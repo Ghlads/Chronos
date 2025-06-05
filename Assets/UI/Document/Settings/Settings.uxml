@@ -1,0 +1,30 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
+    <engine:VisualElement style="flex-grow: 1; flex-direction: row;">
+        <engine:VisualElement style="flex-grow: 1; justify-content: space-evenly; margin-right: 2px; margin-left: 2px; max-width: 50%;">
+            <engine:Slider label="Master" value="42" fill="true" data-source="project://database/Assets/Data/UI/SettingsBindings.asset?fileID=11400000&amp;guid=d5e1eda87bea5704ea8f55426e29aa38&amp;type=2#SettingsBindings" high-value="1" class="chronos-slider">
+                <Bindings>
+                    <engine:DataBinding property="value" data-source-path="MasterVolume" binding-mode="TwoWay" />
+                </Bindings>
+            </engine:Slider>
+            <engine:Slider label="Music" value="42" high-value="1" fill="true" data-source="project://database/Assets/Data/UI/SettingsBindings.asset?fileID=11400000&amp;guid=d5e1eda87bea5704ea8f55426e29aa38&amp;type=2#SettingsBindings" class="chronos-slider">
+                <Bindings>
+                    <engine:DataBinding property="value" data-source-path="MusicVolume" binding-mode="TwoWay" />
+                </Bindings>
+            </engine:Slider>
+            <engine:Slider label="SFX" value="42" high-value="1" fill="true" data-source="project://database/Assets/Data/UI/SettingsBindings.asset?fileID=11400000&amp;guid=d5e1eda87bea5704ea8f55426e29aa38&amp;type=2#SettingsBindings" class="chronos-slider">
+                <Bindings>
+                    <engine:DataBinding property="value" data-source-path="SfxVolume" binding-mode="TwoWay" />
+                </Bindings>
+            </engine:Slider>
+        </engine:VisualElement>
+        <engine:VisualElement style="flex-grow: 1; flex-shrink: 0; max-width: 50%;">
+            <Framework.EnhancedListView data-source="project://database/Assets/Data/ProjectList.asset?fileID=11400000&amp;guid=c2899e3baab310d4bb4808802e7af06a&amp;type=2#ProjectList" items-source="m_projectDatas" virtualization-method="FixedHeight" allow-add="false" allow-remove="false" show-bound-collection-size="false" item-template="project://database/Assets/UI/Document/Settings/ProjectCard.uxml?fileID=9197481963319205126&amp;guid=853afaff78a8a4b41be52193852531b2&amp;type=3#ProjectCard" fixed-item-height="22" style="flex-grow: 1; flex-shrink: 0;" />
+        </engine:VisualElement>
+        <Framework.Core.EnhancedButton name="back-button" text="BACK" action="project://database/Assets/Data/UI/ButtonAction/CloseSettingsMenu.asset?fileID=11400000&amp;guid=7cccfa127314e914e8955505035bdf31&amp;type=2#CloseSettingsMenu" data-source="project://database/Assets/Data/UI/ButtonAction/CloseSettingsMenu.asset?fileID=11400000&amp;guid=7cccfa127314e914e8955505035bdf31&amp;type=2#CloseSettingsMenu" class="back-button" style="position: absolute;">
+            <Bindings>
+                <engine:DataBinding property="Command" data-source-path="Command" binding-mode="ToSource" />
+            </Bindings>
+        </Framework.Core.EnhancedButton>
+    </engine:VisualElement>
+</engine:UXML>

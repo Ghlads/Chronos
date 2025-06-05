@@ -1,0 +1,3 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Framework.StackElement root-element-asset="project://database/Assets/UI/Document/HUD.uxml?fileID=9197481963319205126&amp;guid=a5de07cf70882e446b74d511e34e9cfb&amp;type=3#HUD" back-event="project://database/Assets/Data/Event/UI/BackButton.asset?fileID=11400000&amp;guid=7b21a02ff5c91e24ca7d8086ffeea9f7&amp;type=2#BackButton" variable="project://database/Assets/Data/Variable/UI/MenuStack.asset?fileID=11400000&amp;guid=4ad460455b6054d4c93e46c2b282213c&amp;type=2#MenuStack" style="flex-grow: 1;" />
+</engine:UXML>
