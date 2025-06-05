@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee27057f80f9c14e85b5c4282cdb9a5, type: 3}
+  m_Name: SettingsBindings
+  m_EditorClassIdentifier: 
+  m_audioMixer: {fileID: 24100000, guid: 08ace42ac3ffd824f8a5e02f481b5a21, type: 2}
+  m_masterVolumeLinear: 0.25
+  m_musicVolumeLinear: 0.25
+  m_sfxVolumeLinear: 0.25

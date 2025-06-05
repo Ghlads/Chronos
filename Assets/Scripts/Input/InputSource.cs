@@ -1,4 +1,5 @@
 using Chronos.Input;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using static Chronos.Input.InputControls;
@@ -13,6 +14,8 @@ public class InputSource : Framework.Scriptable.RuntimeScriptableObject, IMoveme
 
     private InputControls m_inputActions;
 
+
+    [SerializeReference] private SerRefTest m_serRefTest;
 
     public void Enable()
     {
@@ -37,4 +40,17 @@ public class InputSource : Framework.Scriptable.RuntimeScriptableObject, IMoveme
 
     public void OnPointerDown( InputAction.CallbackContext context ) {}
     public void OnPointerPosition( InputAction.CallbackContext context ) {}
+}
+
+[Serializable]
+public class SerRefTest
+{
+    [SerializeField] private bool m_test;
+}
+
+
+[Serializable]
+public class SerRefInherTest : SerRefTest
+{
+    [SerializeField] private float m_testInhe;
 }

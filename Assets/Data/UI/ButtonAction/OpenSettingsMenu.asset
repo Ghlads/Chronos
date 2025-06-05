@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd920eaaa9913a243bd519c479361b16, type: 3}
+  m_Name: OpenSettingsMenu
+  m_EditorClassIdentifier: 
+  m_action:
+    rid: 1943844289124761988
+  references:
+    version: 2
+    RefIds:
+    - rid: 1943844289124761988
+      type: {class: ExecutableList, ns: Framework.Core, asm: FrameworkCoreAssmebly}
+      data:
+        m_actions:
+        - rid: 1943844289124761989
+        - rid: 1943844289124761990
+    - rid: 1943844289124761989
+      type: {class: VoidEventInvokerAction, ns: Framework, asm: FrameworkAssembly}
+      data:
+        m_events:
+        - {fileID: 11400000, guid: 85fd122c1cfae864d878a67914e6ec18, type: 2}
+    - rid: 1943844289124761990
+      type: {class: OpenMenuAction, ns: Framework, asm: FrameworkAssembly}
+      data:
+        m_stackElement: {fileID: 11400000, guid: 4ad460455b6054d4c93e46c2b282213c, type: 2}
+        m_elementToOpen: {fileID: 9197481963319205126, guid: 5279a0b53360cde46adbdc27849f569b, type: 3}
+        m_openOptions:
+          HidePrevious: 1

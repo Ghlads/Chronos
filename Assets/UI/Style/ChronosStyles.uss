@@ -29,3 +29,183 @@
 .island {
     background-color: rgb(255, 193, 1);
 }
+
+.unity-text-element {
+    -unity-font-definition: url("project://database/Assets/Art/Font/PublicPixel.ttf?fileID=12800000&guid=a4771633cc86d9040ba8d81c01c6c695&type=3#PublicPixel");
+    font-size: 4px;
+    color: rgb(246, 239, 244);
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.info-title {
+    font-size: 3px;
+}
+
+.unity-button {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    -unity-text-align: middle-center;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgb(116, 125, 140);
+}
+
+.unity-scroll-view__vertical-scroller {
+}
+
+.bullet-point-list .unity-repeat-button {
+    display: none;
+    width: 4px;
+}
+
+.bullet-point-list .unity-scroller__slider {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 4px;
+    min-width: 4px;
+}
+
+.bullet-point-list Scroller {
+    width: 4px;
+}
+
+.bullet-point-list .unity-base-slider__dragger {
+    width: 2px;
+    left: 1px;
+    top: 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.back-button {
+    font-size: 8px;
+    background-color: rgb(255, 71, 87);
+    transition-duration: 0.5s;
+}
+
+.unity-button.back-button:hover {
+    scale: 1.05 1.05;
+    transition-property: scale, background-color;
+    transition-duration: 0.5s, 0.8s;
+    background-color: rgb(255, 107, 129);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+.unity-button.back-button:active {
+    scale: 1 1;
+    transition-property: scale;
+    transition-duration: 0.5s;
+}
+
+.trailer-button {
+    background-color: rgb(255, 165, 2);
+    translate: 1px 1px;
+    width: 8px;
+    height: 8px;
+    transition-duration: 0.5s;
+}
+
+.unity-button.trailer-button:hover {
+    background-color: rgb(236, 204, 104);
+    translate: 1px 1px;
+    width: 8px;
+    height: 8px;
+    scale: 1.05 1.05;
+    transition-property: scale, background-color;
+    transition-duration: 0.5s, 0.8s;
+}
+
+.unity-button.trailer-button:active {
+    background-color: rgb(236, 204, 104);
+    translate: 1px 1px;
+    width: 8px;
+    height: 8px;
+    scale: 1 1.05;
+    transition-property: scale;
+    transition-duration: 0.5s;
+}
+
+.unity-slider {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    min-height: 6px;
+}
+
+.unity-slider #unity-tracker {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 0;
+    height: auto;
+    flex-grow: 1;
+}
+
+.unity-slider #unity-dragger {
+    top: auto;
+    width: 4px;
+    height: 8px;
+    margin: -1px;
+}
+
+.unity-slider__label {
+    -unity-text-align: middle-center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: 32px;
+    margin-right: 3px;
+}
+
+.chronos-slider {
+}
+
+.project-card {
+    white-space: normal;
+    align-items: flex-start;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+
+.project-card .unity-button__image {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.project-card .unity-text-element {
+    -unity-text-align: middle-center;
+    flex-grow: 1;
+    align-self: center;
+}

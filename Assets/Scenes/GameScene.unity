@@ -684,6 +684,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1263073889}
   - component: {fileID: 1263073888}
+  - component: {fileID: 1263073890}
+  - component: {fileID: 1263073891}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -705,7 +707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: d2477c2fb3c048e429ec135217310005, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: a5de07cf70882e446b74d511e34e9cfb, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: ff8b451364a457343a2749dde4d64f13, type: 3}
   m_SortingOrder: 0
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
@@ -725,6 +727,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1263073890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263073887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e587553c20159459d6f1ff3792c62e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_event:
+    m_rawObject: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
+  m_onRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e535c261f46279241a15fe7478973c8a, type: 2}
+        m_TargetAssemblyTypeName: Framework.Scriptable.ScriptableVariable`1[[ProjectData,
+          GameAssembly
+        m_MethodName: set_Value
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1263073891}
+        m_TargetAssemblyTypeName: Framework.MenuStackController, FrameworkAssembly
+        m_MethodName: OpenElement
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 9197481963319205126, guid: 633d97bd5672c554c87013aa8eae4654, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UIElements.VisualTreeAsset,
+            UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1263073891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263073887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d389352c540888f44b4c5b15058d0bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stackVariable: {fileID: 11400000, guid: 4ad460455b6054d4c93e46c2b282213c, type: 2}
+  m_openOptions:
+    HidePrevious: 1
 --- !u!1001 &1306394157
 PrefabInstance:
   m_ObjectHideFlags: 0
