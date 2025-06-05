@@ -20,21 +20,10 @@ namespace Framework.Core
         {
             if ( m_isLinearToDecibel )
             {
-                value = LinearToDecibel( value );
+                value = AudioUtils.LinearToDb( value );
             }
 
             m_mixer.SetFloat( m_property, value );
-        }
-
-
-        public static float LinearToDecibel( float value )
-        {
-            if ( value <= 0.0001f )
-            {
-                return -80f;
-            }
-
-            return Mathf.Log10( value ) * 20f;
         }
     }
 }

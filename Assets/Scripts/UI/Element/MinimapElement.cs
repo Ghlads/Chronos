@@ -13,8 +13,51 @@ namespace Game
         [UxmlAttribute( "Ship" )] private GameObjectVariable m_shipVariable;
         [UxmlAttribute( "MapScale" )][Tooltip( "As 1/value" )] private float m_mapScale = 5.0f;
         [Header( "Island Marker" )]
-        [UxmlAttribute( "IslandSet" )] private GameObjectRuntimeSet m_islandsSet;
+
+        private GameObjectRuntimeSet m_islandsSet;
+        [UxmlAttribute]
+        private GameObjectRuntimeSet IslandSet
+        {
+            get => m_islandsSet;
+            set
+            {
+                if ( m_islandsSet != null )
+                {
+                    m_islandsSet.OnElementAdded -= IslandAddedHandler;
+                }
+
+                m_islandsSet = value;
+                if ( m_islandsSet != null )
+                {
+                    m_islandsSet.OnElementAdded += IslandAddedHandler;
+                    if ( m_treeAsset != null )
+                    {
+                        for ( int index = 0; index < m_islandsSet.Count; index++ )
+                        {
+                            CreateNewMarker();
+                        }
+                    }
+                }
+            }
+        }
+
         [UxmlAttribute( "IslandMarker" )] private VisualTreeAsset m_islandMarkerVisualTreeAsset;
+        private VisualTreeAsset m_treeAsset;
+        [UxmlAttribute]
+        private VisualTreeAsset TreeAsset
+        {
+            get { return m_treeAsset; }
+            set 
+            {
+                m_treeAsset = value;
+                if ( m_treeAsset != null )
+                {
+                    Clear();
+                    Add( m_treeAsset.Instantiate() );
+                    m_markerContainer = this.Q( name: "minimap-marker-container" );
+                }
+            }
+        }
 
         private readonly List<VisualElement> m_islandsMarkers = new();
         private VisualElement m_markerContainer;
@@ -26,18 +69,15 @@ namespace Game
                 return;
             }
 
-            schedule.Execute( Start ).ExecuteLater( 10 );
             this.RegisterUpdate( Update );// TODO : make an interface for update and start 
         }
 
 
-        private void Start()
+        ~MinimapElement()
         {
-            m_markerContainer = this.Q( name: "minimap-marker-container" );
-            m_islandsSet.OnElementAdded += IslandAddedHandler;
-            for ( int index = 0; index < m_islandsSet.Count; index++ )
+            if ( m_islandsSet != null )
             {
-                CreateNewMarker();
+                m_islandsSet.OnElementAdded -= IslandAddedHandler;
             }
         }
 

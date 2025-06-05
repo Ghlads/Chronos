@@ -1,0 +1,10 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
+    <Framework.Core.EnhancedButton text="Button" data-source-type="ProjectData, GameAssembly" class="project-card" style="flex-grow: 1;">
+        <Bindings>
+            <engine:DataBinding property="text" data-source-path="m_title" binding-mode="ToTarget" />
+            <engine:DataBinding property="iconImage" data-source-path="m_icon" binding-mode="ToTarget" source-to-ui-converters="ToBackground" />
+            <engine:DataBinding property="Command" data-source-path="PreviewProject" binding-mode="ToSource" />
+        </Bindings>
+    </Framework.Core.EnhancedButton>
+</engine:UXML>

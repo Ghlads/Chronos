@@ -1,61 +1,111 @@
 using Framework.Core;
 using Framework.Scriptable.Generated;
+using System;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UIElements;
 
-[UxmlElement]
-public partial class CompassElement : VisualElement
+namespace Game
 {
-    [UxmlAttribute( "Target" )] private GameObjectVariable m_target;
-    [UxmlAttribute( "Origin" )] private GameObjectVariable m_origin;
-    [UxmlAttribute( "Damping" )][Range( 0, 359 )] private float m_damping;
-
-    private VisualElement m_needle;
-
-    public CompassElement()
+    [UxmlElement]
+    public partial class CompassElement : VisualElement
     {
-        if ( !Application.isPlaying )
+        private GameObjectRuntimeSet m_toVisitIsland;
+        [UxmlAttribute]
+        public GameObjectRuntimeSet ToVisitIsland
         {
-            return;
+            get => m_toVisitIsland;
+            set
+            {
+                m_toVisitIsland = value;
+                if ( m_toVisitIsland != null )
+                {
+                    m_toVisitIsland.OnCleared += ClearedHandler;
+                    m_toVisitIsland.OnElementRemoved += ElementRemovedHandler;
+                }
+            }
         }
 
-        schedule.Execute( () =>
-        {
-            m_needle = this.Q( name: "compass-root" );
-            Assert.IsNotNull( m_needle );
-        } ).ExecuteLater( 10 );
-        this.RegisterUpdate( Update );
-    }
 
-    private void Update()
-    {
-        if ( m_target.Value == null || m_origin.Value == null )
+        [UxmlAttribute( "Target" )] private GameObjectVariable m_target;
+        [UxmlAttribute( "Origin" )] private GameObjectVariable m_origin;
+        [UxmlAttribute( "Damping" )][Range( 0, 359 )] private float m_damping;
+        private VisualTreeAsset m_treeAsset;
+        [UxmlAttribute]
+        private VisualTreeAsset TreeAsset
         {
-            return;
+            get => m_treeAsset;
+            set
+            {
+                m_treeAsset = value;
+                if ( m_treeAsset != null )
+                {
+                    Clear();
+                    Add( m_treeAsset.Instantiate() );
+                    m_needle = this.Q( name: "compass-root" );
+                    Assert.IsNotNull( m_needle );
+                }
+            }
         }
 
-        if ( m_needle == null || m_needle.transform == null )
+
+        private VisualElement m_needle;
+
+        public CompassElement()
         {
-            return;
+            if ( !Application.isPlaying )
+            {
+                return;
+            }
+
+            this.RegisterUpdate( Update );
         }
 
-        Vector3 directionToTarget = ( m_target.Value.transform.position - m_origin.Value.transform.position );
-        if ( directionToTarget.sqrMagnitude < .0001f )
+
+        private void Update()
         {
-            return;
+            if ( m_target.Value == null || m_origin.Value == null )
+            {
+                return;
+            }
+
+            if ( m_needle == null || m_needle.transform == null )
+            {
+                return;
+            }
+
+            Vector3 directionToTarget = ( m_target.Value.transform.position - m_origin.Value.transform.position );
+            if ( directionToTarget.sqrMagnitude < .0001f )
+            {
+                return;
+            }
+
+            directionToTarget.Normalize();
+            directionToTarget.x = -directionToTarget.x;
+            float targetAngle = MathUtils.GetAngleRadBetween( directionToTarget, Vector3.up, Axis.Z ) * Mathf.Rad2Deg;
+            if ( targetAngle < 0f )
+            {
+                targetAngle += 360f;
+            }
+
+            float currentAngle = m_needle.transform.rotation.eulerAngles.z;
+            float newAngle = Mathf.LerpAngle( currentAngle, targetAngle, m_damping * Time.deltaTime );
+            m_needle.transform.rotation = Quaternion.Euler( 0, 0, newAngle );
         }
 
-        directionToTarget.Normalize();
-        directionToTarget.x = -directionToTarget.x;
-        float targetAngle = MathUtils.GetAngleRadBetween( directionToTarget, Vector3.up, Axis.Z ) * Mathf.Rad2Deg;
-        if ( targetAngle < 0f )
+
+        private void ElementRemovedHandler( GameObject newElement, int index )
         {
-            targetAngle += 360f;
+            if ( m_toVisitIsland.Count <= 0 )
+            {
+                this.Hide();
+            }
         }
 
-        float currentAngle = m_needle.transform.rotation.eulerAngles.z;
-        float newAngle = Mathf.LerpAngle( currentAngle, targetAngle, m_damping * Time.deltaTime );
-        m_needle.transform.rotation = Quaternion.Euler( 0, 0, newAngle );
+
+        private void ClearedHandler()
+        {
+            this.Hide();
+        }
     }
 }
