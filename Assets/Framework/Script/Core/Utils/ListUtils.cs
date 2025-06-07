@@ -109,5 +109,22 @@ namespace Framework.Core
 
             return list;
         }
+
+
+        public static T Last<T>( this List<T> list )
+        {
+            return list == null || list.Count <= 0 ? default : list[list.Count - 1];
+        } 
+
+
+        public static T PopLast<T>( this List<T> list )
+        {
+            T last = list.Last();
+            if ( !( list == null || list.Count <= 0 ) )
+            {
+                list.RemoveAt(list.Count - 1);
+            }
+            return last;
+        }
     }
 }

@@ -7,8 +7,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ProjectData", menuName = "Scriptable/ProjectData")]
 public class ProjectData : ScriptableObject
 {
-    [SerializeField] private ProjectDataEvent m_previewProjectEvent;
-    [Space]
     [SerializeField] private Sprite m_icon;
     [SerializeField] private Sprite m_splash;
     [SerializeField] private string m_trailerLink;
@@ -46,7 +44,8 @@ public class ProjectData : ScriptableObject
         get => Command.Default;
         set
         {
-            m_previewProjectEvent.Raise( this );
+            ProjectDataEvent @event = value.AdditionalParams[0] as ProjectDataEvent;
+            @event.Raise( this );
         }
     }
 }

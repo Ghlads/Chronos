@@ -1,8 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
-    <engine:VisualElement name="root" data-source-path="m_value" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" style="flex-grow: 1; flex-direction: row; background-color: rgba(0, 0, 0, 0.38);">
+    <Framework.StackElementEventListener data-source="project://database/Assets/Data/Event/SE_DisableShipMovement.asset?fileID=11400000&amp;guid=b43f009396555014bbf636dc7c717fa3&amp;type=2#SE_DisableShipMovement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.38); flex-direction: row;">
         <engine:VisualElement name="focus-view" style="flex-grow: 1; flex-shrink: 0;" />
-        <engine:VisualElement name="details" data-source-type="ProjectData, GameAssembly" style="flex-shrink: 0; margin-right: 4px; margin-top: 1px; flex-grow: 0;">
+        <engine:VisualElement name="details" data-source-type="ProjectData, GameAssembly" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" data-source-path="m_value" style="flex-shrink: 0; margin-right: 4px; margin-top: 1px; flex-grow: 0;">
             <engine:VisualElement name="splash" style="flex-grow: 0.8; -unity-background-scale-mode: scale-and-crop; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; background-size: cover; width: 115px; flex-shrink: 0;">
                 <Framework.Core.EnhancedButton name="trailer-button" action="project://database/Assets/Data/UI/ButtonAction/ProjectTrailerOpener.asset?fileID=11400000&amp;guid=c8b3fc7a463b9a941adfa82d30c71dd7&amp;type=2#ProjectTrailerOpener" class="trailer-button" style="position: absolute; right: 0; bottom: 0;">
                     <Bindings>
@@ -48,5 +48,9 @@
                 <engine:DataBinding property="Command" data-source-path="Command" binding-mode="ToSource" />
             </Bindings>
         </Framework.Core.EnhancedButton>
-    </engine:VisualElement>
+        <Bindings>
+            <engine:DataBinding property="GainFocusCommand" data-source-path="RaiseBaseCommand" binding-mode="ToSource" />
+            <engine:DataBinding property="OpenCommand" data-source-path="RaiseBaseCommand" binding-mode="ToSource" />
+        </Bindings>
+    </Framework.StackElementEventListener>
 </engine:UXML>
