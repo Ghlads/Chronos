@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Unity.Properties;
 using UnityEngine.UIElements;
 
@@ -9,7 +8,7 @@ namespace Framework.Core
     {
         public static readonly BindingId CommandProperty = nameof( Command );
 
-        [UxmlAttribute( "CommandArgs" )] private List<UnityEngine.Object> m_commandArgs;
+        [UxmlAttribute( "CommandArgs" )] private CommandArgs m_commandArgs;
 
         private Command m_cachedCommand;
         [UxmlObjectReference]
@@ -31,7 +30,7 @@ namespace Framework.Core
             {
                 if ( Command.Trigger == value )
                 {
-                    m_cachedCommand = Command.Pool( this, dataSource, m_commandArgs );
+                    m_cachedCommand = Command.Pool( this, dataSource, m_commandArgs != null ? m_commandArgs.Args : null );
                     NotifyPropertyChanged( CommandProperty );
                 }
             }

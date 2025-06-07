@@ -16,7 +16,7 @@ namespace Framework
         // GainFocus 
         public static readonly BindingId GainFocusCommandProperty = nameof( GainFocusCommand );
         [Header( "Gain Focus" )]
-        [UxmlAttribute( "GainFocusCommandArgs" )] private List<UnityEngine.Object> m_commandGainFocusArgs;
+        [UxmlAttribute( "GainFocusCommandArgs" )] private CommandArgs m_gainFocusCommandArgs;
 
         private Command m_cachedGainFocusCommand;
         [UxmlObjectReference]
@@ -38,7 +38,7 @@ namespace Framework
             {
                 if ( Command.Trigger == value )
                 {
-                    m_cachedGainFocusCommand = Command.Pool( this, dataSource, m_commandGainFocusArgs );
+                    m_cachedGainFocusCommand = Command.Pool( this, dataSource, m_gainFocusCommandArgs != null ? m_gainFocusCommandArgs.Args : null );
                     NotifyPropertyChanged( GainFocusCommandProperty );
                 }
             }
@@ -47,7 +47,7 @@ namespace Framework
         //LooseFocus
         public static readonly BindingId LooseFocusCommandProperty = nameof( LooseFocusCommand );
         [Header( "Loose Focus" )]
-        [UxmlAttribute( "LooseFocusCommandArgs" )] private List<UnityEngine.Object> m_commandLooseFocusArgs;
+        [UxmlAttribute( "LooseFocusCommandArgs" )] private CommandArgs m_looseFocusCommandArgs;
 
         private Command m_cachedLooseFocusCommand;
         [UxmlObjectReference]
@@ -69,7 +69,7 @@ namespace Framework
             {
                 if ( Command.Trigger == value )
                 {
-                    m_cachedLooseFocusCommand = Command.Pool( this, dataSource, m_commandLooseFocusArgs );
+                    m_cachedLooseFocusCommand = Command.Pool( this, dataSource, m_looseFocusCommandArgs != null ? m_looseFocusCommandArgs.Args : null );
                     NotifyPropertyChanged( LooseFocusCommandProperty );
                 }
             }
@@ -79,7 +79,7 @@ namespace Framework
         //Open
         public static readonly BindingId OpenCommandProperty = nameof( OpenCommand );
         [Header( "Open" )]
-        [UxmlAttribute( "OpenCommandArgs" )] private List<UnityEngine.Object> m_commandOpenArgs;
+        [UxmlAttribute( "OpenCommandArgs" )] private CommandArgs m_openCommandArgs;
 
         private Command m_cachedOpenCommand;
         [UxmlObjectReference]
@@ -101,7 +101,7 @@ namespace Framework
             {
                 if ( Command.Trigger == value )
                 {
-                    m_cachedOpenCommand = Command.Pool( this, dataSource, m_commandOpenArgs );
+                    m_cachedOpenCommand = Command.Pool( this, dataSource, m_openCommandArgs != null ? m_openCommandArgs.Args : null );
                     NotifyPropertyChanged( OpenCommandProperty );
                 }
             }
@@ -111,7 +111,7 @@ namespace Framework
         //Close
         public static readonly BindingId CloseCommandProperty = nameof( CloseCommand );
         [Header( "Close" )]
-        [UxmlAttribute( "CloseCommandArgs" )] private List<UnityEngine.Object> m_commandCloseArgs;
+        [UxmlAttribute( "CloseCommandArgs" )] private CommandArgs m_closeCommandArgs ;
 
         private Command m_cachedCloseCommand;
         [UxmlObjectReference]
@@ -133,7 +133,7 @@ namespace Framework
             {
                 if ( Command.Trigger == value )
                 {
-                    m_cachedCloseCommand = Command.Pool( this, dataSource, m_commandCloseArgs );
+                    m_cachedCloseCommand = Command.Pool( this, dataSource, m_closeCommandArgs != null ? m_closeCommandArgs.Args : null );
                     NotifyPropertyChanged( CloseCommandProperty );
                 }
             }
