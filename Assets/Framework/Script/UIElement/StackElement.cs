@@ -49,7 +49,7 @@ namespace Framework
                 m_rootElementAsset = value; 
                 if ( m_rootElementAsset != null && m_stack.Count <= 0 )
                 {
-                    PushElement( m_rootElementAsset.Instantiate() );
+                    PushElement( m_rootElementAsset.Instantiate()[0] );
                 }
             }
         }
@@ -93,12 +93,13 @@ namespace Framework
         public void Open( VisualTreeAsset element, OpenOptions options = null )
         {
             Assert.IsTrue( m_stack.Count > 0 );
-            ActiveElement.SendEvent( EventStackLooseFocus.GetPooled( ActiveElement ) );
+            using EventStackLooseFocus looseFocusEvent = EventStackLooseFocus.GetPooled( ActiveElement );
+            SafeSendEventToTarget( ActiveElement, looseFocusEvent );
             if ( options.HidePrevious )
             {
                 ActiveElement.Hide();
             }
-            PushElement( element.Instantiate() );
+            PushElement( element.Instantiate()[0] );
         }
 
 
@@ -109,7 +110,30 @@ namespace Framework
             element.style.height = Length.Percent( 100 );
             Add( element );
             m_stack.Push( element );
-            element.SendEvent( EventStackOpen.GetPooled( element ) );
+            using EventStackOpen openEvent = EventStackOpen.GetPooled( element );
+            openEvent.target = ActiveElement;
+            SafeSendEventToTarget( element, openEvent ); 
+        }
+
+
+        private void SafeSendEventToTarget( VisualElement element, EventBase @event )
+        {
+            if ( element == null )
+            {
+                return;
+            }
+
+            if ( element.panel == null )
+            {
+                element.RegisterCallbackOnce<AttachToPanelEvent>( evt =>
+                {
+                    SendEvent( @event );
+                } );
+            }
+            else
+            {
+                SendEvent( @event );
+            }
         }
 
 
@@ -120,10 +144,11 @@ namespace Framework
                 Debug.LogWarning( "Last menu was closed, should not happen unless you know what you do" );
                 return;
             }
-
-            ActiveElement.SendEvent( EventStackClose.GetPooled( ActiveElement ) );
+            using EventStackClose closeEvent = EventStackClose.GetPooled(  );
+            SafeSendEventToTarget( ActiveElement, closeEvent );
             Remove( m_stack.Pop() );
-            ActiveElement.SendEvent( EventStackGainFocus.GetPooled( ActiveElement ) );
+            using EventStackGainFocus gainFocusEvent = EventStackGainFocus.GetPooled( ActiveElement );
+            SafeSendEventToTarget( ActiveElement, gainFocusEvent );
             ActiveElement.Display();
         }
     }
@@ -136,6 +161,13 @@ namespace Framework
             T @event = EventBase<T>.GetPooled();
             @event.target = target;
             return @event;
+        }
+
+        protected override void Init()
+        {
+            base.Init();
+            bubbles = true;
+            tricklesDown = true;
         }
     }
     public class EventStackLooseFocus : EventStackBase<EventStackLooseFocus> {}
