@@ -1,5 +1,3 @@
-using Codice.Client.BaseCommands.WkStatus.Printers;
-using log4net.Util;
 using UnityEngine;
 
 namespace Framework.Core
