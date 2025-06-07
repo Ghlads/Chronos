@@ -1,4 +1,6 @@
-﻿using Unity.Properties;
+﻿using System;
+using System.Collections.Generic;
+using Unity.Properties;
 using UnityEngine.UIElements;
 
 namespace Framework.Core
@@ -51,9 +53,32 @@ namespace Framework.Core
     /// </example>
     /// </summary>
     [UxmlObject]
-    public partial class Command 
+    public partial class Command : IDisposable
     {
-        public readonly static Command Trigger = new Command();
+        private readonly static List<Command> s_pool = new List<Command>(25);
+
+        public static Command Pool(VisualElement element = null, object datasource = null, List<UnityEngine.Object> additionalParams = null )
+        {
+            Command pooled = s_pool.Count <= 0 ? new() : s_pool.PopLast();
+            pooled.ElementSource = element;
+            pooled.AdditionalParams = additionalParams;
+            pooled.DataSource = datasource;
+            return pooled;
+        }
+
+        public void Dispose()
+        {
+            ElementSource = null;
+            DataSource = null;
+            AdditionalParams = null;
+            s_pool.Add(this);
+        }
+
         public readonly static Command Default = new Command();
+        public readonly static Command Trigger = new Command();
+
+        public VisualElement ElementSource;
+        public object DataSource;
+        public List<UnityEngine.Object> AdditionalParams;
     }
 }

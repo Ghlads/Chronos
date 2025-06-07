@@ -1,6 +1,6 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
-    <engine:VisualElement style="flex-grow: 1; flex-direction: row;">
+    <Framework.StackElementEventListener data-source="project://database/Assets/Data/Event/SE_DisableShipMovement.asset?fileID=11400000&amp;guid=b43f009396555014bbf636dc7c717fa3&amp;type=2#SE_DisableShipMovement" style="flex-grow: 1; flex-direction: row; background-color: rgba(47, 53, 66, 0.38);">
         <engine:VisualElement style="flex-grow: 1; justify-content: space-evenly; margin-right: 2px; margin-left: 2px; max-width: 50%;">
             <engine:Slider label="Master" value="42" fill="true" data-source="project://database/Assets/Data/UI/SettingsBindings.asset?fileID=11400000&amp;guid=d5e1eda87bea5704ea8f55426e29aa38&amp;type=2#SettingsBindings" high-value="1" class="chronos-slider">
                 <Bindings>
@@ -26,5 +26,9 @@
                 <engine:DataBinding property="Command" data-source-path="Command" binding-mode="ToSource" />
             </Bindings>
         </Framework.Core.EnhancedButton>
-    </engine:VisualElement>
+        <Bindings>
+            <engine:DataBinding property="GainFocusCommand" data-source-path="RaiseBaseCommand" binding-mode="ToSource" />
+            <engine:DataBinding property="OpenCommand" data-source-path="RaiseBaseCommand" binding-mode="ToSource" />
+        </Bindings>
+    </Framework.StackElementEventListener>
 </engine:UXML>

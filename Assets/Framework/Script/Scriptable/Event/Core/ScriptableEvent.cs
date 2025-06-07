@@ -1,4 +1,5 @@
 using Framework.Core;
+using Unity.Properties;
 using UnityEngine;
 
 namespace Framework.Scriptable
@@ -49,6 +50,17 @@ namespace Framework.Scriptable
         public override void RuntimeReset()
         {
             RemoveAllListener();
+        }
+
+
+        [CreateProperty]
+        public Command RaiseBaseCommand
+        {
+            get => Command.Default;
+            set
+            {
+                RaiseBase();
+            }
         }
     }
 

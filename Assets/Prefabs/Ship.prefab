@@ -140,8 +140,6 @@ GameObject:
   - component: {fileID: 5352518683209377269}
   - component: {fileID: 3037916219005948941}
   - component: {fileID: 6659935409344393761}
-  - component: {fileID: 2101177971948645771}
-  - component: {fileID: 6290324996175194932}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -381,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_event:
-    m_rawObject: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
+    m_rawObject: {fileID: 11400000, guid: b43f009396555014bbf636dc7c717fa3, type: 2}
   m_onRaised:
     m_PersistentCalls:
       m_Calls:
@@ -410,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_event:
-    m_rawObject: {fileID: 11400000, guid: 31fb50e62d5f70d41b512b62381f5635, type: 2}
+    m_rawObject: {fileID: 11400000, guid: 8db7dfc938b60804585e6412ea780129, type: 2}
   m_onRaised:
     m_PersistentCalls:
       m_Calls:
@@ -426,64 +424,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7402673498424796157}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &2101177971948645771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289984768859780772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb3710f4f2b5404280a07854bdf1b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_event:
-    m_rawObject: {fileID: 11400000, guid: 85fd122c1cfae864d878a67914e6ec18, type: 2}
-  m_onRaised:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7402673498424796157}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &6290324996175194932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6289984768859780772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bb3710f4f2b5404280a07854bdf1b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_event:
-    m_rawObject: {fileID: 11400000, guid: 96784a23b307ef349b151352953d36a9, type: 2}
-  m_onRaised:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 7402673498424796157}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
