@@ -1,6 +1,7 @@
 using Framework.Core;
 using Framework.Scriptable;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -57,19 +58,13 @@ namespace Game
 
         private IEnumerator MoorPositionRoutine( Vector3 moorPosition )
         {
-            Vector3 direction = ( moorPosition - transform.position ).normalized;
-            do
+            Debug.Log( "Test" );
+            while ( Vector3.Distance( transform.position, moorPosition ) > m_mooringTolerance )
             {
-                Vector3 distance = moorPosition - transform.position;
-                Vector3 movement = Time.deltaTime * m_mooringSpeed * direction;
-                if ( movement.sqrMagnitude >= distance.sqrMagnitude )
-                {
-                    movement = distance;
-                }
-
-                transform.position += movement;
+                Vector3 direction = ( moorPosition - transform.position ).normalized;
+                transform.position += direction * m_mooringSpeed * Time.deltaTime;
                 yield return null;
-            } while ( !MathUtils.Vector3Equal( transform.position, moorPosition, m_mooringTolerance ) );
+            }
 
             transform.position = moorPosition;
             m_mooringRoutine = null;

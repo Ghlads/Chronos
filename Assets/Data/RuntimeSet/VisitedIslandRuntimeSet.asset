@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_values: []
   m_mode: 0
+  m_disallowNull: 1
