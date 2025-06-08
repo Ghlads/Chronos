@@ -33,6 +33,7 @@ namespace Framework.Scriptable
     {
         [SerializeField] private List<T> m_values = new List<T>();
         [SerializeField] private RemoveMode m_mode = RemoveMode.Classic;
+        [SerializeField] private bool m_disallowNull;
 
         public event IRuntimeSet<T>.ChangeEventSignature OnElementChanged;
         public event IRuntimeSet<T>.MoveElementSignature OnElementAdded;
@@ -65,6 +66,12 @@ namespace Framework.Scriptable
 
         public void Add( T item )
         {
+            if ( m_disallowNull && item == null )
+            {
+                Debug.Log( " Null added " );
+                return;
+            }
+
             m_values.Add( item );
             OnElementAdded?.Invoke( item, m_values.Count - 1 );
         }

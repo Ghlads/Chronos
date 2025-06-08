@@ -1,5 +1,6 @@
 using Framework.Core;
 using Framework.Scriptable.Generated;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -55,6 +56,10 @@ namespace Game
                     Clear();
                     Add( m_treeAsset.Instantiate() );
                     m_markerContainer = this.Q( name: "minimap-marker-container" );
+                    foreach ( VisualElement element in m_islandsMarkers )
+                    {
+                        m_markerContainer.Add( element );
+                    }
                 }
             }
         }
@@ -87,7 +92,10 @@ namespace Game
             VisualElement marker = m_islandMarkerVisualTreeAsset != null ? m_islandMarkerVisualTreeAsset.Instantiate() : new VisualElement();
             marker.AddToClassList( "minimap-marker" );
             marker.AddToClassList( "island" );
-            m_markerContainer.Add( marker );
+            if ( m_markerContainer != null )
+            {
+                m_markerContainer.Add( marker );
+            }
             m_islandsMarkers.Add( marker );
         }
 
@@ -118,9 +126,22 @@ namespace Game
             Vector3 shipPosition = m_shipVariable.Value.transform.position;
             for ( int index = 0; index < m_islandsMarkers.Count; index++ )
             {
+                if ( m_islandsMarkers[index] == null || m_islandsMarkers[index].transform == null )
+                {
+                    Debug.LogWarning( "Null marker or transform" );
+                    continue;
+                }
+
+                if ( m_islandsMarkers[index].panel == null )
+                {
+                    Debug.LogWarning( "Marker not attached yet" );
+                    continue;
+                }
+
                 Vector2 offset = new Vector2( -m_islandsMarkers[index].resolvedStyle.width * 0.5f, -m_islandsMarkers[index].resolvedStyle.height * 0.5f );
                 m_islandsMarkers[index].transform.position = offset + TransformWorldToMapSpace( m_islandsSet[index].transform.localPosition, shipPosition );
             }
         }
     }
 }
+ 
