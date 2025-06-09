@@ -1,5 +1,5 @@
 .compass-needle {
-    background-image: url("project://database/Assets/Art/CompassArrow.png?fileID=2636546667915235586&guid=8a6e33c18e1a51e4597f8b0cf0b5a2de&type=3#CompassArrowStraight");
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1254843080&guid=93245fbf45618e64eaa866b7737bce64&type=3#Needle");
     flex-shrink: 0;
     flex-grow: 1;
 }
@@ -8,6 +8,7 @@
     width: 16px;
     height: 16px;
     flex-shrink: 0;
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1386249586&guid=93245fbf45618e64eaa866b7737bce64&type=3#Compass");
 }
 
 .minimap {
@@ -15,11 +16,12 @@
     flex-grow: 0;
     width: 32px;
     height: 32px;
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1962010746&guid=93245fbf45618e64eaa866b7737bce64&type=3#MapBacking");
 }
 
 .minimap-marker {
-    width: 4px;
-    height: 4px;
+    width: 8px;
+    height: 8px;
     position: absolute;
     translate: -50% -50%;
     top: 50%;
@@ -27,7 +29,7 @@
 }
 
 .island {
-    background-color: rgb(255, 193, 1);
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1298971352&guid=93245fbf45618e64eaa866b7737bce64&type=3#IslandIcon");
 }
 
 .unity-text-element {
@@ -42,6 +44,7 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
+    -unity-text-align: upper-left;
 }
 
 .info-title {
@@ -53,16 +56,17 @@
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
-    padding-left: 1px;
-    padding-right: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
     padding-top: 1px;
-    padding-bottom: 1px;
-    -unity-text-align: middle-center;
+    padding-bottom: 2px;
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
-    background-color: rgb(116, 125, 140);
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=957060315&guid=93245fbf45618e64eaa866b7737bce64&type=3#Button");
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 0.2s;
 }
 
 .unity-scroll-view__vertical-scroller {
@@ -98,22 +102,22 @@
 
 .back-button {
     font-size: 8px;
-    background-color: rgb(255, 71, 87);
     transition-duration: 0.5s;
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1197370736&guid=93245fbf45618e64eaa866b7737bce64&type=3#BackButton");
+    align-items: center;
+    justify-content: center;
 }
 
 .unity-button.back-button:hover {
-    scale: 1.05 1.05;
-    transition-property: scale, background-color;
-    transition-duration: 0.5s, 0.8s;
-    background-color: rgb(255, 107, 129);
-    -unity-background-image-tint-color: rgb(255, 255, 255);
+    translate: 2px 0;
+    transition-duration: 0.2s;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .unity-button.back-button:active {
-    scale: 1 1;
-    transition-property: scale;
-    transition-duration: 0.5s;
+    background-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.1s;
+    translate: 2px 1px;
 }
 
 .trailer-button {
@@ -149,7 +153,11 @@
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
-    min-height: 6px;
+    min-height: 8px;
+}
+
+.unity-slider #unity-drag-container {
+    justify-content: center;
 }
 
 .unity-slider #unity-tracker {
@@ -159,22 +167,41 @@
     right: auto;
     margin: 0;
     height: auto;
-    flex-grow: 1;
+    flex-grow: 0;
+    align-self: auto;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1180585268&guid=93245fbf45618e64eaa866b7737bce64&type=3#Rope");
+    min-height: 8px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
 }
 
 .unity-slider #unity-dragger {
     top: auto;
-    width: 4px;
+    width: 8px;
     height: 8px;
     margin: -1px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1196494765&guid=93245fbf45618e64eaa866b7737bce64&type=3#knot");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
 }
 
 .unity-slider__label {
-    -unity-text-align: middle-center;
+    -unity-text-align: upper-center;
     flex-grow: 0;
     flex-shrink: 0;
-    min-width: 32px;
+    min-width: 40px;
     margin-right: 3px;
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1269712643&guid=93245fbf45618e64eaa866b7737bce64&type=3#LabelBacker");
+    padding-top: 2px;
+    padding-right: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
 }
 
 .chronos-slider {
@@ -208,4 +235,66 @@
     -unity-text-align: middle-center;
     flex-grow: 1;
     align-self: center;
+}
+
+.chronos-button.unity-button:hover {
+    background-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.2s;
+    translate: 2px 0;
+}
+
+.chronos-button.unity-button:active {
+    background-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.1s;
+    translate: 2px 1px;
+}
+
+.back-button-text {
+    font-size: 8px;
+    margin-left: 4px;
+}
+
+.settings-options-container {
+    justify-content: space-evenly;
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
+    margin-top: 20px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    margin-left: 3px;
+    width: 50%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.unity-base-slider--vertical #unity-tracker {
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1650174205&guid=93245fbf45618e64eaa866b7737bce64&type=3#Chain");
+    background-repeat: round round;
+    flex-grow: 1;
+    background-size: 100% 40%;
+}
+
+.unity-base-slider--vertical #unity-dragger {
+    width: 16px;
+    height: 16px;
+    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=813479799&guid=93245fbf45618e64eaa866b7737bce64&type=3#Anchor");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    max-height: 16px;
+    left: -150%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: absolute;
+    top: 0;
+}
+
+.chronos-list-view .unity-scroller__slider {
+    overflow: visible;
 }
