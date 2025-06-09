@@ -40,10 +40,11 @@
                         </Bindings>
                     </engine:Label>
                 </engine:VisualElement>
-                <Framework.EnhancedListView item-template="project://database/Assets/UI/Document/ProjectPreview/BulletPoint.uxml?fileID=9197481963319205126&amp;guid=26ad2d7e741789e409b39942c77fec39&amp;type=3#BulletPoint" allow-add="false" allow-remove="false" items-source="m_bulletPoints" binding-source-selection-mode="AutoAssign" show-bound-collection-size="false" virtualization-method="DynamicHeight" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" data-source-path="m_value" class="bullet-point-list" style="width: 116px; margin-top: 2px;" />
+                <Framework.EnhancedListView item-template="project://database/Assets/UI/Document/ProjectPreview/BulletPoint.uxml?fileID=9197481963319205126&amp;guid=26ad2d7e741789e409b39942c77fec39&amp;type=3#BulletPoint" allow-add="false" allow-remove="false" items-source="m_bulletPoints" binding-source-selection-mode="AutoAssign" show-bound-collection-size="false" virtualization-method="DynamicHeight" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" data-source-path="m_value" class="bullet-point-list chronos-list-view" style="width: 116px; margin-top: 2px;" />
             </engine:VisualElement>
         </engine:VisualElement>
-        <Framework.Core.EnhancedButton text="BACK" name="back-button" data-source="project://database/Assets/Data/UI/ButtonAction/CloseProjectPreview.asset?fileID=11400000&amp;guid=e131182a152fd334c9cfec3e66fbf255&amp;type=2#CloseProjectPreview" enable-rich-text="false" emoji-fallback-support="false" double-click-selects-word="false" triple-click-selects-line="false" display-tooltip-when-elided="false" class="back-button" style="position: absolute;">
+        <Framework.Core.EnhancedButton name="back-button" action="project://database/Assets/Data/UI/ButtonAction/CloseSettingsMenu.asset?fileID=11400000&amp;guid=7cccfa127314e914e8955505035bdf31&amp;type=2#CloseSettingsMenu" data-source="project://database/Assets/Data/UI/ButtonAction/CloseSettingsMenu.asset?fileID=11400000&amp;guid=7cccfa127314e914e8955505035bdf31&amp;type=2#CloseSettingsMenu" class="back-button" style="position: absolute; height: 16px;">
+            <engine:Label text="BACK" class="back-button-text" />
             <Bindings>
                 <engine:DataBinding property="Command" data-source-path="Command" binding-mode="ToSource" />
             </Bindings>

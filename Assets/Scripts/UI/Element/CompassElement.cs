@@ -42,7 +42,7 @@ namespace Game
                 {
                     Clear();
                     Add( m_treeAsset.Instantiate() );
-                    m_needle = this.Q( name: "compass-root" );
+                    m_needle = this.Q( name: "compass-needle" );
                     Assert.IsNotNull( m_needle );
                 }
             }
