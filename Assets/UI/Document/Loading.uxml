@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; background-color: rgb(16, 18, 24);">
+        <ui:Label text="LOADING..." enable-rich-text="false" style="bottom: 0; right: 0; position: absolute; left: 0; margin-left: 2px; margin-bottom: 2px;" />
+    </ui:VisualElement>
+</ui:UXML>
