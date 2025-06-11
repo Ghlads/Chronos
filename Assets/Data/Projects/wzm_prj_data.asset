@@ -12,19 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e306e2a4274184cabfd08b6642056a, type: 3}
   m_Name: wzm_prj_data
   m_EditorClassIdentifier: 
-  m_previewProjectEvent: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
   m_icon: {fileID: 1136246814, guid: 2897cedc543e39244baf1089a6257108, type: 3}
   m_splash: {fileID: 21300000, guid: abd83393951737c45ae842b516dd5422, type: 3}
   m_trailerLink: https://www.youtube.com/watch?v=eBYXHsbeYKU
   m_title: Call of Duty Warzone Mobile
   m_needTitleDisplay: 0
-  m_platformes:
-  - Mobile
-  m_technologies:
-  - C++
-  - Lua
-  - Engine maison
   m_bulletPoints:
+  - Icon: {fileID: 957060315, guid: 93245fbf45618e64eaa866b7737bce64, type: 3}
+    Title: Platformes
+    Text: Mobile
+  - Icon: {fileID: 322164677, guid: 93245fbf45618e64eaa866b7737bce64, type: 3}
+    Title: Technologies
+    Text: c++ / lua / engin maison
   - Icon: {fileID: -7022472676040673793, guid: 2897cedc543e39244baf1089a6257108, type: 3}
     Title: Objectif
     Text: "Maintient de la stabilit\xE9 du jeu et \xE9laboration de nouveau syst\xE8me
@@ -34,5 +33,5 @@ MonoBehaviour:
     Text: "Appropriation d'une code base gigantesque, mise en place d'optimisation
       m\xE9moire et impl\xE9mentation de feature cross platforme "
   - Icon: {fileID: -1964055494, guid: 2897cedc543e39244baf1089a6257108, type: 3}
-    Title: Impact collaboratif
+    Title: Collaboration
     Text: "Int\xE9gration et coaching de nouveau d\xE9veloppeur sur le projet"
