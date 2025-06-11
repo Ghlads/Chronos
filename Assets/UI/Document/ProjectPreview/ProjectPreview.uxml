@@ -2,46 +2,25 @@
     <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
     <Framework.StackElementEventListener data-source="project://database/Assets/Data/Event/SE_DisableShipMovement.asset?fileID=11400000&amp;guid=b43f009396555014bbf636dc7c717fa3&amp;type=2#SE_DisableShipMovement" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.38); flex-direction: row;">
         <engine:VisualElement name="focus-view" style="flex-grow: 1; flex-shrink: 0;" />
-        <engine:VisualElement name="details" data-source-type="ProjectData, GameAssembly" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" data-source-path="m_value" style="flex-shrink: 0; margin-right: 4px; margin-top: 1px; flex-grow: 0;">
-            <engine:VisualElement name="splash" style="flex-grow: 0.8; -unity-background-scale-mode: scale-and-crop; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; background-size: cover; width: 115px; flex-shrink: 0;">
-                <Framework.Core.EnhancedButton name="trailer-button" action="project://database/Assets/Data/UI/ButtonAction/ProjectTrailerOpener.asset?fileID=11400000&amp;guid=c8b3fc7a463b9a941adfa82d30c71dd7&amp;type=2#ProjectTrailerOpener" class="trailer-button" style="position: absolute; right: 0; bottom: 0;">
+        <engine:VisualElement name="details" data-source-type="ProjectData, GameAssembly" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" data-source-path="m_value" class="project-details" style="flex-shrink: 0; flex-grow: 0;">
+            <engine:VisualElement name="splash" style="flex-grow: 0.9; -unity-background-scale-mode: stretch-to-fill; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; background-size: 100px 100%; width: 115px; flex-shrink: 0;">
+                <Framework.Core.EnhancedButton name="trailer-button" action="project://database/Assets/Data/UI/ButtonAction/ProjectTrailerOpener.asset?fileID=11400000&amp;guid=c8b3fc7a463b9a941adfa82d30c71dd7&amp;type=2#ProjectTrailerOpener" icon-image="project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-776883180&amp;guid=93245fbf45618e64eaa866b7737bce64&amp;type=3#OpenLinkIcon" class="trailer-button" style="position: absolute; right: 0; bottom: 0;">
                     <Bindings>
                         <engine:DataBinding property="Command" data-source-path="OpenTrailer" binding-mode="ToSource" />
                     </Bindings>
                 </Framework.Core.EnhancedButton>
-                <engine:VisualElement name="project-title" style="flex-grow: 0; background-color: rgb(47, 53, 66); flex-shrink: 0;">
-                    <engine:Label text="Label" style="margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-center; align-self: stretch;">
-                        <Bindings>
-                            <engine:DataBinding property="text" data-source-path="m_title" binding-mode="ToTarget" />
-                        </Bindings>
-                    </engine:Label>
+                <engine:Label text="Label" class="title text-with-backing" style="-unity-text-align: middle-center; align-self: center; white-space: normal;">
                     <Bindings>
-                        <engine:DataBinding property="style.display" data-source-path="m_needTitleDisplay" binding-mode="ToTarget" />
+                        <engine:DataBinding property="text" data-source-path="m_title" binding-mode="ToTarget" />
+                        <engine:DataBinding property="style.display" data-source-path="m_needTitleDisplay" binding-mode="ToTargetOnce" />
                     </Bindings>
-                </engine:VisualElement>
+                </engine:Label>
                 <Bindings>
                     <engine:DataBinding property="style.backgroundImage" data-source-path="m_splash" binding-mode="ToTarget" />
                 </Bindings>
             </engine:VisualElement>
-            <engine:VisualElement name="info" style="flex-grow: 1; margin-top: 0; padding-top: 2px;">
-                <engine:VisualElement name="platforms" style="flex-grow: 0; flex-direction: row; flex-shrink: 0;">
-                    <engine:VisualElement style="width: 8px; height: 8px; background-color: rgb(30, 144, 255); margin-right: 5px;" />
-                    <engine:Label text="Label" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-center;">
-                        <Bindings>
-                            <engine:DataBinding property="text" data-source-path="m_platformes" binding-mode="ToTarget" source-to-ui-converters="ListToStringSlashSeparated" />
-                        </Bindings>
-                    </engine:Label>
-                </engine:VisualElement>
-                <engine:VisualElement name="technologies" style="flex-grow: 0; flex-direction: row; margin-top: 2px; flex-shrink: 0;">
-                    <engine:VisualElement style="width: 8px; height: 8px; background-color: rgb(46, 213, 115); margin-right: 5px;" />
-                    <engine:Label text="Label" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-text-align: middle-center;">
-                        <Bindings>
-                            <engine:DataBinding property="text" data-source-path="m_technologies" binding-mode="ToTarget" source-to-ui-converters="ListToStringSlashSeparated" />
-                        </Bindings>
-                    </engine:Label>
-                </engine:VisualElement>
-                <Framework.EnhancedListView item-template="project://database/Assets/UI/Document/ProjectPreview/BulletPoint.uxml?fileID=9197481963319205126&amp;guid=26ad2d7e741789e409b39942c77fec39&amp;type=3#BulletPoint" allow-add="false" allow-remove="false" items-source="m_bulletPoints" binding-source-selection-mode="AutoAssign" show-bound-collection-size="false" virtualization-method="DynamicHeight" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" data-source-path="m_value" class="bullet-point-list chronos-list-view" style="width: 116px; margin-top: 2px;" />
-            </engine:VisualElement>
+            <engine:VisualElement class="horizontal-separator" />
+            <Framework.EnhancedListView item-template="project://database/Assets/UI/Document/ProjectPreview/BulletPoint.uxml?fileID=9197481963319205126&amp;guid=26ad2d7e741789e409b39942c77fec39&amp;type=3#BulletPoint" allow-add="false" allow-remove="false" items-source="m_bulletPoints" binding-source-selection-mode="AutoAssign" show-bound-collection-size="false" virtualization-method="DynamicHeight" data-source="project://database/Assets/Data/Variable/PreviewedProjectData.asset?fileID=11400000&amp;guid=e535c261f46279241a15fe7478973c8a&amp;type=2#PreviewedProjectData" data-source-path="m_value" selection-type="None" class="bullet-point-list chronos-list-view" style="width: 116px;" />
         </engine:VisualElement>
         <Framework.Core.EnhancedButton name="back-button" action="project://database/Assets/Data/UI/ButtonAction/CloseSettingsMenu.asset?fileID=11400000&amp;guid=7cccfa127314e914e8955505035bdf31&amp;type=2#CloseSettingsMenu" data-source="project://database/Assets/Data/UI/ButtonAction/CloseSettingsMenu.asset?fileID=11400000&amp;guid=7cccfa127314e914e8955505035bdf31&amp;type=2#CloseSettingsMenu" class="back-button" style="position: absolute; height: 16px;">
             <engine:Label text="BACK" class="back-button-text" />
