@@ -16,6 +16,7 @@ namespace Framework.Scriptable
         private void OnEnable()
         {
             Register( this );
+            RuntimeReset();
         }
 
         private void OnDisable()

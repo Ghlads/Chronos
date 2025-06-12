@@ -30,6 +30,11 @@ namespace Game
                 m_islandsSet = value;
                 if ( m_islandsSet != null )
                 {
+                    if ( m_islandsSet.Count > 0 )
+                    {
+                        Debug.LogWarning( "Islands visited count is greater than 0" );
+                    }
+
                     m_islandsSet.OnElementAdded += IslandAddedHandler;
                     if ( m_treeAsset != null )
                     {
@@ -102,6 +107,12 @@ namespace Game
 
         private void IslandAddedHandler( GameObject newElement, int index )
         {
+            if ( newElement == null )
+            {
+                Debug.LogError( "Null island" );
+                return;
+            }
+
             CreateNewMarker();
         }
 
@@ -126,6 +137,13 @@ namespace Game
             Vector3 shipPosition = m_shipVariable.Value.transform.position;
             for ( int index = 0; index < m_islandsMarkers.Count; index++ )
             {
+                if ( m_islandsSet[index] == null )
+                {
+                    Debug.LogWarning( "Null island detected" );
+                    m_islandsSet.RemoveAt( index-- );
+                    continue;
+                }
+
                 if ( m_islandsMarkers[index] == null || m_islandsMarkers[index].transform == null )
                 {
                     Debug.LogWarning( "Null marker or transform" );
@@ -137,6 +155,7 @@ namespace Game
                     Debug.LogWarning( "Marker not attached yet" );
                     continue;
                 }
+
 
                 Vector2 offset = new Vector2( -m_islandsMarkers[index].resolvedStyle.width * 0.5f, -m_islandsMarkers[index].resolvedStyle.height * 0.5f );
                 m_islandsMarkers[index].transform.position = offset + TransformWorldToMapSpace( m_islandsSet[index].transform.localPosition, shipPosition );
