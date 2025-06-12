@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; background-color: rgb(16, 18, 24);">
-        <ui:Label text="LOADING..." enable-rich-text="false" style="bottom: 0; right: 0; position: absolute; left: 0; margin-left: 2px; margin-bottom: 2px;" />
+    <Style src="project://database/Assets/UI/Style/ChronosStyles.uss?fileID=7433441132597879392&amp;guid=22aa7f97b89f3ed4f8007cac2964243a&amp;type=3#ChronosStyles" />
+    <ui:VisualElement style="flex-grow: 1; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;">
+        <ui:Label text="LOADING..." enable-rich-text="false" class="title text-with-backing" style="position: absolute; -unity-text-align: middle-left; align-self: center; bottom: 0; left: 0; padding-left: 5px; padding-right: 1px;" />
     </ui:VisualElement>
 </ui:UXML>
