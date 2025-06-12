@@ -18,20 +18,20 @@ MonoBehaviour:
   m_title: Call of Duty Warzone Mobile
   m_needTitleDisplay: 0
   m_bulletPoints:
-  - Icon: {fileID: 957060315, guid: 93245fbf45618e64eaa866b7737bce64, type: 3}
+  - Icon: {fileID: 2478943349938514664, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
     Title: Platformes
     Text: Mobile
-  - Icon: {fileID: 322164677, guid: 93245fbf45618e64eaa866b7737bce64, type: 3}
+  - Icon: {fileID: -1004665556, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
     Title: Technologies
     Text: c++ / lua / engin maison
-  - Icon: {fileID: -7022472676040673793, guid: 2897cedc543e39244baf1089a6257108, type: 3}
+  - Icon: {fileID: -2025482038, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
     Title: Objectif
     Text: "Maintient de la stabilit\xE9 du jeu et \xE9laboration de nouveau syst\xE8me
       pour les designer"
-  - Icon: {fileID: 1136246814, guid: 2897cedc543e39244baf1089a6257108, type: 3}
+  - Icon: {fileID: -1673226356, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
     Title: "D\xE9fis relev\xE9"
     Text: "Appropriation d'une code base gigantesque, mise en place d'optimisation
       m\xE9moire et impl\xE9mentation de feature cross platforme "
-  - Icon: {fileID: -1964055494, guid: 2897cedc543e39244baf1089a6257108, type: 3}
+  - Icon: {fileID: -1175687579, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
     Title: Collaboration
     Text: "Int\xE9gration et coaching de nouveau d\xE9veloppeur sur le projet"
