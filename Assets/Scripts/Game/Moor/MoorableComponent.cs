@@ -58,7 +58,6 @@ namespace Game
 
         private IEnumerator MoorPositionRoutine( Vector3 moorPosition )
         {
-            Debug.Log( "Test" );
             while ( Vector3.Distance( transform.position, moorPosition ) > m_mooringTolerance )
             {
                 Vector3 direction = ( moorPosition - transform.position ).normalized;
