@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26e306e2a4274184cabfd08b6642056a, type: 3}
+  m_Name: wib_prj_data
+  m_EditorClassIdentifier: 
+  m_icon: {fileID: 21300000, guid: f20007c390cb38a4389e67566bdaf466, type: 3}
+  m_splash: {fileID: 21300000, guid: 67d76c8354d8e1d4f93a558faf31a95e, type: 3}
+  m_trailerLink: https://store.steampowered.com/app/2228710/Where_is_Billy/
+  m_title: Where is Billy
+  m_needTitleDisplay: 0
+  m_bulletPoints:
+  - Icon: {fileID: 2478943349938514664, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
+    Title: Plateformes
+    Text: PC / Steam deck / Nintendo switch / Xbox one et Series / PS4 / PS5
+  - Icon: {fileID: -1004665556, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
+    Title: Technologies
+    Text: Unity (C#) / Photon (multijoueur)
+  - Icon: {fileID: -2025482038, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
+    Title: Objectif
+    Text: "Refactorer les syst\xE8mes techniques afin de faciliter l\u2019\xE9volution
+      et la maintenance du projet"
+  - Icon: {fileID: -1673226356, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
+    Title: "D\xE9fis relev\xE9s"
+    Text: "Refonte compl\xE8te du netcode pour supporter un gameplay multijoueur
+      fluide et modulaire\n"
+  - Icon: {fileID: -269750402, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
+    Title: "R\xE9sultats"
+    Text: "Mise en place d\u2019un netcode plus propre, extensible et r\xE9utilisable
+      sur d\u2019autres projets et Contribution \xE0 l\u2019unification du framework
+      technique de l\u2019entreprise"
