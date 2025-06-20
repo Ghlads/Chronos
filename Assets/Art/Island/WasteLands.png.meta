@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5b892e95fc721ed48a83eb8d2229b35d
+guid: 50ef38f82e07210418822202bdf97e12
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2478943349938514664
-    second: IconSheet_0
+      213: -4174649981274109775
+    second: WasteLands_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Icon_GamePad
+      name: WasteLands_Bottom
       rect:
         serializedVersion: 2
         x: 0
-        y: 24
-        width: 8
-        height: 8
+        y: 0
+        width: 192
+        height: 96
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,108 +128,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8eae66fb7d9f66220800000000000000
-      internalID: 2478943349938514664
+      spriteID: 1b8c094d5f9a016c0800000000000000
+      internalID: -4174649981274109775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icon_Tools
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3138e9d24cc696c40b77777075b9a18f
-      internalID: -1004665556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icon_BullEye
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0814b9ac34e69444aed46340d286338
-      internalID: -2025482038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icon_Trophy
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 24
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43ddd77f16624c64ebae2e63f30d2272
-      internalID: -1673226356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Icon_Team
+      name: WasteLands_Top
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed428b9c2f0c373409ad2f3b142abf75
-      internalID: -1175687579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ResultIcon
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 16
-        width: 8
-        height: 8
+        y: 96
+        width: 192
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc9799bfb4edd6349b0f329a756c4daf
-      internalID: -269750402
+      spriteID: 520f1a937ef1fab419772f0f967c8d47
+      internalID: -2064858566
       vertices: []
       indices: 
       edges: []
@@ -248,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6bb3b86d2113ed7408a47c0d9384d515
+    spriteID: dfa4805023fe14c49b6143ab565116eb
     internalID: 0
     vertices: []
     indices: 
@@ -258,12 +170,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Icon_BullEye: -2025482038
-      Icon_GamePad: 2478943349938514664
-      Icon_Team: -1175687579
-      Icon_Tools: -1004665556
-      Icon_Trophy: -1673226356
-      ResultIcon: -269750402
+      WasteLands_Bottom: -4174649981274109775
+      WasteLands_Top: -2064858566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
