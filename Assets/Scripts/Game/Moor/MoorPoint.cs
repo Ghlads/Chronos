@@ -6,6 +6,7 @@ namespace Game
     public class MoorPoint : MonoBehaviour
     {
         [SerializeField] private UnityEvent m_onMoorableEntered;
+        [SerializeField] private Transform m_targetTransform;
 
         private void OnTriggerEnter2D( Collider2D collider )
         {
@@ -19,7 +20,7 @@ namespace Game
                 rigidbody.linearVelocity = Vector2.zero;
             }
 
-            moorable.Moor( transform );
+            moorable.Moor( m_targetTransform );
             m_onMoorableEntered.Invoke();
         }
     }
