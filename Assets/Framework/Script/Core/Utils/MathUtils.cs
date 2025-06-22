@@ -19,6 +19,12 @@ namespace Framework.Core
         Z = 2,
     }
 
+    public enum Space
+    {
+        Local = 0,
+        World = 1
+    }
+
     public static class MathUtils
     {
         public static float RaiseExponant( float value, Exponant exponant )

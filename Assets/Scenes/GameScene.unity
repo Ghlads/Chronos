@@ -383,6 +383,8 @@ GameObject:
   m_Component:
   - component: {fileID: 705123698}
   - component: {fileID: 705123699}
+  - component: {fileID: 705123701}
+  - component: {fileID: 705123700}
   m_Layer: 0
   m_Name: MapContainer
   m_TagString: Untagged
@@ -423,6 +425,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bounds: {fileID: 11400000, guid: e67b1fa15288d504381d26e67fbebdfa, type: 2}
   m_deadSeaSize: {fileID: 11400000, guid: 9081367da0b039c45ad402623dde98a1, type: 2}
+--- !u!114 &705123700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705123697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb3710f4f2b5404280a07854bdf1b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_event:
+    m_rawObject: {fileID: 11400000, guid: 31fb50e62d5f70d41b512b62381f5635, type: 2}
+  m_onRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 57744b8096d401d46a7f49c1fe9ef9d7, type: 2}
+        m_TargetAssemblyTypeName: Framework.Scriptable.ScriptableEvent, ScriptableAssembly
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &705123701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705123697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb3710f4f2b5404280a07854bdf1b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_event:
+    m_rawObject: {fileID: 11400000, guid: 495d311c3a84d2b499297b7e9318bbcf, type: 2}
+  m_onRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 5ff2fb304ddc5cc40bba434a4c1ca576, type: 2}
+        m_TargetAssemblyTypeName: Framework.Scriptable.ScriptableEvent, ScriptableAssembly
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &745479478
 GameObject:
   m_ObjectHideFlags: 0
