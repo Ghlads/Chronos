@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Framework.Scriptable
 {
+
     public abstract class RuntimeEventInjector<T> : MonoBehaviour, IRaiseableEvent<T>
     {
         [SerializeField] private InterfaceReference<IRaiseableEvent<T>, RuntimeScriptableObject> m_templateEvent;

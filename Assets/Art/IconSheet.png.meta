@@ -231,7 +231,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,6 +240,28 @@ TextureImporter:
       bones: []
       spriteID: bc9799bfb4edd6349b0f329a756c4daf
       internalID: -269750402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moor-circle
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa36736b9e902d345b67fe79c5279d59
+      internalID: 590224110
       vertices: []
       indices: 
       edges: []
@@ -263,6 +285,7 @@ TextureImporter:
       Icon_Team: -1175687579
       Icon_Tools: -1004665556
       Icon_Trophy: -1673226356
+      Moor-circle: 590224110
       ResultIcon: -269750402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
