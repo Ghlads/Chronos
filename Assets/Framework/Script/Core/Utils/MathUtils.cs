@@ -231,5 +231,25 @@ namespace Framework.Core
             result.max += Vector2.one * offset;
             return result;
         }
+
+
+        public static void SetPositionInSpace( this Transform transform, Vector3 newPosition, Space space )
+        {
+            if ( transform == null )
+            {
+                return;
+            }
+
+            switch ( space )
+            {
+                case Space.Local:
+                    transform.localPosition = newPosition;
+                    break;
+                case Space.World:
+                default:
+                    transform.position = newPosition;
+                    break;
+            }
+        }
     }
 }

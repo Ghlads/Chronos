@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 32
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -253,7 +253,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,6 +262,50 @@ TextureImporter:
       bones: []
       spriteID: aa36736b9e902d345b67fe79c5279d59
       internalID: 590224110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hand
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94a19f7a1b087a479de5daec8377b1b
+      internalID: -146168996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TouchParticle
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9c8b910f8ba1f4c9e66f947817bb88
+      internalID: 232440465
       vertices: []
       indices: 
       edges: []
@@ -280,6 +324,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Hand: -146168996
       Icon_BullEye: -2025482038
       Icon_GamePad: 2478943349938514664
       Icon_Team: -1175687579
@@ -287,6 +332,7 @@ TextureImporter:
       Icon_Trophy: -1673226356
       Moor-circle: 590224110
       ResultIcon: -269750402
+      TouchParticle: 232440465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
