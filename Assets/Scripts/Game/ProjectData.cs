@@ -3,6 +3,7 @@ using Game.Generated.Scriptable;
 using System.Collections.Generic;
 using Unity.Properties;
 using UnityEngine;
+using UnityEngine.Localization;
 
 [CreateAssetMenu(fileName = "ProjectData", menuName = "Scriptable/ProjectData")]
 public class ProjectData : ScriptableObject
@@ -43,6 +44,15 @@ public class ProjectData : ScriptableObject
             @event.Raise( this );
         }
     }
+
+
+    public void OnEnable()
+    {
+        foreach ( BulletPointData point in m_bulletPoints )
+        {
+            point.LoadLocalized();
+        }
+    }
 }
 
 
@@ -50,7 +60,45 @@ public class ProjectData : ScriptableObject
 public struct BulletPointData
 {
     public Sprite Icon;
-    public string Title;
-    [TextArea]
-    public string Text;
+
+    [SerializeField][DontCreateProperty] private LocalizedString m_titleLocal;
+    private string m_title;
+    [CreateProperty]
+    public string Title
+    {
+        get
+        {
+            if ( string.IsNullOrEmpty( m_title ) )
+            {
+                m_title = m_titleLocal.GetLocalizedString();
+            }
+
+            return m_title;
+        }
+    }
+
+
+    [SerializeField][DontCreateProperty] private LocalizedString m_textLocal;
+    private string m_text;
+    [CreateProperty]
+
+    public string Text
+    {
+        get
+        {
+            if ( string.IsNullOrEmpty( m_text ) )
+            {
+                m_text = m_textLocal.GetLocalizedString();
+            }
+
+            return m_text;
+        }
+    }
+
+
+    public void LoadLocalized()
+    {
+        m_title = m_titleLocal.GetLocalizedString();
+        m_text = m_textLocal.GetLocalizedString();
+    }
 }

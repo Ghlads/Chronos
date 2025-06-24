@@ -19,19 +19,119 @@ MonoBehaviour:
   m_needTitleDisplay: 0
   m_bulletPoints:
   - Icon: {fileID: 2478943349938514664, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Platformes
-    Text: Mobile
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4079013982208
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4971108888576
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1004665556, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Technologies
-    Text: c++ / lua / engin maison
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4156377919488
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 5022937903104
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -2025482038, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Objectif
-    Text: "Maintient de la stabilit\xE9 du jeu et \xE9laboration de nouveau syst\xE8me
-      pour les designeur"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4238984736768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 5172519366656
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1673226356, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: "D\xE9fis relev\xE9"
-    Text: "Appropriation d'une code base gigantesque, mise en place d'optimisation
-      m\xE9moire et impl\xE9mentation de feature cross platforme "
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4292793462784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 5655745130496
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1175687579, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Collaboration
-    Text: "Int\xE9gration et coaching de nouveau d\xE9veloppeur sur le projet"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4704586035200
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 5788536795136
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  - Icon: {fileID: -269750402, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4821464510464
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 6249360781312
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

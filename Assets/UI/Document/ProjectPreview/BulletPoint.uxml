@@ -15,7 +15,7 @@
                 </engine:Label>
             </engine:VisualElement>
             <engine:VisualElement style="flex-grow: 0;">
-                <engine:Label text="Label" style="flex-grow: 1; white-space: normal; -unity-text-align: upper-left;">
+                <engine:Label text="Label" style="flex-grow: 1; white-space: normal; -unity-text-align: upper-left; -unity-font-definition: resource(&apos;BigLineHeight_PublicPixel_SDF&apos;);">
                     <Bindings>
                         <engine:DataBinding property="text" data-source-path="Text" binding-mode="ToTarget" />
                     </Bindings>

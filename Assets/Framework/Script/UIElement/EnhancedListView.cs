@@ -25,6 +25,22 @@ namespace Framework
             }
         }
 
+        private ScrollView m_scrollView;
+        private float m_scrollSpeed = 18;
+        [UxmlAttribute]
+        public float ScrollSpeed
+        {
+            get => m_scrollSpeed;
+            set
+            {
+                m_scrollSpeed = value;
+                if ( m_scrollView != null )
+                {
+                    m_scrollView.mouseWheelScrollSize = value;
+                }
+            }
+        }
+
         public void ResolveItemsSource()
         {
             if ( PropertyContainer.TryGetValue( dataSource, PropertyPath.Combine( dataSourcePath, m_itemsSourcePath ), out object outValue ) )
@@ -45,6 +61,16 @@ namespace Framework
             unbindItem = Unbind;
 
             schedule.Execute( () => ResolveItemsSource() ).Until( () => itemsSource != null );
+            bool retrieved = false;
+            schedule.Execute( () =>
+            {
+                m_scrollView = this.Q<ScrollView>();
+                if ( m_scrollView != null )
+                {
+                    m_scrollView.mouseWheelScrollSize = m_scrollSpeed;
+                    retrieved = true;
+                }
+            } ).Until( () => !retrieved );
         }
 
 
