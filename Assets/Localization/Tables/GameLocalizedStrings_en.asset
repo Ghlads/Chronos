@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameLocalizedStrings_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: b19765e94d34861479ed21f4483b6020, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 51152547840
+    m_Localized: back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 150180065280
+    m_Localized: settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 197013663744
+    m_Localized: music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1376082849792
+    m_Localized: master
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1577514299392
+    m_Localized: islands
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4079013982208
+    m_Localized: platforms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4156377919488
+    m_Localized: technologies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4238984736768
+    m_Localized: goal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4292793462784
+    m_Localized: challenges
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4704586035200
+    m_Localized: collaboration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4821464510464
+    m_Localized: results
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4971108888576
+    m_Localized: Mobile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5022937903104
+    m_Localized: c++ / lua / in house engine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5172519366656
+    m_Localized: Maintaining game stability and developing new systems for designers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5655745130496
+    m_Localized: Appropriation of a gigantic code base, implementation of memory
+      optimization and cross-platform feature implementation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5788536795136
+    m_Localized: Onboarding and support of new developers on the project
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6249360781312
+    m_Localized: Creation of clear guidelines reltaed to the game's memory usage,
+      with a significant memory gain. Faster, simpler cross-platform event creation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7502262300672
+    m_Localized: PC / Steam deck / Nintendo switch / Xbox one and Series / PS4 /
+      PS5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7600325128192
+    m_Localized: Unity (C#) / Photon (multiplayer)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7701080698880
+    m_Localized: Refactor technical systems to facilitate project evolution and maintenance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7885474885632
+    m_Localized: Complete overhaul of netcode to support fluid, modular multiplayer
+      gameplay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7990152130560
+    m_Localized: Set up a cleaner, extensible and reusable netcode for other projects,
+      and contribute to the unification of the company's technical framework.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8116593618944
+    m_Localized: PC / Nintendo switch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8185745108992
+    m_Localized: Unity (C#) / in house ECS / custom physics system
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424195485696
+    m_Localized: Solving bugs and creating internal tools to improve production efficiency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8537886289920
+    m_Localized: Automate the generation of game credits from a Confluence page
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8658627719168
+    m_Localized: Automatic generation of the credit prefab from the web page, reducing
+      a day-long manual task to a single click for producer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8837032439808
+    m_Localized: WebGL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8904074194944
+    m_Localized: Unity (C#) / WebGL / HLSL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8956456857600
+    m_Localized: UI programming, First Time User Experience (FTUE) design and HLSL
+      shader creation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9011557429248
+    m_Localized: Design of a non-intrusive, full-overlay FTUE, requiring no modification
+      of existing gameplay code
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9127097921536
+    m_Localized: Implementation of a modular, independent FTUE system without conflict
+      with the rest of the development in progress
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

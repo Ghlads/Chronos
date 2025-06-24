@@ -19,20 +19,100 @@ MonoBehaviour:
   m_needTitleDisplay: 0
   m_bulletPoints:
   - Icon: {fileID: 2478943349938514664, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Plateformes
-    Text: WebGL
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4079013982208
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8837032439808
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1004665556, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Technologies
-    Text: Unity (C#) / WebGL / HLSL
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4156377919488
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8904074194944
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -2025482038, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Objectif
-    Text: "Programmation du UI, concpetion du First Time User Experience (FTUE) et
-      cr\xE9ation de shader HLSL"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4238984736768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8956456857600
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1673226356, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: "D\xE9fis relev\xE9s"
-    Text: "Conception d'un FTUE non-intrusif, en superposition compl\xE8te, ne n\xE9cessitant
-      aucune modification du code gameplay existant\n"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4292793462784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 9011557429248
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -269750402, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: "R\xE9sultats"
-    Text: "Impl\xE9mentation d\u2019un syst\xE8me de FTUE modulaire et ind\xE9pendant
-      sans conflit avec le reste du d\xE9velopment en cours"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4821464510464
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 9127097921536
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

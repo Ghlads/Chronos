@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class EntryPoint : MonoBehaviour
 {
@@ -34,6 +35,13 @@ public class EntryPoint : MonoBehaviour
     private static IEnumerator Initialize()
     {
         s_coreSystemInitialized = true;
+        SystemLanguage language = Application.systemLanguage;
+        LocalizationSettings.SelectedLocale = language switch
+        {
+            SystemLanguage.French => LocalizationSettings.AvailableLocales.GetLocale( SystemLanguage.French ),
+            _ => LocalizationSettings.AvailableLocales.GetLocale( SystemLanguage.English ),
+        };
+
         yield break;
     }
 
