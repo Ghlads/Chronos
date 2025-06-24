@@ -1,5 +1,5 @@
 .compass-needle {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1254843080&guid=93245fbf45618e64eaa866b7737bce64&type=3#Needle");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1254843080&guid=93245fbf45618e64eaa866b7737bce64&type=3#Needle");
     flex-shrink: 0;
     flex-grow: 1;
 }
@@ -8,7 +8,7 @@
     width: 16px;
     height: 16px;
     flex-shrink: 0;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1386249586&guid=93245fbf45618e64eaa866b7737bce64&type=3#Compass");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=-1386249586&guid=93245fbf45618e64eaa866b7737bce64&type=3#Compass");
 }
 
 .minimap {
@@ -16,7 +16,7 @@
     flex-grow: 0;
     width: 32px;
     height: 32px;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1962010746&guid=93245fbf45618e64eaa866b7737bce64&type=3#MapBacking");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1962010746&guid=93245fbf45618e64eaa866b7737bce64&type=3#MapBacking");
 }
 
 .minimap-marker {
@@ -29,7 +29,7 @@
 }
 
 .island {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1298971352&guid=93245fbf45618e64eaa866b7737bce64&type=3#IslandIcon");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1298971352&guid=93245fbf45618e64eaa866b7737bce64&type=3#IslandIcon");
 }
 
 .unity-text-element {
@@ -64,7 +64,7 @@
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=957060315&guid=93245fbf45618e64eaa866b7737bce64&type=3#Button");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=957060315&guid=93245fbf45618e64eaa866b7737bce64&type=3#Button");
     background-color: rgba(255, 255, 255, 0);
     transition-duration: 0.2s;
 }
@@ -98,7 +98,7 @@
 .back-button {
     font-size: 8px;
     transition-duration: 0.5s;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1197370736&guid=93245fbf45618e64eaa866b7737bce64&type=3#BackButton");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=-1197370736&guid=93245fbf45618e64eaa866b7737bce64&type=3#BackButton");
     align-items: center;
     justify-content: center;
 }
@@ -128,7 +128,7 @@
 .horizontal-separator {
     flex-shrink: 0;
     height: 8px;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=322164677&guid=93245fbf45618e64eaa866b7737bce64&type=3#ChronosSpriteSheet_0");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=322164677&guid=93245fbf45618e64eaa866b7737bce64&type=3#ChronosSpriteSheet_0");
 }
 
 .unity-button.trailer-button:hover {
@@ -170,7 +170,7 @@
     flex-grow: 0;
     align-self: auto;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1180585268&guid=93245fbf45618e64eaa866b7737bce64&type=3#Rope");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=-1180585268&guid=93245fbf45618e64eaa866b7737bce64&type=3#Rope");
     min-height: 8px;
     border-left-width: 0;
     border-right-width: 0;
@@ -184,7 +184,7 @@
     height: 8px;
     margin: -1px;
     background-color: rgba(0, 0, 0, 0);
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1196494765&guid=93245fbf45618e64eaa866b7737bce64&type=3#knot");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1196494765&guid=93245fbf45618e64eaa866b7737bce64&type=3#knot");
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
@@ -197,7 +197,7 @@
     flex-shrink: 0;
     min-width: 40px;
     margin-right: 3px;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1269712643&guid=93245fbf45618e64eaa866b7737bce64&type=3#LabelBacker");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1269712643&guid=93245fbf45618e64eaa866b7737bce64&type=3#LabelBacker");
     padding-top: 2px;
     padding-right: 4px;
     padding-bottom: 3px;
@@ -260,7 +260,7 @@
 
 .settings-options-container {
     justify-content: space-evenly;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
     margin-top: 20px;
     margin-right: 3px;
     margin-bottom: 5px;
@@ -271,14 +271,14 @@
     align-self: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    min-height: 85px;
+    min-height: 100px;
     max-width: 50%;
 }
 
 .unity-base-slider--vertical #unity-dragger {
     width: 16px;
     height: 16px;
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=813479799&guid=93245fbf45618e64eaa866b7737bce64&type=3#Anchor");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=813479799&guid=93245fbf45618e64eaa866b7737bce64&type=3#Anchor");
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
@@ -298,7 +298,7 @@
 }
 
 .text-with-backing {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1269712643&guid=93245fbf45618e64eaa866b7737bce64&type=3#LabelBacker");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1269712643&guid=93245fbf45618e64eaa866b7737bce64&type=3#LabelBacker");
     padding-top: 2px;
     padding-right: 6px;
     padding-bottom: 3px;
@@ -325,7 +325,7 @@
 }
 
 .chronos-list-view .unity-base-slider--vertical .unity-base-slider__tracker#unity-tracker {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1650174205&guid=93245fbf45618e64eaa866b7737bce64&type=3#Chain");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1650174205&guid=93245fbf45618e64eaa866b7737bce64&type=3#Chain");
     background-repeat: repeat repeat;
     flex-grow: 1;
     width: 8px;
@@ -346,14 +346,14 @@
     min-height: auto;
     padding-top: 0;
     padding-right: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 0;
     padding-left: 4px;
     height: 45%;
     flex-shrink: 0;
 }
 
 .settings-islands-list {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
     padding-top: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
@@ -380,19 +380,19 @@
 }
 
 .project-details {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
     margin-top: 2px;
     margin-right: 2px;
     margin-bottom: 2px;
     margin-left: 2px;
     padding-top: 4px;
     padding-right: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 0;
     padding-left: 4px;
 }
 
 .text-with-backing {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=1269712643&guid=93245fbf45618e64eaa866b7737bce64&type=3#LabelBacker");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=1269712643&guid=93245fbf45618e64eaa866b7737bce64&type=3#LabelBacker");
     padding-top: 2px;
     padding-right: 6px;
     padding-bottom: 3px;
@@ -401,7 +401,7 @@
 }
 
 .bullet-point {
-    background-image: url("project://database/Assets/Art/ChronosSpriteSheet.png?fileID=957060315&guid=93245fbf45618e64eaa866b7737bce64&type=3#Button");
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=957060315&guid=93245fbf45618e64eaa866b7737bce64&type=3#Button");
     margin-top: 2px;
     margin-bottom: 2px;
     padding-top: 2px;
@@ -432,4 +432,43 @@
 
 .unity-base-field:focus:enabled > .unity-base-field__label {
     color: rgb(255, 255, 255);
+}
+
+.local-selector-button {
+    width: 20px;
+    height: 14px;
+    transition-duration: 0.2s;
+}
+
+.local-selector-button__background {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=957060315&guid=93245fbf45618e64eaa866b7737bce64&type=3#Button");
+    align-items: center;
+    justify-content: center;
+}
+
+.local-selector-button__icon {
+    width: 16px;
+    height: 8px;
+    flex-grow: 1;
+    max-height: 8px;
+}
+
+.local-selector-button--hover {
+    translate: 2px 0;
+    transition-duration: 0.2s;
+}
+
+.local-selector-button--active {
+    translate: 1px 0;
+    transition-duration: 0.2s;
+}
+
+.local-selector-button--current-local {
+    translate: 0 0;
+    transition-duration: 0.2s;
+}
+
+.local-selector-button--current-local .local-selector-button__background {
+    background-image: url("project://database/Assets/Art/UISpriteSheet.png?fileID=-1356228504&guid=93245fbf45618e64eaa866b7737bce64&type=3#Container");
 }

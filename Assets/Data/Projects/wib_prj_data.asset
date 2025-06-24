@@ -19,21 +19,100 @@ MonoBehaviour:
   m_needTitleDisplay: 0
   m_bulletPoints:
   - Icon: {fileID: 2478943349938514664, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Plateformes
-    Text: PC / Steam deck / Nintendo switch / Xbox one et Series / PS4 / PS5
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4079013982208
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 7502262300672
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1004665556, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Technologies
-    Text: Unity (C#) / Photon (multijoueur)
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4156377919488
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 7600325128192
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -2025482038, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Objectif
-    Text: "Refactorer les syst\xE8mes techniques afin de faciliter l\u2019\xE9volution
-      et la maintenance du projet"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4238984736768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 7701080698880
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1673226356, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: "D\xE9fis relev\xE9s"
-    Text: "Refonte compl\xE8te du netcode pour supporter un gameplay multijoueur
-      fluide et modulaire\n"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4292793462784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 7885474885632
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -269750402, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: "R\xE9sultats"
-    Text: "Mise en place d\u2019un netcode plus propre, extensible et r\xE9utilisable
-      sur d\u2019autres projets et Contribution \xE0 l\u2019unification du framework
-      technique de l\u2019entreprise"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4821464510464
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 7990152130560
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

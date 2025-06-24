@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: GameLocalizedStrings Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: GameLocalizedStrings
+  m_TableCollectionNameGuidString: b19765e94d34861479ed21f4483b6020
+  m_Entries:
+  - m_Id: 51152547840
+    m_Key: back_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 150180065280
+    m_Key: settings_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 197013663744
+    m_Key: music_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1376082849792
+    m_Key: master_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1577514299392
+    m_Key: island_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4079013982208
+    m_Key: platforms_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4156377919488
+    m_Key: technologies_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4238984736768
+    m_Key: goal_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4292793462784
+    m_Key: challenges_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4704586035200
+    m_Key: collaboration_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4821464510464
+    m_Key: results_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4971108888576
+    m_Key: wzm_platforms_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5022937903104
+    m_Key: wzm_technologies_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5172519366656
+    m_Key: wzm_goal_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5655745130496
+    m_Key: wzm_challenges_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5788536795136
+    m_Key: wzm_collaboration_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6249360781312
+    m_Key: wzm_results_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7502262300672
+    m_Key: wib_platforms_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7600325128192
+    m_Key: wib_technologies_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7701080698880
+    m_Key: wib_goal_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7885474885632
+    m_Key: wib_challenges_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7990152130560
+    m_Key: wib_results_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8116593618944
+    m_Key: tkd_platforms_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8185745108992
+    m_Key: tkd_techhnologies_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424195485696
+    m_Key: tkd_goal_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8537886289920
+    m_Key: tkd_challenges_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8658627719168
+    m_Key: tkd_results_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8837032439808
+    m_Key: mxr_platforms_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8904074194944
+    m_Key: mxr_technologies_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8956456857600
+    m_Key: mxr_goal_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9011557429248
+    m_Key: mxr_challenges_loc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9127097921536
+    m_Key: mxr_results_loc
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1943844744796832049
+  references:
+    version: 2
+    RefIds:
+    - rid: 1943844744796832049
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1750732216561

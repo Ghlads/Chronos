@@ -275,7 +275,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -297,7 +297,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -306,6 +306,50 @@ TextureImporter:
       bones: []
       spriteID: 2f9c8b910f8ba1f4c9e66f947817bb88
       internalID: 232440465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: french_flag
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e44b349243c484449172bad25f0117f
+      internalID: 1702921561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uk_flag
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2447659f64a47da48a428e588faede38
+      internalID: -2113890292
       vertices: []
       indices: 
       edges: []
@@ -333,6 +377,8 @@ TextureImporter:
       Moor-circle: 590224110
       ResultIcon: -269750402
       TouchParticle: 232440465
+      french_flag: 1702921561
+      uk_flag: -2113890292
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

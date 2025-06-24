@@ -19,21 +19,100 @@ MonoBehaviour:
   m_needTitleDisplay: 0
   m_bulletPoints:
   - Icon: {fileID: 2478943349938514664, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Plateformes
-    Text: PC / Nintendo switch
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4079013982208
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8116593618944
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1004665556, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Technologies
-    Text: "Unity (C#) / ECS propri\xE9taire / syst\xE8me de physique custom"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4156377919488
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8185745108992
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -2025482038, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: Objectif
-    Text: "R\xE9solution de bugs et cr\xE9ation d\u2019outils internes pour am\xE9liorer
-      l'efficacit\xE9 de production"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4238984736768
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8424195485696
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -1673226356, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: "D\xE9fis relev\xE9s"
-    Text: "Automatiser la g\xE9n\xE9ration des cr\xE9dits du jeu \xE0 partir d\u2019une
-      page Confluence\n"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4292793462784
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8537886289920
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
   - Icon: {fileID: -269750402, guid: 5b892e95fc721ed48a83eb8d2229b35d, type: 3}
-    Title: "R\xE9sultats"
-    Text: "G\xE9n\xE9ration automatique du prefab de cr\xE9dits \xE0 partir de la
-      page web, r\xE9duisant une t\xE2che manuelle d\u2019une journ\xE9e \xE0 un
-      seul clic pour la production"
+    m_titleLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 4821464510464
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    m_textLocal:
+      m_TableReference:
+        m_TableCollectionName: GUID:b19765e94d34861479ed21f4483b6020
+      m_TableEntryReference:
+        m_KeyId: 8658627719168
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: GameLocalizedStrings_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: b19765e94d34861479ed21f4483b6020, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 51152547840
+    m_Localized: retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 150180065280
+    m_Localized: options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 197013663744
+    m_Localized: musique
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1376082849792
+    m_Localized: maitre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1577514299392
+    m_Localized: iles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4079013982208
+    m_Localized: plateformes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4156377919488
+    m_Localized: technologies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4238984736768
+    m_Localized: objectif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4292793462784
+    m_Localized: "d\xE9fis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4704586035200
+    m_Localized: collaboration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4821464510464
+    m_Localized: "r\xE9sultats"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4971108888576
+    m_Localized: Mobile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5022937903104
+    m_Localized: "c++ / lua / engin propri\xE9taire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5172519366656
+    m_Localized: "Maintient de la stabilit\xE9 du jeu et \xE9laboration de nouveau
+      syst\xE8me pour les designers"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5655745130496
+    m_Localized: "Appropriation d'une code base gigantesque, mise en place d'optimisation
+      m\xE9moire et impl\xE9mentation de feature cross platforme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5788536795136
+    m_Localized: "Int\xE9gration et accompagnement de nouveau d\xE9veloppeur sur
+      le projet"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6249360781312
+    m_Localized: "Cr\xE9ation de guidelines claire en lien avec l'utilisation m\xE9moire
+      du jeu, accompagn\xE9 d'un gain m\xE9moire cons\xE9quent. Cr\xE9ation d'\xE9v\xE9nement
+      cross platformes plus rapide et plus simple"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7502262300672
+    m_Localized: PC / Steam deck / Nintendo switch / Xbox one et Series / PS4 / PS5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7600325128192
+    m_Localized: Unity (C#) / Photon (multijoueur)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7701080698880
+    m_Localized: "Refactorer les syst\xE8mes techniques afin de faciliter l\u2019\xE9volution
+      et la maintenance du projet"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7885474885632
+    m_Localized: "Refonte compl\xE8te du netcode pour permettre un gameplay multijoueur
+      fluide et modulaire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7990152130560
+    m_Localized: "Mise en place d\u2019un netcode plus propre, extensible et r\xE9utilisable
+      sur d\u2019autres projets et Contribution \xE0 l\u2019unification du framework
+      technique de l\u2019entreprise"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8116593618944
+    m_Localized: PC / Nintendo switch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8185745108992
+    m_Localized: "Unity (C#) / ECS propri\xE9taire / syst\xE8me de physique custom"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8424195485696
+    m_Localized: "R\xE9solution de bugs et cr\xE9ation d\u2019outils internes pour
+      am\xE9liorer l'efficacit\xE9 de production"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8537886289920
+    m_Localized: "Automatiser la g\xE9n\xE9ration des cr\xE9dits du jeu \xE0 partir
+      d\u2019une page Confluence\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8658627719168
+    m_Localized: "G\xE9n\xE9ration automatique du prefab de cr\xE9dits \xE0 partir
+      de la page web, r\xE9duisant une t\xE2che manuelle d\u2019une journ\xE9e \xE0
+      un seul clic pour les producteurs"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8837032439808
+    m_Localized: WebGL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8904074194944
+    m_Localized: Unity (C#) / WebGL / HLSL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8956456857600
+    m_Localized: "Programmation du UI, conception du First Time User Experience (FTUE)
+      et cr\xE9ation de shader HLSL"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9011557429248
+    m_Localized: "Conception d'un FTUE non-intrusif, en superposition compl\xE8te,
+      ne n\xE9cessitant aucune modification du code gameplay existant\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9127097921536
+    m_Localized: "Impl\xE9mentassions d'un syst\xE8me de FTUE modulaire et ind\xE9pendant
+      sans conflit avec le reste du d\xE9veloppement en cours"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
