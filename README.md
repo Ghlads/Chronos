@@ -1,14 +1,14 @@
 # Interactive Portfolio – "Chronos"
 
 Welcome to my interactive portfolio, presented as a minimalist pixel art game.  
-You play as a small figure exploring fragments of memory, each representing a key project from my journey.
+You play as a boat exploring islands, each representing a key project from my journey.
 
 ## 🎮 How It Works
 
 - **Simple controls**: click or tap to move
-- **Two modes**:
-  - *Free mode*: access all projects directly
-  - *Discovery mode*: explore and collect fragments to unlock each project
+- **Two ways to explore each project**:
+  - *Free mode*: access all projects directly from the settings tab, perfect if you are in a hurry
+  - *Discovery mode*: explore and sail to each islands thanks to your compass pointing towards the nearest island
 - Each fragment reveals a **trailer video** and a **description** of my role on the project
 
 ## 💡 Intent
